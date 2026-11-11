@@ -1,7 +1,7 @@
 // System back on a web page: one press, one step. What the page has open
-// goes first (assets/web/dsh_web_back.js answers for DSH Web), then the
+// goes first (assets/web/dsh_web_back.js answers for JDK Web), then the
 // WebView's history, then out — off the page, or out of the app when the page
-// is the home (网页模式). DSH Web keeps settings, menus and pages in component
+// is the home (网页模式). JDK Web keeps settings, menus and pages in component
 // state, never in its history: before this, back from its settings sheet
 // left the app.
 
@@ -246,7 +246,7 @@ void main() {
 
     bool leftApp() => platformCalls.any((c) => c.method == 'SystemNavigator.pop');
 
-    testWidgets('DSH Web gets the back bridge on every load', (tester) async {
+    testWidgets('JDK Web gets the back bridge on every load', (tester) async {
       await pushPage(tester);
       expect(page().scripts.where((s) => s.contains('window.__dshAppBack = function')), hasLength(1));
       page().finish();

@@ -117,7 +117,7 @@ void main() {
         );
         await tester.pump();
         final word = await expectBrandLockup(tester, find.byType(BrandLockup));
-        final tagline = tester.getRect(find.text('手机上的 DSH · 扫码获取'));
+        final tagline = tester.getRect(find.text('手机上的 JDK · 扫码获取'));
         expect(tagline.left, closeTo(word.left, 0.01));
         expect(tagline.top, greaterThanOrEqualTo(word.bottom));
       });

@@ -1,4 +1,4 @@
-// 网页模式: the official DSH Web as the app's home. Where the native handle
+// 网页模式: the official JDK Web as the app's home. Where the native handle
 // sits in every layout (against the room the injected CSS reserves in the
 // page), how the two modes hand the conversation over, and how the rest of
 // the phone (shares, launcher shortcuts, 「在网页版打开」) lands in the page.

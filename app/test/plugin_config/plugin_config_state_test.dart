@@ -1,7 +1,7 @@
 // The plugin configuration controller over the in-memory Host interface:
 // live fields at once, the rest held until 保存 and applied with a reload,
 // progress, a failed reload retried, put back or dropped, write-only secrets,
-// conflicts, and 全部恢复默认. Then the live-only adapter over DSH 0.2.1's
+// conflicts, and 全部恢复默认. Then the live-only adapter over JDK 0.2.1's
 // settings/describe and settings/mutate.
 
 import 'dart:async';
@@ -200,7 +200,7 @@ void main() {
     expect(api.entries['translator']!.secrets, {'apiKey': 'sk'});
   });
 
-  test('DSH 0.2.1: the engine settings serve live fields only, written through settings/mutate', () async {
+  test('JDK 0.2.1: the engine settings serve live fields only, written through settings/mutate', () async {
     // Thinking translation switched on: its rows are a plugin's.
     final host = FakeSettingsHost()..bundles = bridgeBundles();
     final c = ProviderContainer(overrides: engineOverrides(DshClient.withCarrier(host)));
@@ -212,7 +212,7 @@ void main() {
     await pumpEventQueue();
     final state = c.read(pluginConfigProvider).value!;
     expect(state.complete, isFalse);
-    expect(state['agent-loop'], isNull, reason: 'DSH\'s own, served with live fields too');
+    expect(state['agent-loop'], isNull, reason: 'JDK\'s own, served with live fields too');
     final form = state['cot-translation']!;
     expect(form.allLive, isTrue);
     expect(form.isLive(['anything']), isTrue);

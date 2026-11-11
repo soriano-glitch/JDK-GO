@@ -1,6 +1,6 @@
 // The phone layout on the official frame (assets/web/dsh_web_phone.js and .css),
 // run against a model under node (test/web/support/phone_layout_harness.mjs).
-// From DSH 0.2.2 on the official layout has a drawer of its own below 768px and
+// From JDK 0.2.2 on the official layout has a drawer of its own below 768px and
 // makes the page inert while its sidebar is expanded, so keeping that sidebar
 // expanded under the app's drawer leaves a page that takes no touch at all.
 // Needs `node` on PATH; skipped without it.

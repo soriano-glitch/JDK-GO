@@ -127,7 +127,7 @@ void main() {
       final sheet = find.byType(RemoteNetworkDetailsSheet);
       expect(sheet, findsOneWidget);
       expect(find.descendant(of: sheet, matching: find.text('Workstation')), findsOneWidget);
-      expect(find.descendant(of: sheet, matching: find.text('DSH Remote')), findsOneWidget);
+      expect(find.descendant(of: sheet, matching: find.text('JDK Remote')), findsOneWidget);
       expect(find.text(path.label), findsWidgets);
       expect(find.text('未测量'), findsNWidgets(2));
       expect(link.inspections, 0, reason: 'opening details does not continuously probe the connection');

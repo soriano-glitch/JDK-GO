@@ -1,7 +1,7 @@
 // The back bridge (assets/web/dsh_web_back.js): what one press of back does
-// inside DSH Web, run against a page model under node
+// inside JDK Web, run against a page model under node
 // (test/web/support/back_bridge_harness.mjs). Topmost first — a dialog or
-// menu, a popover, the sidebar as a drawer (the app's, or DSH Web's own in the
+// menu, a popover, the sidebar as a drawer (the app's, or JDK Web's own in the
 // official layout), the right panel, a level up inside the main area, a full
 // page back to its conversation — one step per press, and
 // nothing that stays open can hold back forever. Needs `node` on PATH;
@@ -50,7 +50,7 @@ void main() {
     expect(out['idempotent'], true);
   }, skip: skip);
 
-  test("DSH Web's own sidebar drawer: one press folds it with its own toggle", () async {
+  test("JDK Web's own sidebar drawer: one press folds it with its own toggle", () async {
     final out = await back({
       'officialDrawer': true,
       'noPhoneLayout': true,

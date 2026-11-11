@@ -196,7 +196,7 @@ void main() {
             children: [
               const InfoRow(label: '架构', value: 'arm64-v8a'),
               RuntimeLaunchFacts(status: status),
-              const InfoRow(label: 'DSH', value: '0.2.0'),
+              const InfoRow(label: 'JDK', value: '0.2.0'),
             ],
           ),
         ),
@@ -209,7 +209,7 @@ void main() {
       l10n.phoneActualLaunchMode,
       l10n.phoneLastLaunchSelection,
       l10n.phoneLaunchFailureReason,
-      'DSH',
+      'JDK',
     ]);
     final boxes = [for (final row in rows) tester.getRect(find.byWidget(row))];
     final labels = [for (final row in rows) tester.getRect(find.text(row.label))];

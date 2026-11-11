@@ -1,6 +1,6 @@
 // Which files a turn delivered or generated (lib/state/artifacts.dart) and
 // where their card sits among the chat rows, over a synthetic session in the
-// DSH 0.2.1 wire shape (test/chat/fixtures/follow_artifacts.jsonl) and the
+// JDK 0.2.1 wire shape (test/chat/fixtures/follow_artifacts.jsonl) and the
 // presented-files fixture of packages/dsh_client.
 
 import 'dart:convert';

@@ -122,7 +122,7 @@ void main() {
     await _pump(tester, running: true, waiting: true, onStop: () => stops++);
     // The approval card and the header say what waits; the hint is the plain
     // one, not 「生成中」.
-    expect(tester.widget<TextField>(find.byType(TextField)).decoration!.hintText, '给 DSH 发消息…');
+    expect(tester.widget<TextField>(find.byType(TextField)).decoration!.hintText, '给 JDK 发消息…');
     final key = find.ancestor(of: find.byIcon(AppIcons.stopGenerating), matching: find.byType(AnimatedContainer)).first;
     final decoration = tester.widget<AnimatedContainer>(key).decoration! as BoxDecoration;
     final colors = Theme.of(tester.element(find.byType(Composer))).colorScheme;

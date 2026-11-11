@@ -1,4 +1,4 @@
-// What JDK-Go sends and pulls over DSH Remote, flow by flow: the real home
+// What JDK-Go sends and pulls over JDK Remote, flow by flow: the real home
 // shell and chat screen on a relay Host, with a metered fake tunnel under
 // the client (fake_host.dart) and fake time. Each test prints its traffic
 // (`TRAFFIC <flow>`) and pins what must not come back:
@@ -142,7 +142,7 @@ void main() {
       await app.wait(const Duration(seconds: 2));
     }
     for (var i = 1; i < 4; i++) {
-      // DSH re-announces a conversation whenever its agent comes or goes.
+      // JDK re-announces a conversation whenever its agent comes or goes.
       app.host.emit('api-session/added', [app.host.sessions['S$i']!.summary()]);
       await app.wait(const Duration(seconds: 2));
     }

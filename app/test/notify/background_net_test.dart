@@ -31,7 +31,7 @@ class _Bridge extends RuntimeBridge {
   Future<bool?> batteryExempt() async => exempt;
 
   @override
-  Future<BackgroundSettingsInfo?> backgroundSettings() async => BackgroundSettingsInfo(vendor: vendor, label: 'DSH');
+  Future<BackgroundSettingsInfo?> backgroundSettings() async => BackgroundSettingsInfo(vendor: vendor, label: 'JDK');
 
   @override
   Future<String?> openBackgroundSettings() async => 'vendor';

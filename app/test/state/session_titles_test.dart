@@ -1,7 +1,7 @@
 // Conversation titles in the list (sessionsProvider), as an SSH host serves
-// them. DSH 0.2.1-rc.4's `session/list` gives a conversation the Host process
+// them. JDK 0.2.1-rc.4's `session/list` gives a conversation the Host process
 // isn't holding the title from its projection cache, read once when the
-// process starts: one another DSH process wrote since (the desktop app, the
+// process starts: one another JDK process wrote since (the desktop app, the
 // TUI, a headless run — on an SSH host the app's `dsh web` lives on between
 // connections) comes with no projections at all, and showed 「未命名」 until
 // opened (ccch1mneyyy/dsh-go#57, item 1). Checked against two rc.4 processes
@@ -165,7 +165,7 @@ void main() {
     return c = _container(host);
   }
 
-  test('a conversation another DSH process wrote gets its title read, without being opened', () async {
+  test('a conversation another JDK process wrote gets its title read, without being opened', () async {
     host.rows = [_row('own', title: 'Release notes'), _row('desktop', cold: true)];
     host.folded['desktop'] = _folded(title: 'Plan the garden party');
     start();

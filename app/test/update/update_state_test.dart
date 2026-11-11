@@ -19,7 +19,7 @@ const _api = 'https://api.github.com/repos/ccch1mneyyy/dsh-go/releases/latest';
 const _manifest = 'https://github.com/ccch1mneyyy/dsh-go/releases/latest/download/update.json';
 const _apkUrl = 'https://github.com/ccch1mneyyy/dsh-go/releases/download/v1.2.0/dsh-go-1.2.0-arm64.apk';
 
-final _apk = utf8.encode('PK pretend this is DSH 1.2.0 for arm64');
+final _apk = utf8.encode('PK pretend this is JDK 1.2.0 for arm64');
 
 Map<String, Object?> _release({String version = '1.2.0', List<int>? apk, String? sha}) => {
   'schema': 1,

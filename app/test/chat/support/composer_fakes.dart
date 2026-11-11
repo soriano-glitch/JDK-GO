@@ -1,5 +1,5 @@
 // Fakes for the composer's `@` references and voice input: an RPC carrier
-// that answers like DSH 0.2.1-rc.2 did against a throwaway `dsh web`
+// that answers like JDK 0.2.1-rc.2 did against a throwaway `dsh web`
 // (`fileReferences/list`, `sessionReferenceResolver/candidates`,
 // `session/list`, `speech/*`), and a scripted voice bridge.
 

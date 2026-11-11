@@ -59,7 +59,7 @@ void main() {
   setUp(openedWeb.clear);
 
   group('plan', () {
-    test('a view is a page island in its conversation; the official views stay DSH Web\'s', () {
+    test('a view is a page island in its conversation; the official views stay JDK Web\'s', () {
       final plan = _plan(seatOverrides(inventory: seatInventory(occupancy: _views)));
       final item = plan.visible.single;
       expect(item.occupant.cell, 'memory');
@@ -69,7 +69,7 @@ void main() {
       expect(spec.slot, Slots.conversationView);
       expect(spec.cell, 'memory');
       expect(spec.sessionId, 's1');
-      expect(spec.maskOfficial, isFalse, reason: 'DSH Web shows one view at a time: nothing to hide');
+      expect(spec.maskOfficial, isFalse, reason: 'JDK Web shows one view at a time: nothing to hide');
     });
 
     test('no route guard on this phone\'s engine: 在网页版打开', () {

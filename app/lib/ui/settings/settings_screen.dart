@@ -467,7 +467,7 @@ class _SettingsOverviewState extends ConsumerState<SettingsOverview> {
         onTap: () => _push(hostLink != null ? const RemoteScreen() : const AccountPage()),
         footer: OverviewFooter(
           tone: engine.tone,
-          text: [l10n.hubSettingsEngine, engine.label, if (dsh != null) 'DSH $dsh'].join(' · '),
+          text: [l10n.hubSettingsEngine, engine.label, if (dsh != null) 'JDK $dsh'].join(' · '),
         ),
         onFooterTap: () => _push(const EngineScreen()),
       ),

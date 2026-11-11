@@ -32,7 +32,7 @@ final petBundle = PluginBundle.fromJson(bundleJson(pet, version: '0.4.2', title:
 SlotOccupant occupant(String slot, String package, String cell, {String? label}) =>
     SlotOccupant(slot: slot, package: package, cell: cell, label: label);
 
-/// A host with the bridge (Tier B), the route guard and DSH Web.
+/// A host with the bridge (Tier B), the route guard and JDK Web.
 SeatInventory seatInventory({
   Map<String, List<SlotOccupant>> occupancy = const {},
   ClientInventoryTier tier = ClientInventoryTier.bridge,
@@ -92,7 +92,7 @@ class NoEngineSettings extends EngineSettingsController {
   Future<EngineSettings?> build() async => null;
 }
 
-/// Where the seats tried to open DSH Web.
+/// Where the seats tried to open JDK Web.
 final openedWeb = <DshWebTarget>[];
 
 /// The real web entries; [island] stands in for the IslandView.

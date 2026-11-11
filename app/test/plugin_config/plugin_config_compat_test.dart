@@ -1,5 +1,5 @@
 // Hosts whose plugin-config list does not say who carries an entry — 0.9.9's
-// runtime r12 (no dsh-go plugin-config routes: DSH's own settings/describe)
+// runtime r12 (no dsh-go plugin-config routes: JDK's own settings/describe)
 // and a bridge before R7 — see exactly what they saw before the R7 changes:
 // the same entries, the same names (a row's own title), no read-only mark,
 // the same page titles and search results. This file only uses what the app
@@ -115,7 +115,7 @@ Future<void> _openSheet(WidgetTester tester, PluginBundle bundle, List<Override>
 void main() {
   setUp(() => SharedPreferences.setMockInitialValues({}));
 
-  group('runtime r12: no plugin-config routes (DSH\'s own settings)', () {
+  group('runtime r12: no plugin-config routes (JDK\'s own settings)', () {
     FakeSettingsHost host() => FakeSettingsHost()..bundles = recordedBundles();
 
     testWidgets('设置 › 引擎参数 › 插件: the same rows, named as before, no mark', (tester) async {

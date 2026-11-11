@@ -91,7 +91,7 @@ void main() {
     expect(installed().listSync(recursive: true).where((f) => f.path.endsWith('.dsh-go-tmp')), isEmpty);
   });
 
-  test('no DSH home yet: nothing is created', () async {
+  test('no JDK home yet: nothing is created', () async {
     root.deleteSync(recursive: true);
     root = tempRootfs(withHome: false);
     expect(await installUiSkill(root, guide), UiSkillInstallResult.noHome);

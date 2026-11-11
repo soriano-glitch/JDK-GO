@@ -341,7 +341,7 @@ List<Object?> bridgeBundles() => [
   },
 ];
 
-/// DSH's own web server (a `dsh-base` row): listed by the Host, configurable
+/// JDK's own web server (a `dsh-base` row): listed by the Host, configurable
 /// there, and never a plugin.
 BridgeEntry webserverEntry() => BridgeEntry(
   'webserver',

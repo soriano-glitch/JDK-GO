@@ -26,10 +26,10 @@ class _FakeClient extends DshClient {
   /// `remove:<item>`, `steer:<item>`.
   final calls = <String>[];
 
-  /// Refuse inline images like DSH does for a text-only model (V4 Pro).
+  /// Refuse inline images like JDK does for a text-only model (V4 Pro).
   bool textOnlyModel = false;
 
-  /// Receipt uploads are unavailable on DSH Remote.
+  /// Receipt uploads are unavailable on JDK Remote.
   bool uploadsAllowed = true;
   bool workspaceUploadsAllowed = false;
   Object? uploadError;
@@ -394,7 +394,7 @@ void main() {
     });
   });
 
-  test('DSH Remote: a text-only model asks for another model, no files', () async {
+  test('JDK Remote: a text-only model asks for another model, no files', () async {
     client.uploadsAllowed = false;
     client.textOnlyModel = true;
     expect(await chat().send('图片', attachments: [image]), isFalse);
@@ -1123,7 +1123,7 @@ void main() {
     });
   });
 
-  // DSH keeps the inbox across a stop but starts no turn for it: what waits
+  // JDK keeps the inbox across a stop but starts no turn for it: what waits
   // goes again under its own request id, which wakes the agent.
   group('sending what waits right away', () {
     var seq = 0;
@@ -1261,7 +1261,7 @@ void main() {
       await waiting(['用中文']);
       client.promptError = const DshRemoteException('session/agent-busy', 'busy', {'reason': 'x'});
       final prompt = bubble('用中文');
-      // What DSH reports for the removal.
+      // What JDK reports for the removal.
       splice('next-step', removed: 1, canceled: true);
       final lost = await chat().sendNow(prompt);
       expect([for (final p in lost) p.text], ['用中文']);

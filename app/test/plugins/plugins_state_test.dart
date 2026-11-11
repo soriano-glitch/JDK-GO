@@ -56,7 +56,7 @@ void main() {
         of(installResult(application: 'failed', error: {'code': 'already-installed'})).kind,
         PluginFailureKind.alreadyInstalled,
       );
-      expect(of(installResult(application: 'failed', error: {'code': 'not-bundle'})).title, '这不是 DSH 插件');
+      expect(of(installResult(application: 'failed', error: {'code': 'not-bundle'})).title, '这不是 JDK 插件');
 
       final now = DateTime.utc(2026, 10, 23, 12);
       final fresh = of(
@@ -90,7 +90,7 @@ void main() {
         ),
       );
       expect(incompatible.kind, PluginFailureKind.incompatible);
-      expect(incompatible.message, '这个插件要求 DSH >=0.3.0，当前是 0.2.1-rc.2。');
+      expect(incompatible.message, '这个插件要求 JDK >=0.3.0，当前是 0.2.1-rc.2。');
 
       final blocked = of(installResult(application: 'failed', kind: 'build-blocked', pendingBuilds: ['esbuild']));
       expect(blocked.canApproveBuilds, isTrue);

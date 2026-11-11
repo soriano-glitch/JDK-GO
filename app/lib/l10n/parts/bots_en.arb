@@ -322,7 +322,7 @@
   "botsPetCodexWebp": "The WebP sheet was converted to PNG",
   "botsPetCodexCustomTracks": "Custom motion rows are not tied to any state",
   "botsPetCodexFps": "Frame rates were rounded to whole milliseconds",
-  "botsPetCodexOneShot": "Where a play-once motion returns to is decided by DSH",
+  "botsPetCodexOneShot": "Where a play-once motion returns to is decided by JDK",
   "botsPetCodexMissingAuthor": "The pack names no author",
   "botsPetCodexMissingLicense": "The pack names no license",
   "botsPetCodexMissingSource": "The pack names no source",
@@ -426,7 +426,7 @@
     }
   },
   "botsMobileUnsupportedTitle": "DS Bot isn't on mobile yet",
-  "botsMobileApiRequired": "Use it in DSH Web for now",
-  "botsMobileApiMissing": "Not on mobile yet. Use it in DSH Web for now",
+  "botsMobileApiRequired": "Use it in JDK Web for now",
+  "botsMobileApiMissing": "Not on mobile yet. Use it in JDK Web for now",
   "botsCreationConnectionChanged": "The connection changed. Reopen this form to create on the current host."
 }

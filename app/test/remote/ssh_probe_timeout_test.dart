@@ -48,7 +48,7 @@ void main() {
     expect(late.destroyed, isTrue);
   });
 
-  test('a silent probe consumes the existing retry budget without restarting a live DSH', () async {
+  test('a silent probe consumes the existing retry budget without restarting a live JDK', () async {
     final remote = FakeRemote()..pid = 500;
     final transports = <SilentProbeTransport>[];
     final link = SshHostLink(

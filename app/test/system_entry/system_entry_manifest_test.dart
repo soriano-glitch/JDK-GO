@@ -43,7 +43,7 @@ void main() {
     expect(links, contains('<data android:scheme="dshgo" />'));
     expect(links, contains('application/vnd.dshgo+json'));
     expect(links, contains('android.intent.action.VIEW'));
-    // Two entries named DSH in the share sheet otherwise.
+    // Two entries named JDK in the share sheet otherwise.
     expect(links, isNot(contains('android.intent.action.SEND')));
   });
 

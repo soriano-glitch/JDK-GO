@@ -117,7 +117,7 @@ class DiagnosticsPage extends ConsumerWidget {
               mono: true,
             ),
             RuntimeLaunchFacts(status: status),
-            InfoRow(label: 'DSH', value: status.dshVersion ?? '—', mono: true),
+            InfoRow(label: 'JDK', value: status.dshVersion ?? '—', mono: true),
             InfoRow(label: 'Node.js', value: status.nodeVersion ?? '—', mono: true),
             if (status.error case final error?) InfoRow(label: l10n.pluginsErrorLabel, value: error, mono: true),
           ],

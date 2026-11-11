@@ -1,7 +1,7 @@
-// An in-memory DSH host for the workspace tests: the workspace registry
+// An in-memory JDK host for the workspace tests: the workspace registry
 // (`workspace/*` + the `workspace/follow` stream), a folder tree for
 // `directoryPicker/*`, and `session/list` / `session/create`. It behaves
-// like DSH 0.2.1-rc.2 did against a throwaway `dsh web`: new workspaces go
+// like JDK 0.2.1-rc.2 did against a throwaway `dsh web`: new workspaces go
 // to the front, only `workspaceId` attaches a conversation, removal keeps
 // folders and conversations.
 
@@ -34,7 +34,7 @@ class FakeWorkspaceHost extends DshCarrier {
 
   final String home;
 
-  /// False imitates the DSH Remote allow-list (listing only).
+  /// False imitates the JDK Remote allow-list (listing only).
   final bool canCreate;
 
   /// False imitates a Host that composes the native picker.

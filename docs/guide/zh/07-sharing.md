@@ -52,4 +52,4 @@ Open a `.dshgo` file or JDK-Go share link with JDK-Go to replay it:
 - Tap **Full chat** to see the whole conversation at once.
 - Tap **Continue chat** to start a new chat with this replay attached as a Markdown transcript (one summary line per tool call, without thinking or tool output) and a line ready in the composer. Check it, then send. Files and tool state from the original chat aren't restored.
 
-**Continue chat** isn't shown in the preview of your own share. If the current DSH Remote host does not support file uploads, the transcript is dropped. Otherwise it is uploaded to the current workspace when you send, subject to the normal attachment limit and the host's actual limits.
+**Continue chat** isn't shown in the preview of your own share. If the current JDK Remote host does not support file uploads, the transcript is dropped. Otherwise it is uploaded to the current workspace when you send, subject to the normal attachment limit and the host's actual limits.

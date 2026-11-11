@@ -158,7 +158,7 @@ void main() {
     await pumpPhone(tester, const RestrictedSettingsGuidePage());
     expect(find.text('侧载的 App 要先放行这一项，无障碍开关才点得动'), findsOneWidget);
     expect(find.text('去开无障碍'), findsOneWidget);
-    expect(find.textContaining('先去「无障碍」里点一次 DSH 的开关'), findsOneWidget);
+    expect(find.textContaining('先去「无障碍」里点一次 JDK 的开关'), findsOneWidget);
   });
 
   for (final brightness in Brightness.values) {

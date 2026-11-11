@@ -293,8 +293,8 @@ List<ForumTopic> sampleTopics() => [
     posters: [3, 1, 2],
     unseen: true,
   ),
-  sampleTopic(102, '手机上跑 DSH 的省电配置（附分享码）', category: 3, posts: 6, ago: const Duration(hours: 2), posters: [4, 5]),
-  sampleTopic(103, '让 DSH 每天早上整理一份新闻简报', category: 4, posts: 21, ago: const Duration(hours: 5), posters: [2, 6, 1]),
+  sampleTopic(102, '手机上跑 JDK 的省电配置（附分享码）', category: 3, posts: 6, ago: const Duration(hours: 2), posters: [4, 5]),
+  sampleTopic(103, '让 JDK 每天早上整理一份新闻简报', category: 4, posts: 21, ago: const Duration(hours: 5), posters: [2, 6, 1]),
   sampleTopic(104, '远程连接家里电脑时提示「没能连上引擎」', category: 5, posts: 4, ago: const Duration(hours: 26), posters: [6, 3]),
   sampleTopic(105, '建议：插件市场支持按评分排序', category: 6, posts: 9, ago: const Duration(days: 4), posters: [5, 4, 2]),
   sampleTopic(106, '用 dsh-go 批量改照片文件名的小技巧', category: 4, posts: 2, ago: const Duration(days: 6), posters: [1]),
@@ -352,7 +352,7 @@ ForumTopicDetail sampleTopicDetail({List<int>? stream, List<ForumPost>? posts}) 
         samplePost(
           1001,
           1,
-          '<p>最近一直在用这个插件，<strong>不用 API Key</strong>，装上就能让 DSH 查实时资料 '
+          '<p>最近一直在用这个插件，<strong>不用 API Key</strong>，装上就能让 JDK 查实时资料 '
           '<img src="/images/emoji/twitter/tada.png?v=12" title=":tada:" class="emoji" alt=":tada:"></p>'
           '<p><a href="${link.webLink}">插件：ModSearch 联网搜索</a></p>'
           '<p>装好后在对话里直接问：</p>'
@@ -366,7 +366,7 @@ ForumTopicDetail sampleTopicDetail({List<int>? stream, List<ForumPost>? posts}) 
           2,
           '<aside class="quote" data-username="chimney" data-post="1" data-topic="101">'
           '<div class="title"><img alt="" width="24" height="24" src="/user_avatar/forum.test/chimney/48/1_2.png" class="avatar"> chimney:</div>'
-          '<blockquote><p>不用 API Key，装上就能让 DSH 查实时资料</p></blockquote></aside>'
+          '<blockquote><p>不用 API Key，装上就能让 JDK 查实时资料</p></blockquote></aside>'
           '<p>试了一下，确实好用 <img src="/images/emoji/twitter/+1.png?v=12" title=":+1:" class="emoji" alt=":+1:"> '
           '<a class="mention" href="/u/chimney">@chimney</a> 搜索结果能带上来源链接吗？</p>',
           user: 1,
@@ -424,8 +424,8 @@ ForumNotificationPage sampleNotifications() {
   return ForumNotificationPage(
     notifications: [
       n(1, 2, 'xiamu', '分享一个联网搜索插件，装上就能查实时资料', const Duration(minutes: 5)),
-      n(2, 5, 'liguobao', '手机上跑 DSH 的省电配置（附分享码）', const Duration(minutes: 50), extra: {'count': 3}),
-      n(3, 1, 'mika', '让 DSH 每天早上整理一份新闻简报', const Duration(hours: 4)),
+      n(2, 5, 'liguobao', '手机上跑 JDK 的省电配置（附分享码）', const Duration(minutes: 50), extra: {'count': 3}),
+      n(3, 1, 'mika', '让 JDK 每天早上整理一份新闻简报', const Duration(hours: 4)),
       n(4, 12, 'system', '', const Duration(days: 1), read: true, extra: {'badge_name': '初来乍到'}),
       n(5, 3, 'kiwi', '远程连接家里电脑时提示「没能连上引擎」', const Duration(days: 2), read: true),
     ],

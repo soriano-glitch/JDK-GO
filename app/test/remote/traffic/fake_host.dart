@@ -1,4 +1,4 @@
-// In-memory DSH Host behind a DSH Remote tunnel, for traffic measurements
+// In-memory JDK Host behind a JDK Remote tunnel, for traffic measurements
 // with fake time. It mirrors what `RemoteTunnelCarrier` adds on top of the
 // app's own calls: one session open (Relay hello, Noise IK, capability
 // probe) per link and a `harness.transport.describe` health probe every 25 s
@@ -215,7 +215,7 @@ class FakeSession {
 
   /// Records from the turn start that makes the window hold at least
   /// [minMessages] messages and [minTurns] turns, at most [maxMessages]
-  /// messages (DSH's turn-aligned window), ending before [before].
+  /// messages (JDK's turn-aligned window), ending before [before].
   (List<Map<String, Object?>>, bool) window({int? before, int minMessages = 50, int minTurns = 2, int maxMessages = 500}) {
     final end = before ?? log.length;
     var start = end;

@@ -735,7 +735,7 @@
   "botsPetCodexWebp": "WebP 图转成了 PNG",
   "botsPetCodexCustomTracks": "自定义的动作行没接到任何状态上",
   "botsPetCodexFps": "帧率换算成毫秒时取了整",
-  "botsPetCodexOneShot": "只播一次的动作，播完回到哪里由 DSH 决定",
+  "botsPetCodexOneShot": "只播一次的动作，播完回到哪里由 JDK 决定",
   "botsPetCodexMissingAuthor": "包里没写作者",
   "botsPetCodexMissingLicense": "包里没写授权",
   "botsPetCodexMissingSource": "包里没写来源",

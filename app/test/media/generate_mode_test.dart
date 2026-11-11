@@ -153,7 +153,7 @@ void main() {
       await pumpFrames(tester);
       expect(_capsule, findsNothing);
       expect(find.text('橘猫'), findsOneWidget);
-      expect(tester.widget<TextField>(find.byType(TextField)).decoration!.hintText, '给 DSH 发消息…');
+      expect(tester.widget<TextField>(find.byType(TextField)).decoration!.hintText, '给 JDK 发消息…');
     });
   });
 

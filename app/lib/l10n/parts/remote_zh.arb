@@ -4,7 +4,7 @@
   "remoteAutoConnectOnStartupHint": "关闭后从本机开始",
   "remoteStepConnect": "连接服务器",
   "remoteStepVerifyHostKey": "验证主机指纹",
-  "remoteStepStartDsh": "启动 DSH",
+  "remoteStepStartDsh": "启动 JDK",
   "remoteStepTunnel": "建立隧道",
   "remoteConnecting": "正在连接",
   "remoteConnected": "已连接",
@@ -22,7 +22,7 @@
   "remoteErrHostNotInAccount": "账号下找不到这台主机",
   "remoteHostFallback": "这台主机",
   "remoteErrHostOffline": "主机现在不在线",
-  "remoteErrHostRemoved": "{name}已不在你的 DSH Remote 账号下",
+  "remoteErrHostRemoved": "{name}已不在你的 JDK Remote 账号下",
   "@remoteErrHostRemoved": {
     "placeholders": {
       "name": {
@@ -30,14 +30,14 @@
       }
     }
   },
-  "remoteErrRelaySignInExpired": "DSH Remote 登录已失效",
+  "remoteErrRelaySignInExpired": "JDK Remote 登录已失效",
   "remoteErrIdentityKeyChanged": "主机身份密钥和上次不一致",
   "remoteErrIdentityUnconfirmed": "还没有确认主机身份指纹",
   "remoteErrConnectionReplaced": "远程连接已被替换",
   "remoteErrHostRejected": "主机拒绝了连接",
-  "remoteErrHostNotOwned": "主机不在你的 DSH Remote 账号下",
+  "remoteErrHostNotOwned": "主机不在你的 JDK Remote 账号下",
   "remoteErrUpdateNeeded": "版本不匹配，请更新 JDK-Go 和主机上的远程插件",
-  "remoteErrVersionIncompatible": "主机上的 DSH 或远程插件需要更新",
+  "remoteErrVersionIncompatible": "主机上的 JDK 或远程插件需要更新",
   "remoteErrSignInTimeout": "登录超时",
   "remoteSignInCancelled": "已取消登录",
   "remoteErrBrowserSignInUnsupported": "服务器不支持浏览器登录",
@@ -49,7 +49,7 @@
   "remoteUnavailable": "暂不可用",
   "remoteErrHostNotFound": "找不到这台主机",
   "remoteConnectionStopped": "远程连接已停止",
-  "remoteBootstrapReusePort": "复用已在运行的 DSH（端口 {port}）",
+  "remoteBootstrapReusePort": "复用已在运行的 JDK（端口 {port}）",
   "@remoteBootstrapReusePort": {
     "placeholders": {
       "port": {
@@ -57,7 +57,7 @@
       }
     }
   },
-  "remoteBootstrapStarting": "正在远端启动 DSH…",
+  "remoteBootstrapStarting": "正在远端启动 JDK…",
   "remoteErrCommandNotFound": "远端找不到「{command}」",
   "@remoteErrCommandNotFound": {
     "placeholders": {
@@ -68,9 +68,9 @@
   },
   "remoteErrDshMissing": "主机上没有 dsh，装好后重试，或在启动命令里填完整路径",
   "remoteStartCommandExample": "启动命令示例：~/.nvm/versions/node/v22.0.0/bin/dsh web",
-  "remoteErrDshStartTimeout": "远端 DSH 启动超时",
-  "remoteErrDshExited": "远端 DSH 启动后立即退出",
-  "remoteErrDshStart": "没能在远端启动 DSH",
+  "remoteErrDshStartTimeout": "远端 JDK 启动超时",
+  "remoteErrDshExited": "远端 JDK 启动后立即退出",
+  "remoteErrDshStart": "没能在远端启动 JDK",
   "remoteExitCode": "退出码 {code}",
   "@remoteExitCode": {
     "placeholders": {
@@ -83,15 +83,15 @@
   "remoteErrFingerprintChanged": "主机指纹和上次不一致，已断开",
   "remoteErrFingerprintUnconfirmed": "还没有确认主机指纹",
   "remoteHostTrustCancelled": "已取消信任主机",
-  "remoteCheckingDsh": "检查远端的 DSH…",
-  "remoteErrDshPort": "远端 DSH 端口连不上",
-  "remoteDshReused": "复用了远端已在运行的 DSH",
-  "remoteDshStarted": "已在远端启动 DSH",
-  "remoteErrDshTokenRejected": "远端 DSH 拒绝了登录令牌",
-  "remoteErrDshSignIn": "没能登录远端 DSH",
-  "remoteErrDshTunnel": "没能通过隧道连接 DSH",
-  "remoteErrDshSignInExpired": "远端 DSH 登录已失效",
-  "remoteErrDshStopped": "远端 DSH 已停止运行",
+  "remoteCheckingDsh": "检查远端的 JDK…",
+  "remoteErrDshPort": "远端 JDK 端口连不上",
+  "remoteDshReused": "复用了远端已在运行的 JDK",
+  "remoteDshStarted": "已在远端启动 JDK",
+  "remoteErrDshTokenRejected": "远端 JDK 拒绝了登录令牌",
+  "remoteErrDshSignIn": "没能登录远端 JDK",
+  "remoteErrDshTunnel": "没能通过隧道连接 JDK",
+  "remoteErrDshSignInExpired": "远端 JDK 登录已失效",
+  "remoteErrDshStopped": "远端 JDK 已停止运行",
   "remoteErrSshDisconnected": "SSH 连接已断开",
   "remoteErrSshUnresponsive": "SSH 连接没有响应",
   "remoteRetryCount": "已重试 {count} 次",
@@ -551,7 +551,7 @@
     }
   },
   "remoteSwitchHost": "切换主机",
-  "remoteThisPhoneDsh": "这台手机上的 DSH",
+  "remoteThisPhoneDsh": "这台手机上的 JDK",
   "remoteRemoteLabel": "远程",
   "remoteRemotePlatform": "远程 · {platform}",
   "@remoteRemotePlatform": {
@@ -561,10 +561,10 @@
       }
     }
   },
-  "remoteRelaySwitchWarning": "DSH Remote 一次只连一台主机，切换会断开上一台",
+  "remoteRelaySwitchWarning": "JDK Remote 一次只连一台主机，切换会断开上一台",
   "remoteConnectComputer": "连接电脑或服务器",
   "remoteManageHosts": "管理远程主机",
-  "remoteConnectionMethods": "通过 SSH 或 DSH Remote",
+  "remoteConnectionMethods": "通过 SSH 或 JDK Remote",
   "remoteRelayLoginRequired": "填写服务器地址、邮箱和密码",
   "remoteErrSignIn": "没能登录",
   "remoteSelfHostedServer": "自建服务器",
@@ -574,9 +574,9 @@
   "remotePassword": "密码",
   "remoteRestoreServer": "改回默认服务器 dsh.r2049.cn",
   "remoteConsole": "远程控制台",
-  "remoteHostsIntro": "在手机上接着用电脑或服务器上的 DSH",
+  "remoteHostsIntro": "在手机上接着用电脑或服务器上的 JDK",
   "remoteSshHosts": "SSH 主机",
-  "remoteSshRequirements": "需要那台主机开着 SSH，并装好 DSH",
+  "remoteSshRequirements": "需要那台主机开着 SSH，并装好 JDK",
   "remoteAddSshHost": "添加 SSH 主机",
   "remoteSshDirect": "不经过第三方服务器",
   "remoteOtherMethods": "其他方式",
@@ -629,10 +629,10 @@
   "remoteSignOut": "退出",
   "remoteErrHostsRetry": "没能获取主机列表 · 轻点重试",
   "remoteNoHosts": "还没有主机",
-  "remoteRelaySetupHelp": "在主机的 DSH 里装好远程插件并登录",
-  "remoteRelaySignOutTitle": "退出 DSH Remote？",
-  "remoteRelaySignOutBody": "这台手机会从账号中移除。主机上的 DSH 和对话不受影响，随时可以重新登录。",
-  "remoteRelaySignInTitle": "登录 DSH Remote",
+  "remoteRelaySetupHelp": "在主机的 JDK 里装好远程插件并登录",
+  "remoteRelaySignOutTitle": "退出 JDK Remote？",
+  "remoteRelaySignOutBody": "这台手机会从账号中移除。主机上的 JDK 和对话不受影响，随时可以重新登录。",
+  "remoteRelaySignInTitle": "登录 JDK Remote",
   "remoteRelaySignInHelp": "无需配置网络，连接端到端加密",
   "remoteBrowserSignIn": "在浏览器中登录",
   "remoteSignInWithProvider": "使用 {provider} 登录",
@@ -662,7 +662,7 @@
       }
     }
   },
-  "remoteDeleteHostBody": "这台主机的设置和保存在手机上的密码、私钥都会删除。主机上的 DSH 和对话不受影响。",
+  "remoteDeleteHostBody": "这台主机的设置和保存在手机上的密码、私钥都会删除。主机上的 JDK 和对话不受影响。",
   "remoteErrReadKey": "没能读取：{error}",
   "@remoteErrReadKey": {
     "placeholders": {
@@ -674,7 +674,7 @@
   "remoteErrPublicKeyFile": "这不是私钥文件，请选不带 .pub 的那个（例如 id_ed25519）",
   "remotePrivateKeyImported": "已导入私钥，原文件可以删掉了",
   "remoteEditHost": "编辑主机",
-  "remoteSshHostIntro": "连接你电脑或服务器上的 DSH",
+  "remoteSshHostIntro": "连接你电脑或服务器上的 JDK",
   "remoteHostBasicInfo": "基本信息",
   "remoteHostNameHint": "比如：电脑、家里的 Mac",
   "remoteHost": "主机",
@@ -955,7 +955,7 @@
       }
     }
   },
-  "remoteSshInstallCommand": "还没装 DSH？在主机上运行 {command}",
+  "remoteSshInstallCommand": "还没装 JDK？在主机上运行 {command}",
   "@remoteSshInstallCommand": {
     "placeholders": {
       "command": {
@@ -965,7 +965,7 @@
   },
   "remoteRelayProvider": "服务由 {project} 提供",
   "@remoteRelayProvider": {
-    "description": "Under the DSH Remote card; project is the upstream GitHub project (liguobao/ds-harness-remote), drawn as a link.",
+    "description": "Under the JDK Remote card; project is the upstream GitHub project (liguobao/ds-harness-remote), drawn as a link.",
     "placeholders": {
       "project": {
         "type": "String"
@@ -1041,6 +1041,6 @@
   "remoteTransferSettings": "远程传输",
   "remoteCompactHistory": "精简历史",
   "remoteErrHistoryModeChanged": "主机已不支持精简历史，请切换到其他主机后再连回来，或重启 App，重新加载历史",
-  "remoteCompactHistoryHint": "支持的 DSH Remote 主机会精简历史工具详情，实时回复和审批不变。切换主机或重启 App 后生效；旧主机仍传输完整历史。",
+  "remoteCompactHistoryHint": "支持的 JDK Remote 主机会精简历史工具详情，实时回复和审批不变。切换主机或重启 App 后生效；旧主机仍传输完整历史。",
   "searchKwRemoteCompactHistory": "精简 简洁 历史 工具 传输 流量 远程 compact slim lite"
 }

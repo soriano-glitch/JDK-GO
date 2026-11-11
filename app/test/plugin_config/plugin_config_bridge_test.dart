@@ -5,7 +5,7 @@
 // 400 invalid-operation, 404 entry-unavailable, 409 conflict / overridden /
 // apply-failed, 422 invalid-config, 503 host-unavailable, 500
 // recovery-failed, a dropped connection — then bound and bare secrets, and
-// the scope: DSH's own entries, listed and configurable on the Host, are
+// the scope: JDK's own entries, listed and configurable on the Host, are
 // never read or written from here.
 
 import 'package:dsh_app/state/engine_settings_state.dart';
@@ -113,7 +113,7 @@ void main() {
       expect(state.complete, isFalse);
       expect(state.lazy, isFalse);
       expect(state['cot-translation']!.allLive, isTrue);
-      expect(state[_ns], isNull, reason: 'DSH 0.2.1 lists no ordinary-only plugin');
+      expect(state[_ns], isNull, reason: 'JDK 0.2.1 lists no ordinary-only plugin');
       expect((rig.c.read(pluginConfigApiProvider)! as BridgePluginConfigApi).supported, isFalse);
       expect(rig.host.requests.where((r) => r.$2 == '/api/settings/describe'), isNotEmpty);
       // Asked once; a refresh does not knock again.
@@ -361,7 +361,7 @@ void main() {
   });
 
   group('scope', () {
-    test('the Host lists DSH\'s own web server, configurable: no page, no read', () async {
+    test('the Host lists JDK\'s own web server, configurable: no page, no read', () async {
       final rig = await _rig();
       rig.host.entries['webserver'] = webserverEntry();
       await rig.controller.refresh();

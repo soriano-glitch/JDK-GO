@@ -1,4 +1,4 @@
-// Messages DSH puts in the agent inbox itself (an approval-policy or plan-mode
+// Messages JDK puts in the agent inbox itself (an approval-policy or plan-mode
 // switch, a working-directory change, a subagent's result...) are context for
 // the model, never the person's words: they must not show as "my" bubble with
 // 撤回, and the next send must not carry or move them (0.9.8 smoke 06g/06h/06r).
@@ -13,7 +13,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'support/harness.dart';
 import 'support/pending_notice_harness.dart';
 
-/// Every `source.kind` DSH 0.2.1-rc.4 inserts into an inbox on its own, with
+/// Every `source.kind` JDK 0.2.1-rc.4 inserts into an inbox on its own, with
 /// the kind of text it carries (the English the model reads).
 const _engineNotes = {
   'user-approval': 'The approval policy changed from "ask" to "never" (changed by the user).',
@@ -84,7 +84,7 @@ void main() {
     expect(find.byType(UserBubble), findsOneWidget);
     expect(find.text('撤回'), findsNothing, reason: 'still on its way: no inbox entry yet');
     final requestId = h.client.sent.single.requestId;
-    // DSH: the turn starts, takes the notes and the prompt out of the inbox and logs them.
+    // JDK: the turn starts, takes the notes and the prompt out of the inbox and logs them.
     h.splice([
       pendingMessage(id: 'mine', text: '帮我看看这个项目', source: {'kind': 'user', 'rpcId': requestId}),
     ], slot: 'next-turn');

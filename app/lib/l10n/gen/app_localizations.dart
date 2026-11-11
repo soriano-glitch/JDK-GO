@@ -491,7 +491,7 @@ abstract class L10n {
   /// No description provided for @accessRestrictedTap.
   ///
   /// In zh, this message translates to:
-  /// **'在无障碍里点一下「DSH 手机操控」，出现「受限制的设置」时点确定'**
+  /// **'在无障碍里点一下「JDK 手机操控」，出现「受限制的设置」时点确定'**
   String get accessRestrictedTap;
 
   /// No description provided for @accessRestrictedMenu.
@@ -509,7 +509,7 @@ abstract class L10n {
   /// No description provided for @accessRestrictedBack.
   ///
   /// In zh, this message translates to:
-  /// **'回到无障碍，打开「DSH 手机操控」'**
+  /// **'回到无障碍，打开「JDK 手机操控」'**
   String get accessRestrictedBack;
 
   /// No description provided for @accessRestrictedHelp.
@@ -5207,7 +5207,7 @@ abstract class L10n {
   /// No description provided for @botsPetCodexOneShot.
   ///
   /// In zh, this message translates to:
-  /// **'只播一次的动作，播完回到哪里由 DSH 决定'**
+  /// **'只播一次的动作，播完回到哪里由 JDK 决定'**
   String get botsPetCodexOneShot;
 
   /// No description provided for @botsPetCodexMissingAuthor.
@@ -6329,7 +6329,7 @@ abstract class L10n {
   /// No description provided for @catalogWebSummary.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 官方界面'**
+  /// **'JDK 官方界面'**
   String get catalogWebSummary;
 
   /// No description provided for @catalogPluginPanel.
@@ -6869,7 +6869,7 @@ abstract class L10n {
   /// No description provided for @chatComposerHint.
   ///
   /// In zh, this message translates to:
-  /// **'给 DSH 发消息…'**
+  /// **'给 JDK 发消息…'**
   String get chatComposerHint;
 
   /// No description provided for @chatStopGenerating.
@@ -7205,7 +7205,7 @@ abstract class L10n {
   /// No description provided for @chatImageOffline.
   ///
   /// In zh, this message translates to:
-  /// **'未连接 DSH'**
+  /// **'未连接 JDK'**
   String get chatImageOffline;
 
   /// No description provided for @chatImageTooLarge.
@@ -9299,7 +9299,7 @@ abstract class L10n {
   /// No description provided for @companionMemoryUnsupportedHint.
   ///
   /// In zh, this message translates to:
-  /// **'经 DSH Remote 中继连接时用不了，或者这台主机的 dsh-go 桥接比较旧。'**
+  /// **'经 JDK Remote 中继连接时用不了，或者这台主机的 dsh-go 桥接比较旧。'**
   String get companionMemoryUnsupportedHint;
 
   /// No description provided for @companionMemoryLoadFailed.
@@ -9431,7 +9431,7 @@ abstract class L10n {
   /// No description provided for @companionModeFullHint.
   ///
   /// In zh, this message translates to:
-  /// **'主机上的 DSH 引擎，带工具和手机操控'**
+  /// **'主机上的 JDK 引擎，带工具和手机操控'**
   String get companionModeFullHint;
 
   /// No description provided for @companionLightNoKey.
@@ -10883,7 +10883,7 @@ abstract class L10n {
   /// No description provided for @engineAccountBrowserFact.
   ///
   /// In zh, this message translates to:
-  /// **'在浏览器中登录，密码不经过 DSH'**
+  /// **'在浏览器中登录，密码不经过 JDK'**
   String get engineAccountBrowserFact;
 
   /// No description provided for @engineAccountCredentialsFact.
@@ -11063,7 +11063,7 @@ abstract class L10n {
   /// No description provided for @engineSettingsVersionRequired.
   ///
   /// In zh, this message translates to:
-  /// **'需要 DSH 0.2.1 或更新版本'**
+  /// **'需要 JDK 0.2.1 或更新版本'**
   String get engineSettingsVersionRequired;
 
   /// No description provided for @engineGeneralWebDisplay.
@@ -12677,7 +12677,7 @@ abstract class L10n {
   /// No description provided for @featuresCordisRemoteUnavailable.
   ///
   /// In zh, this message translates to:
-  /// **'经 DSH Remote 中转时不可用'**
+  /// **'经 JDK Remote 中转时不可用'**
   String get featuresCordisRemoteUnavailable;
 
   /// No description provided for @featuresCordisReadFailed.
@@ -12971,7 +12971,7 @@ abstract class L10n {
   /// No description provided for @featuresPresetCreatorDescription.
   ///
   /// In zh, this message translates to:
-  /// **'让 Agent 写插件，定制 DSH 本身'**
+  /// **'让 Agent 写插件，定制 JDK 本身'**
   String get featuresPresetCreatorDescription;
 
   /// No description provided for @featuresHostUnreachable.
@@ -13061,7 +13061,7 @@ abstract class L10n {
   /// No description provided for @featuresJobOutputSubject.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 任务输出'**
+  /// **'JDK 任务输出'**
   String get featuresJobOutputSubject;
 
   /// No description provided for @featuresJobOutputReadFailed.
@@ -14663,7 +14663,7 @@ abstract class L10n {
   /// No description provided for @featuresExportRemoteHint.
   ///
   /// In zh, this message translates to:
-  /// **'经 DSH Remote 中转时拿不到日志，可以在电脑上的网页版导出'**
+  /// **'经 JDK Remote 中转时拿不到日志，可以在电脑上的网页版导出'**
   String get featuresExportRemoteHint;
 
   /// No description provided for @featuresExportShareHint.
@@ -15455,7 +15455,7 @@ abstract class L10n {
   /// No description provided for @hubPluginRequiresDsh.
   ///
   /// In zh, this message translates to:
-  /// **'需要 DSH'**
+  /// **'需要 JDK'**
   String get hubPluginRequiresDsh;
 
   /// No description provided for @hubPluginPackageName.
@@ -15527,7 +15527,7 @@ abstract class L10n {
   /// No description provided for @hubPluginOfficial.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 官方'**
+  /// **'JDK 官方'**
   String get hubPluginOfficial;
 
   /// No description provided for @hubPluginNotLoaded.
@@ -15785,7 +15785,7 @@ abstract class L10n {
   /// No description provided for @hubInterfaceWebHint.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 官方网页版'**
+  /// **'JDK 官方网页版'**
   String get hubInterfaceWebHint;
 
   /// No description provided for @hubInterfaceOpenWeb.
@@ -16301,25 +16301,25 @@ abstract class L10n {
   /// No description provided for @livePublicRunning.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 正在干活'**
+  /// **'JDK 正在干活'**
   String get livePublicRunning;
 
   /// No description provided for @livePublicWaiting.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 在等你处理'**
+  /// **'JDK 在等你处理'**
   String get livePublicWaiting;
 
   /// No description provided for @livePublicDone.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 做完了'**
+  /// **'JDK 做完了'**
   String get livePublicDone;
 
   /// No description provided for @livePublicFailed.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 出错了'**
+  /// **'JDK 出错了'**
   String get livePublicFailed;
 
   /// No description provided for @liveSettingsTitle.
@@ -16391,7 +16391,7 @@ abstract class L10n {
   /// No description provided for @localEnvChooseTitle.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 在哪里运行？'**
+  /// **'JDK 在哪里运行？'**
   String get localEnvChooseTitle;
 
   /// No description provided for @localEnvChooseMessage.
@@ -16421,7 +16421,7 @@ abstract class L10n {
   /// No description provided for @localEnvRemoteDetail.
   ///
   /// In zh, this message translates to:
-  /// **'连接电脑或服务器上的 DSH'**
+  /// **'连接电脑或服务器上的 JDK'**
   String get localEnvRemoteDetail;
 
   /// No description provided for @localEnvRecommended.
@@ -16439,7 +16439,7 @@ abstract class L10n {
   /// No description provided for @localEnvInstallMessage.
   ///
   /// In zh, this message translates to:
-  /// **'在这台手机上运行 DSH'**
+  /// **'在这台手机上运行 JDK'**
   String get localEnvInstallMessage;
 
   /// No description provided for @localEnvFactStorage.
@@ -18437,7 +18437,7 @@ abstract class L10n {
   /// No description provided for @phoneLogShareTitle.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 引擎日志'**
+  /// **'JDK 引擎日志'**
   String get phoneLogShareTitle;
 
   /// No description provided for @phoneLogCopyAll.
@@ -18617,7 +18617,7 @@ abstract class L10n {
   /// No description provided for @phoneActionLogEmptyHint.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 在手机上的每一步都会记在这里'**
+  /// **'JDK 在手机上的每一步都会记在这里'**
   String get phoneActionLogEmptyHint;
 
   /// No description provided for @phoneAppRuleDeny.
@@ -19079,7 +19079,7 @@ abstract class L10n {
   /// No description provided for @phoneDndStartPairingStep.
   ///
   /// In zh, this message translates to:
-  /// **'回到这里点「开始配对」，DSH 会发一条通知。'**
+  /// **'回到这里点「开始配对」，JDK 会发一条通知。'**
   String get phoneDndStartPairingStep;
 
   /// No description provided for @phoneDndGetPairingCodeStep.
@@ -19091,7 +19091,7 @@ abstract class L10n {
   /// No description provided for @phoneDndEnterPairingCodeStep.
   ///
   /// In zh, this message translates to:
-  /// **'下拉通知栏，把配对码填进 DSH 的通知。配对成功后点「连接」。'**
+  /// **'下拉通知栏，把配对码填进 JDK 的通知。配对成功后点「连接」。'**
   String get phoneDndEnterPairingCodeStep;
 
   /// No description provided for @phoneDndStartPairing.
@@ -19247,7 +19247,7 @@ abstract class L10n {
   /// No description provided for @phoneOpenAccessibilityFailed.
   ///
   /// In zh, this message translates to:
-  /// **'打不开系统设置，请到「设置 → 无障碍」里找到 DSH'**
+  /// **'打不开系统设置，请到「设置 → 无障碍」里找到 JDK'**
   String get phoneOpenAccessibilityFailed;
 
   /// No description provided for @phoneOpenAppInfoFailed.
@@ -19451,7 +19451,7 @@ abstract class L10n {
   /// No description provided for @phoneControlReadScreenHint.
   ///
   /// In zh, this message translates to:
-  /// **'看看 DSH 读到了什么，不发给模型'**
+  /// **'看看 JDK 读到了什么，不发给模型'**
   String get phoneControlReadScreenHint;
 
   /// No description provided for @phoneControlEnableAccessibilityFirst.
@@ -19625,7 +19625,7 @@ abstract class L10n {
   /// No description provided for @phoneDisclosureIntro.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 会像你一样看屏幕、点按，帮你把事办完。开启前，先了解这几点：'**
+  /// **'JDK 会像你一样看屏幕、点按，帮你把事办完。开启前，先了解这几点：'**
   String get phoneDisclosureIntro;
 
   /// No description provided for @phoneDisclosureRestartNote.
@@ -19697,7 +19697,7 @@ abstract class L10n {
   /// No description provided for @phoneRestrictedTryAccessibility.
   ///
   /// In zh, this message translates to:
-  /// **'先去「无障碍」里点一次 DSH 的开关，看到「受限制的设置」提示后点「确定」。做过这一步，下面的选项才会出现。'**
+  /// **'先去「无障碍」里点一次 JDK 的开关，看到「受限制的设置」提示后点「确定」。做过这一步，下面的选项才会出现。'**
   String get phoneRestrictedTryAccessibility;
 
   /// No description provided for @phoneRestrictedOpenInfoStep.
@@ -19709,7 +19709,7 @@ abstract class L10n {
   /// No description provided for @phoneRestrictedBackAccessibility.
   ///
   /// In zh, this message translates to:
-  /// **'回到「无障碍」，打开 DSH。'**
+  /// **'回到「无障碍」，打开 JDK。'**
   String get phoneRestrictedBackAccessibility;
 
   /// No description provided for @phoneRestrictedMenuStep.
@@ -19739,7 +19739,7 @@ abstract class L10n {
   /// No description provided for @phoneRestrictedHuaweiAccessibility.
   ///
   /// In zh, this message translates to:
-  /// **'华为 HarmonyOS 4 及更早的系统大多没有这一步，直接去「无障碍」打开 DSH。'**
+  /// **'华为 HarmonyOS 4 及更早的系统大多没有这一步，直接去「无障碍」打开 JDK。'**
   String get phoneRestrictedHuaweiAccessibility;
 
   /// No description provided for @phoneRestrictedVivoNote.
@@ -19757,7 +19757,7 @@ abstract class L10n {
   /// No description provided for @phoneRestrictedOppoNote.
   ///
   /// In zh, this message translates to:
-  /// **'ColorOS 有时找不到这个选项。这时用系统自带的「文件管理」找到 DSH 的安装包，点它覆盖安装一次（不用卸载，对话和设置都在），再去开无障碍。'**
+  /// **'ColorOS 有时找不到这个选项。这时用系统自带的「文件管理」找到 JDK 的安装包，点它覆盖安装一次（不用卸载，对话和设置都在），再去开无障碍。'**
   String get phoneRestrictedOppoNote;
 
   /// No description provided for @phoneRestrictedHuaweiNote.
@@ -19961,19 +19961,19 @@ abstract class L10n {
   /// No description provided for @phoneFailureStartup.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 启动失败'**
+  /// **'JDK 启动失败'**
   String get phoneFailureStartup;
 
   /// No description provided for @phoneFailureCrashedEarly.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 启动后很快崩溃了'**
+  /// **'JDK 启动后很快崩溃了'**
   String get phoneFailureCrashedEarly;
 
   /// No description provided for @phoneFailureCrashedLate.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 运行中崩溃了'**
+  /// **'JDK 运行中崩溃了'**
   String get phoneFailureCrashedLate;
 
   /// No description provided for @phoneFailureFatal.
@@ -20093,7 +20093,7 @@ abstract class L10n {
   /// No description provided for @phoneSafeRestoreIntro.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 会回到上次正常运行时的配置：'**
+  /// **'JDK 会回到上次正常运行时的配置：'**
   String get phoneSafeRestoreIntro;
 
   /// No description provided for @phoneSafeRestoreSettings.
@@ -20315,7 +20315,7 @@ abstract class L10n {
   /// No description provided for @phoneAppRulesLoosenTitle.
   ///
   /// In zh, this message translates to:
-  /// **'让 DSH 操作「{app}」？'**
+  /// **'让 JDK 操作「{app}」？'**
   String phoneAppRulesLoosenTitle(String app);
 
   /// No description provided for @phoneAppRulesSkipStepsTitle.
@@ -20375,7 +20375,7 @@ abstract class L10n {
   /// No description provided for @phoneControlRemoteHint.
   ///
   /// In zh, this message translates to:
-  /// **'「{host}」上的 DSH 操作不了这台手机，切回「本机」后可用'**
+  /// **'「{host}」上的 JDK 操作不了这台手机，切回「本机」后可用'**
   String phoneControlRemoteHint(String host);
 
   /// No description provided for @phoneRestrictedSubtitle.
@@ -20405,7 +20405,7 @@ abstract class L10n {
   /// No description provided for @phoneSafeRestoreAt.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 会回到 {when} 正常运行时的配置：'**
+  /// **'JDK 会回到 {when} 正常运行时的配置：'**
   String phoneSafeRestoreAt(String when);
 
   /// No description provided for @phoneSafeRestoreDisable.
@@ -20465,7 +20465,7 @@ abstract class L10n {
   /// No description provided for @phoneAppRulesLoosenBody.
   ///
   /// In zh, this message translates to:
-  /// **'银行、支付类 App 会检测自动操作，可能限制登录甚至冻结账号；DSH 默认不输密码、不付款。'**
+  /// **'银行、支付类 App 会检测自动操作，可能限制登录甚至冻结账号；JDK 默认不输密码、不付款。'**
   String get phoneAppRulesLoosenBody;
 
   /// No description provided for @phoneAppRulesSkipStepsBody.
@@ -22967,7 +22967,7 @@ abstract class L10n {
   /// No description provided for @pluginsDshOfficial.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 官方'**
+  /// **'JDK 官方'**
   String get pluginsDshOfficial;
 
   /// No description provided for @pluginsOfficialToggleOnly.
@@ -22991,7 +22991,7 @@ abstract class L10n {
   /// No description provided for @pluginsPluginsDescription.
   ///
   /// In zh, this message translates to:
-  /// **'插件能给 DSH 加工具、记忆和模型'**
+  /// **'插件能给 JDK 加工具、记忆和模型'**
   String get pluginsPluginsDescription;
 
   /// No description provided for @pluginsBrowseMarket.
@@ -23099,7 +23099,7 @@ abstract class L10n {
   /// No description provided for @pluginsInstalledRemoteRestart.
   ///
   /// In zh, this message translates to:
-  /// **'已安装「{name}」，重启{host}上的 DSH 后生效'**
+  /// **'已安装「{name}」，重启{host}上的 JDK 后生效'**
   String pluginsInstalledRemoteRestart(String name, String host);
 
   /// No description provided for @pluginsInstalledNamed.
@@ -23153,7 +23153,7 @@ abstract class L10n {
   /// No description provided for @pluginsBuildScriptWarning.
   ///
   /// In zh, this message translates to:
-  /// **'脚本会以 DSH 的权限在{host}上执行，能读写文件、联网。只在你信任这个插件时允许。'**
+  /// **'脚本会以 JDK 的权限在{host}上执行，能读写文件、联网。只在你信任这个插件时允许。'**
   String pluginsBuildScriptWarning(String host);
 
   /// No description provided for @pluginsThisDevice.
@@ -23225,7 +23225,7 @@ abstract class L10n {
   /// No description provided for @pluginsCommandAfterInstall.
   ///
   /// In zh, this message translates to:
-  /// **'装好后重启那台电脑上的 DSH，再回来刷新'**
+  /// **'装好后重启那台电脑上的 JDK，再回来刷新'**
   String get pluginsCommandAfterInstall;
 
   /// No description provided for @pluginsError.
@@ -23417,19 +23417,19 @@ abstract class L10n {
   /// No description provided for @pluginsNotDshPlugin.
   ///
   /// In zh, this message translates to:
-  /// **'不是 DSH 插件，无法加载'**
+  /// **'不是 JDK 插件，无法加载'**
   String get pluginsNotDshPlugin;
 
   /// No description provided for @pluginsIncompatible.
   ///
   /// In zh, this message translates to:
-  /// **'与当前 DSH 版本不兼容，未加载'**
+  /// **'与当前 JDK 版本不兼容，未加载'**
   String get pluginsIncompatible;
 
   /// No description provided for @pluginsRequiresDshVersion.
   ///
   /// In zh, this message translates to:
-  /// **'需要 DSH {requiredVersion}，当前 {currentVersion}，未加载'**
+  /// **'需要 JDK {requiredVersion}，当前 {currentVersion}，未加载'**
   String pluginsRequiresDshVersion(String requiredVersion, String currentVersion);
 
   /// No description provided for @pluginsLoadFailure.
@@ -24275,7 +24275,7 @@ abstract class L10n {
   /// No description provided for @pluginsRemoteRestartToApply.
   ///
   /// In zh, this message translates to:
-  /// **'重启{host}上的 DSH 后生效'**
+  /// **'重启{host}上的 JDK 后生效'**
   String pluginsRemoteRestartToApply(String host);
 
   /// No description provided for @pluginsImportedCount.
@@ -24479,7 +24479,7 @@ abstract class L10n {
   /// No description provided for @pluginsUninstalledRestartRemote.
   ///
   /// In zh, this message translates to:
-  /// **'已卸载「{title}」，重启{host}上的 DSH 后完全移除'**
+  /// **'已卸载「{title}」，重启{host}上的 JDK 后完全移除'**
   String pluginsUninstalledRestartRemote(String title, String host);
 
   /// No description provided for @pluginsEnableFailed.
@@ -24503,7 +24503,7 @@ abstract class L10n {
   /// No description provided for @pluginsEnabledRestartRemote.
   ///
   /// In zh, this message translates to:
-  /// **'已启用，重启{host}上的 DSH 后生效'**
+  /// **'已启用，重启{host}上的 JDK 后生效'**
   String pluginsEnabledRestartRemote(String host);
 
   /// No description provided for @pluginsDisabledRestartLocal.
@@ -24515,37 +24515,37 @@ abstract class L10n {
   /// No description provided for @pluginsDisabledRestartRemote.
   ///
   /// In zh, this message translates to:
-  /// **'已停用，重启{host}上的 DSH 后生效'**
+  /// **'已停用，重启{host}上的 JDK 后生效'**
   String pluginsDisabledRestartRemote(String host);
 
   /// No description provided for @pluginsRelayCommandInstruction.
   ///
   /// In zh, this message translates to:
-  /// **'经 DSH Remote 中转时只能开关插件。在{host}的终端里运行：'**
+  /// **'经 JDK Remote 中转时只能开关插件。在{host}的终端里运行：'**
   String pluginsRelayCommandInstruction(String host);
 
   /// No description provided for @pluginsPermissionLocalThirdParty.
   ///
   /// In zh, this message translates to:
-  /// **'插件以 DSH 的权限运行：能读写文件、执行命令、读取 API Key 和已授权的手机存储，不受工作区沙箱限制。由第三方提供，DSH 官方未审核。'**
+  /// **'插件以 JDK 的权限运行：能读写文件、执行命令、读取 API Key 和已授权的手机存储，不受工作区沙箱限制。由第三方提供，JDK 官方未审核。'**
   String get pluginsPermissionLocalThirdParty;
 
   /// No description provided for @pluginsPermissionLocalTrusted.
   ///
   /// In zh, this message translates to:
-  /// **'插件以 DSH 的权限运行：能读写文件、执行命令、读取 API Key 和已授权的手机存储，不受工作区沙箱限制。只装你信任的插件。'**
+  /// **'插件以 JDK 的权限运行：能读写文件、执行命令、读取 API Key 和已授权的手机存储，不受工作区沙箱限制。只装你信任的插件。'**
   String get pluginsPermissionLocalTrusted;
 
   /// No description provided for @pluginsPermissionRemoteThirdParty.
   ///
   /// In zh, this message translates to:
-  /// **'插件以 DSH 的权限运行：能读写文件、执行命令、读取 API Key，不受工作区沙箱限制。由第三方提供，DSH 官方未审核。'**
+  /// **'插件以 JDK 的权限运行：能读写文件、执行命令、读取 API Key，不受工作区沙箱限制。由第三方提供，JDK 官方未审核。'**
   String get pluginsPermissionRemoteThirdParty;
 
   /// No description provided for @pluginsPermissionRemoteTrusted.
   ///
   /// In zh, this message translates to:
-  /// **'插件以 DSH 的权限运行：能读写文件、执行命令、读取 API Key，不受工作区沙箱限制。只装你信任的插件。'**
+  /// **'插件以 JDK 的权限运行：能读写文件、执行命令、读取 API Key，不受工作区沙箱限制。只装你信任的插件。'**
   String get pluginsPermissionRemoteTrusted;
 
   /// No description provided for @pluginsSelectedQrCount.
@@ -25451,7 +25451,7 @@ abstract class L10n {
   /// No description provided for @remoteStepStartDsh.
   ///
   /// In zh, this message translates to:
-  /// **'启动 DSH'**
+  /// **'启动 JDK'**
   String get remoteStepStartDsh;
 
   /// No description provided for @remoteStepTunnel.
@@ -25517,13 +25517,13 @@ abstract class L10n {
   /// No description provided for @remoteErrHostRemoved.
   ///
   /// In zh, this message translates to:
-  /// **'{name}已不在你的 DSH Remote 账号下'**
+  /// **'{name}已不在你的 JDK Remote 账号下'**
   String remoteErrHostRemoved(String name);
 
   /// No description provided for @remoteErrRelaySignInExpired.
   ///
   /// In zh, this message translates to:
-  /// **'DSH Remote 登录已失效'**
+  /// **'JDK Remote 登录已失效'**
   String get remoteErrRelaySignInExpired;
 
   /// No description provided for @remoteErrIdentityKeyChanged.
@@ -25553,7 +25553,7 @@ abstract class L10n {
   /// No description provided for @remoteErrHostNotOwned.
   ///
   /// In zh, this message translates to:
-  /// **'主机不在你的 DSH Remote 账号下'**
+  /// **'主机不在你的 JDK Remote 账号下'**
   String get remoteErrHostNotOwned;
 
   /// No description provided for @remoteErrUpdateNeeded.
@@ -25565,7 +25565,7 @@ abstract class L10n {
   /// No description provided for @remoteErrVersionIncompatible.
   ///
   /// In zh, this message translates to:
-  /// **'主机上的 DSH 或远程插件需要更新'**
+  /// **'主机上的 JDK 或远程插件需要更新'**
   String get remoteErrVersionIncompatible;
 
   /// No description provided for @remoteErrSignInTimeout.
@@ -25637,13 +25637,13 @@ abstract class L10n {
   /// No description provided for @remoteBootstrapReusePort.
   ///
   /// In zh, this message translates to:
-  /// **'复用已在运行的 DSH（端口 {port}）'**
+  /// **'复用已在运行的 JDK（端口 {port}）'**
   String remoteBootstrapReusePort(int port);
 
   /// No description provided for @remoteBootstrapStarting.
   ///
   /// In zh, this message translates to:
-  /// **'正在远端启动 DSH…'**
+  /// **'正在远端启动 JDK…'**
   String get remoteBootstrapStarting;
 
   /// No description provided for @remoteErrCommandNotFound.
@@ -25667,19 +25667,19 @@ abstract class L10n {
   /// No description provided for @remoteErrDshStartTimeout.
   ///
   /// In zh, this message translates to:
-  /// **'远端 DSH 启动超时'**
+  /// **'远端 JDK 启动超时'**
   String get remoteErrDshStartTimeout;
 
   /// No description provided for @remoteErrDshExited.
   ///
   /// In zh, this message translates to:
-  /// **'远端 DSH 启动后立即退出'**
+  /// **'远端 JDK 启动后立即退出'**
   String get remoteErrDshExited;
 
   /// No description provided for @remoteErrDshStart.
   ///
   /// In zh, this message translates to:
-  /// **'没能在远端启动 DSH'**
+  /// **'没能在远端启动 JDK'**
   String get remoteErrDshStart;
 
   /// No description provided for @remoteExitCode.
@@ -25715,55 +25715,55 @@ abstract class L10n {
   /// No description provided for @remoteCheckingDsh.
   ///
   /// In zh, this message translates to:
-  /// **'检查远端的 DSH…'**
+  /// **'检查远端的 JDK…'**
   String get remoteCheckingDsh;
 
   /// No description provided for @remoteErrDshPort.
   ///
   /// In zh, this message translates to:
-  /// **'远端 DSH 端口连不上'**
+  /// **'远端 JDK 端口连不上'**
   String get remoteErrDshPort;
 
   /// No description provided for @remoteDshReused.
   ///
   /// In zh, this message translates to:
-  /// **'复用了远端已在运行的 DSH'**
+  /// **'复用了远端已在运行的 JDK'**
   String get remoteDshReused;
 
   /// No description provided for @remoteDshStarted.
   ///
   /// In zh, this message translates to:
-  /// **'已在远端启动 DSH'**
+  /// **'已在远端启动 JDK'**
   String get remoteDshStarted;
 
   /// No description provided for @remoteErrDshTokenRejected.
   ///
   /// In zh, this message translates to:
-  /// **'远端 DSH 拒绝了登录令牌'**
+  /// **'远端 JDK 拒绝了登录令牌'**
   String get remoteErrDshTokenRejected;
 
   /// No description provided for @remoteErrDshSignIn.
   ///
   /// In zh, this message translates to:
-  /// **'没能登录远端 DSH'**
+  /// **'没能登录远端 JDK'**
   String get remoteErrDshSignIn;
 
   /// No description provided for @remoteErrDshTunnel.
   ///
   /// In zh, this message translates to:
-  /// **'没能通过隧道连接 DSH'**
+  /// **'没能通过隧道连接 JDK'**
   String get remoteErrDshTunnel;
 
   /// No description provided for @remoteErrDshSignInExpired.
   ///
   /// In zh, this message translates to:
-  /// **'远端 DSH 登录已失效'**
+  /// **'远端 JDK 登录已失效'**
   String get remoteErrDshSignInExpired;
 
   /// No description provided for @remoteErrDshStopped.
   ///
   /// In zh, this message translates to:
-  /// **'远端 DSH 已停止运行'**
+  /// **'远端 JDK 已停止运行'**
   String get remoteErrDshStopped;
 
   /// No description provided for @remoteErrSshDisconnected.
@@ -26717,7 +26717,7 @@ abstract class L10n {
   /// No description provided for @remoteThisPhoneDsh.
   ///
   /// In zh, this message translates to:
-  /// **'这台手机上的 DSH'**
+  /// **'这台手机上的 JDK'**
   String get remoteThisPhoneDsh;
 
   /// No description provided for @remoteRemoteLabel.
@@ -26735,7 +26735,7 @@ abstract class L10n {
   /// No description provided for @remoteRelaySwitchWarning.
   ///
   /// In zh, this message translates to:
-  /// **'DSH Remote 一次只连一台主机，切换会断开上一台'**
+  /// **'JDK Remote 一次只连一台主机，切换会断开上一台'**
   String get remoteRelaySwitchWarning;
 
   /// No description provided for @remoteConnectComputer.
@@ -26753,7 +26753,7 @@ abstract class L10n {
   /// No description provided for @remoteConnectionMethods.
   ///
   /// In zh, this message translates to:
-  /// **'通过 SSH 或 DSH Remote'**
+  /// **'通过 SSH 或 JDK Remote'**
   String get remoteConnectionMethods;
 
   /// No description provided for @remoteRelayLoginRequired.
@@ -26813,7 +26813,7 @@ abstract class L10n {
   /// No description provided for @remoteHostsIntro.
   ///
   /// In zh, this message translates to:
-  /// **'在手机上接着用电脑或服务器上的 DSH'**
+  /// **'在手机上接着用电脑或服务器上的 JDK'**
   String get remoteHostsIntro;
 
   /// No description provided for @remoteSshHosts.
@@ -26825,7 +26825,7 @@ abstract class L10n {
   /// No description provided for @remoteSshRequirements.
   ///
   /// In zh, this message translates to:
-  /// **'需要那台主机开着 SSH，并装好 DSH'**
+  /// **'需要那台主机开着 SSH，并装好 JDK'**
   String get remoteSshRequirements;
 
   /// No description provided for @remoteAddSshHost.
@@ -26975,25 +26975,25 @@ abstract class L10n {
   /// No description provided for @remoteRelaySetupHelp.
   ///
   /// In zh, this message translates to:
-  /// **'在主机的 DSH 里装好远程插件并登录'**
+  /// **'在主机的 JDK 里装好远程插件并登录'**
   String get remoteRelaySetupHelp;
 
   /// No description provided for @remoteRelaySignOutTitle.
   ///
   /// In zh, this message translates to:
-  /// **'退出 DSH Remote？'**
+  /// **'退出 JDK Remote？'**
   String get remoteRelaySignOutTitle;
 
   /// No description provided for @remoteRelaySignOutBody.
   ///
   /// In zh, this message translates to:
-  /// **'这台手机会从账号中移除。主机上的 DSH 和对话不受影响，随时可以重新登录。'**
+  /// **'这台手机会从账号中移除。主机上的 JDK 和对话不受影响，随时可以重新登录。'**
   String get remoteRelaySignOutBody;
 
   /// No description provided for @remoteRelaySignInTitle.
   ///
   /// In zh, this message translates to:
-  /// **'登录 DSH Remote'**
+  /// **'登录 JDK Remote'**
   String get remoteRelaySignInTitle;
 
   /// No description provided for @remoteRelaySignInHelp.
@@ -27089,7 +27089,7 @@ abstract class L10n {
   /// No description provided for @remoteDeleteHostBody.
   ///
   /// In zh, this message translates to:
-  /// **'这台主机的设置和保存在手机上的密码、私钥都会删除。主机上的 DSH 和对话不受影响。'**
+  /// **'这台主机的设置和保存在手机上的密码、私钥都会删除。主机上的 JDK 和对话不受影响。'**
   String get remoteDeleteHostBody;
 
   /// No description provided for @remoteErrReadKey.
@@ -27119,7 +27119,7 @@ abstract class L10n {
   /// No description provided for @remoteSshHostIntro.
   ///
   /// In zh, this message translates to:
-  /// **'连接你电脑或服务器上的 DSH'**
+  /// **'连接你电脑或服务器上的 JDK'**
   String get remoteSshHostIntro;
 
   /// No description provided for @remoteHostBasicInfo.
@@ -27785,10 +27785,10 @@ abstract class L10n {
   /// No description provided for @remoteSshInstallCommand.
   ///
   /// In zh, this message translates to:
-  /// **'还没装 DSH？在主机上运行 {command}'**
+  /// **'还没装 JDK？在主机上运行 {command}'**
   String remoteSshInstallCommand(String command);
 
-  /// Under the DSH Remote card; project is the upstream GitHub project (liguobao/ds-harness-remote), drawn as a link.
+  /// Under the JDK Remote card; project is the upstream GitHub project (liguobao/ds-harness-remote), drawn as a link.
   ///
   /// In zh, this message translates to:
   /// **'服务由 {project} 提供'**
@@ -28007,7 +28007,7 @@ abstract class L10n {
   /// No description provided for @remoteCompactHistoryHint.
   ///
   /// In zh, this message translates to:
-  /// **'支持的 DSH Remote 主机会精简历史工具详情，实时回复和审批不变。切换主机或重启 App 后生效；旧主机仍传输完整历史。'**
+  /// **'支持的 JDK Remote 主机会精简历史工具详情，实时回复和审批不变。切换主机或重启 App 后生效；旧主机仍传输完整历史。'**
   String get remoteCompactHistoryHint;
 
   /// No description provided for @searchKwRemoteCompactHistory.
@@ -28685,7 +28685,7 @@ abstract class L10n {
   /// No description provided for @searchKwEngine.
   ///
   /// In zh, this message translates to:
-  /// **'引擎,运行环境,启动,停止,重启,DSH'**
+  /// **'引擎,运行环境,启动,停止,重启,JDK'**
   String get searchKwEngine;
 
   /// No description provided for @searchKwBackground.
@@ -28775,7 +28775,7 @@ abstract class L10n {
   /// No description provided for @searchKwRemote.
   ///
   /// In zh, this message translates to:
-  /// **'远程,SSH,电脑,服务器,DSH Remote,连接电脑'**
+  /// **'远程,SSH,电脑,服务器,JDK Remote,连接电脑'**
   String get searchKwRemote;
 
   /// No description provided for @searchKwPermission.
@@ -30857,7 +30857,7 @@ abstract class L10n {
   /// No description provided for @shellConfigUnknownSlot.
   ///
   /// In zh, this message translates to:
-  /// **'当前 DSH 没有这个 slot，先保留'**
+  /// **'当前 JDK 没有这个 slot，先保留'**
   String get shellConfigUnknownSlot;
 
   /// No description provided for @shellConfigUnseatableSlot.
@@ -31853,7 +31853,7 @@ abstract class L10n {
   /// No description provided for @stateBotTeamBusy.
   ///
   /// In zh, this message translates to:
-  /// **'另一个 DSH 正在使用这个团队'**
+  /// **'另一个 JDK 正在使用这个团队'**
   String get stateBotTeamBusy;
 
   /// No description provided for @stateBotOperationFailed.
@@ -32417,7 +32417,7 @@ abstract class L10n {
   /// No description provided for @stateBundleBuiltIn.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 内置'**
+  /// **'JDK 内置'**
   String get stateBundleBuiltIn;
 
   /// No description provided for @stateBundleHeadless.
@@ -32561,7 +32561,7 @@ abstract class L10n {
   /// No description provided for @statePluginIncompatible.
   ///
   /// In zh, this message translates to:
-  /// **'这个插件不支持当前的 DSH 版本。'**
+  /// **'这个插件不支持当前的 JDK 版本。'**
   String get statePluginIncompatible;
 
   /// No description provided for @statePluginInstallCancelled.
@@ -32579,7 +32579,7 @@ abstract class L10n {
   /// No description provided for @statePluginIncompatibleTitle.
   ///
   /// In zh, this message translates to:
-  /// **'和当前 DSH 不兼容'**
+  /// **'和当前 JDK 不兼容'**
   String get statePluginIncompatibleTitle;
 
   /// No description provided for @statePluginNetworkFailed.
@@ -32717,7 +32717,7 @@ abstract class L10n {
   /// No description provided for @statePluginInvalid.
   ///
   /// In zh, this message translates to:
-  /// **'这不是 DSH 插件'**
+  /// **'这不是 JDK 插件'**
   String get statePluginInvalid;
 
   /// No description provided for @statePluginNoEntry.
@@ -33401,13 +33401,13 @@ abstract class L10n {
   /// No description provided for @statePluginRuntimeIncompatible.
   ///
   /// In zh, this message translates to:
-  /// **'这个插件不支持当前的 DSH 版本（{version}）。'**
+  /// **'这个插件不支持当前的 JDK 版本（{version}）。'**
   String statePluginRuntimeIncompatible(String version);
 
   /// No description provided for @statePluginRequiredVersion.
   ///
   /// In zh, this message translates to:
-  /// **'这个插件要求 DSH {wanted}，当前是 {current}。'**
+  /// **'这个插件要求 JDK {wanted}，当前是 {current}。'**
   String statePluginRequiredVersion(String wanted, String current);
 
   /// No description provided for @statePluginRegistryUnreachable.
@@ -33473,7 +33473,7 @@ abstract class L10n {
   /// No description provided for @stateSafeRepairPrompt.
   ///
   /// In zh, this message translates to:
-  /// **'我的 DSH 正常模式出了问题（{what}）。请按「安全模式」说明排查原因，先用可逆的办法修好 web 配置，修完用 dsh-app-plugins trial 试启动验证，再告诉我改了什么。'**
+  /// **'我的 JDK 正常模式出了问题（{what}）。请按「安全模式」说明排查原因，先用可逆的办法修好 web 配置，修完用 dsh-app-plugins trial 试启动验证，再告诉我改了什么。'**
   String stateSafeRepairPrompt(String what);
 
   /// No description provided for @stateScheduleCreatePrompt.
@@ -33749,7 +33749,7 @@ abstract class L10n {
   /// No description provided for @updateWrongPackage.
   ///
   /// In zh, this message translates to:
-  /// **'不是 DSH 的安装包'**
+  /// **'不是 JDK 的安装包'**
   String get updateWrongPackage;
 
   /// No description provided for @updateWrongPackageMessage.
@@ -33767,7 +33767,7 @@ abstract class L10n {
   /// No description provided for @updateDowngradeBlockedMessage.
   ///
   /// In zh, this message translates to:
-  /// **'手机上的 DSH 比这个安装包还新。'**
+  /// **'手机上的 JDK 比这个安装包还新。'**
   String get updateDowngradeBlockedMessage;
 
   /// No description provided for @updateIncompatible.
@@ -35081,7 +35081,7 @@ abstract class L10n {
   /// No description provided for @viewTipSwitchHost.
   ///
   /// In zh, this message translates to:
-  /// **'点侧栏底部的主机名，可以切到电脑上的 DSH'**
+  /// **'点侧栏底部的主机名，可以切到电脑上的 JDK'**
   String get viewTipSwitchHost;
 
   /// No description provided for @viewTipPasteImage.
@@ -35903,13 +35903,13 @@ abstract class L10n {
   /// No description provided for @viewShareBrandLine.
   ///
   /// In zh, this message translates to:
-  /// **'手机上的 DSH · 扫码获取'**
+  /// **'手机上的 JDK · 扫码获取'**
   String get viewShareBrandLine;
 
   /// No description provided for @viewShareBrandLineNoQr.
   ///
   /// In zh, this message translates to:
-  /// **'手机上的 DSH'**
+  /// **'手机上的 JDK'**
   String get viewShareBrandLineNoQr;
 
   /// No description provided for @viewShareSteps.
@@ -35987,7 +35987,7 @@ abstract class L10n {
   /// No description provided for @viewSharePluginTitle.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 插件「{value}」'**
+  /// **'JDK 插件「{value}」'**
   String viewSharePluginTitle(String value);
 
   /// No description provided for @viewShareInstallCommand.
@@ -37037,7 +37037,7 @@ abstract class L10n {
   /// No description provided for @webTitle.
   ///
   /// In zh, this message translates to:
-  /// **'DSH 网页版'**
+  /// **'JDK 网页版'**
   String get webTitle;
 
   /// No description provided for @webSshAppOnly.
@@ -37049,7 +37049,7 @@ abstract class L10n {
   /// No description provided for @webRelayUnavailable.
   ///
   /// In zh, this message translates to:
-  /// **'经 DSH Remote 中转时打不开网页版，请在那台电脑上打开'**
+  /// **'经 JDK Remote 中转时打不开网页版，请在那台电脑上打开'**
   String get webRelayUnavailable;
 
   /// No description provided for @webSshHost.

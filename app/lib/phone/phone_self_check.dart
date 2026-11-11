@@ -275,7 +275,7 @@ class PhoneSelfCheckController extends ChangeNotifier {
 
 /// Only this fixed whitelist is serialized. No raw map, handle, log, settings, or content path.
 String phoneSelfCheckMarkdown(PhoneSelfCheckSnapshot snapshot) {
-  final out = StringBuffer('# DSH local phone self-check\n\nCoverage: partial.\n');
+  final out = StringBuffer('# JDK local phone self-check\n\nCoverage: partial.\n');
   out.writeln('Profile: ${snapshot.profile ?? "unknown"}');
   if (snapshot.profile == 'target_c1') {
     out.writeln('Only device, selected channel, ordinary display, fixed target launch/tree/tap and cleanup are covered.');

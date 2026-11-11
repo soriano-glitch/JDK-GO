@@ -93,7 +93,7 @@ void main() {
     await pump(tester, const RemoteScreen());
     await frames(tester, 3);
     expect(find.text('重新登录'), findsOneWidget);
-    expect(find.text('登录 DSH Remote'), findsOneWidget);
+    expect(find.text('登录 JDK Remote'), findsOneWidget);
   });
 
   testWidgets('signed-out card offers one button per sign-in provider, GitHub first', (tester) async {

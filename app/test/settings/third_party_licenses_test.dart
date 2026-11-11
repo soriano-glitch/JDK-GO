@@ -17,7 +17,7 @@ const _expected = <String, String>{
   'DeepSeek Harness': 'Copyright (c) 2026 DeepSeek',
   'Phase': 'Copyright (c) 2026 CikeSeven',
   'DS Bot': 'Copyright 2026 Fei2411 and the DS Bot contributors',
-  'ds-harness-remote': 'Copyright (c) 2026 DSH Remote contributors',
+  'ds-harness-remote': 'Copyright (c) 2026 JDK Remote contributors',
   'DSHA': 'Copyright (c) 2026 qiannianhuanxiang',
   'Shizuku-API': 'Copyright (c) 2021 RikkaW',
   'libadb-android': 'Copyright 2021 Muntashir Al-Islam',

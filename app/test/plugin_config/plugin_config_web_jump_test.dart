@@ -1,4 +1,4 @@
-// From a plugin's native configuration page to DSH Web, which edits the same
+// From a plugin's native configuration page to JDK Web, which edits the same
 // configuration through its own page: never while a save is reloading the
 // plugin (it would land on a plugin in the middle of its reload), held edits
 // asked about and dropped before going (kept, a later 保存 would write them
@@ -28,10 +28,10 @@ const _web = ValueKey('plugin-config-web');
 const _primary = ValueKey('plugin-config-primary');
 const _status = ValueKey('plugin-config-status');
 
-/// The weather plugin's card on DSH Web's Plugins page.
+/// The weather plugin's card on JDK Web's Plugins page.
 const _card = ['天气', 'Weather', '@acme/dsh-weather'];
 
-/// 天气 with one more field the app can't draw (a number or a word): DSH
+/// 天气 with one more field the app can't draw (a number or a word): JDK
 /// Web edits it.
 MemoryPluginEntry _weatherWithWebField() => MemoryPluginEntry(
   ns: 'weather',
@@ -105,7 +105,7 @@ void main() {
     await tester.tap(find.byKey(const ValueKey('plugin-config-web-discard')));
     await settle(tester);
     expect(opened.single.pluginItem, _card);
-    expect(_state(tester).hasDraft('weather'), isFalse, reason: 'no later 保存 over what DSH Web sets');
+    expect(_state(tester).hasDraft('weather'), isFalse, reason: 'no later 保存 over what JDK Web sets');
     expect(find.text('未保存'), findsNothing);
     expect(api.calls.where((c) => c.$1 == 'apply'), isEmpty);
   });
@@ -118,7 +118,7 @@ void main() {
     expect(opened.single.pluginItem, _card);
   });
 
-  testWidgets('while a save reloads the plugin the way to DSH Web is shut, and opens again after', (tester) async {
+  testWidgets('while a save reloads the plugin the way to JDK Web is shut, and opens again after', (tester) async {
     final api = sampleConfigApi()..gate = Completer<void>();
     final opened = await _open(tester, api);
     await _holdEdit(tester);
@@ -146,7 +146,7 @@ void main() {
     expect(opened.single.pluginItem, _card);
   });
 
-  testWidgets('a field only DSH Web edits goes the page\'s way: asks, then the plugin\'s card', (tester) async {
+  testWidgets('a field only JDK Web edits goes the page\'s way: asks, then the plugin\'s card', (tester) async {
     final api = MemoryPluginConfigApi([voiceEntry(), translatorEntry(), _weatherWithWebField()]);
     final opened = await _open(tester, api);
     final row = find.text('在网页版编辑此项');

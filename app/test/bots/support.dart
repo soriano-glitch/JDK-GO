@@ -321,7 +321,7 @@ const sampleApprovals = <Object?>[
 FakeDsBotTransport approvalTransport({bool readOnly = false}) {
   final data = sampleTeam(working: false);
   data.addAll(liveOf(data, approvals: sampleApprovals));
-  if (readOnly) data['readOnly'] = '另一个 DSH 正在使用这个团队';
+  if (readOnly) data['readOnly'] = '另一个 JDK 正在使用这个团队';
   final transport = FakeDsBotTransport(team: data);
   transport.handlers['state'] = (_) => data;
   transport.handlers['approval-answer'] = (_) => true;

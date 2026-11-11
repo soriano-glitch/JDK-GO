@@ -1,4 +1,4 @@
-// The credit under the DSH Remote card: only the project name opens
+// The credit under the JDK Remote card: only the project name opens
 // github.com/liguobao/ds-harness-remote; its tap area reaches 48dp tall into
 // the empty space around the line and stays clear of every control near it.
 
@@ -180,7 +180,7 @@ void main() {
 
   testWidgets('the tap area is 48dp tall and overlaps no other control', (tester) async {
     await pump(tester);
-    final relayCard = tester.getRect(card('登录 DSH Remote'));
+    final relayCard = tester.getRect(card('登录 JDK Remote'));
     // One button per sign-in provider; the lowest one sits nearest the credit line.
     final signIn = tester.getRect(find.byWidgetPredicate((w) => w is FilledButton).last);
     final selfHosted = tester.getRect(find.widgetWithText(TextButton, '自建服务器 · 邮箱登录'));
@@ -226,7 +226,7 @@ void main() {
     await pump(tester);
     final line = lineRect(tester);
     // Card → 8 → the line → the section margin (24) → the next section's title.
-    expect(line.top - tester.getRect(card('登录 DSH Remote')).bottom, closeTo(8, 0.01));
+    expect(line.top - tester.getRect(card('登录 JDK Remote')).bottom, closeTo(8, 0.01));
     expect(tester.getRect(find.text('远程传输')).top - line.bottom, closeTo(24, 0.01));
   });
 

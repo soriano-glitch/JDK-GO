@@ -96,7 +96,7 @@ void main() {
   group('failure card', () {
     test('LKG first when it would change something, safe mode next', () {
       final m = FailureCardModel.of(startupFailure(), lkgUseful: true);
-      expect(m.title, 'DSH 启动失败');
+      expect(m.title, 'JDK 启动失败');
       expect(m.primary, FailureAction.restoreLkg);
       expect(m.secondary, [FailureAction.enterSafe, FailureAction.showLog, FailureAction.retry]);
       expect(m.body, contains('break-required'));
@@ -176,7 +176,7 @@ void main() {
   group('repair prompt', () {
     test('names the failure and points at the briefing; never sent by itself', () {
       final prompt = repairPrompt(safeStatus());
-      expect(prompt, startsWith('我的 DSH 正常模式出了问题（启动失败，可疑插件：break-required）'));
+      expect(prompt, startsWith('我的 JDK 正常模式出了问题（启动失败，可疑插件：break-required）'));
       expect(prompt, contains('「安全模式」说明'));
       expect(prompt, contains('trial'));
       expect(repairPrompt(const RuntimeStatus(phase: RuntimePhase.running)), contains('我手动进入了安全模式'));

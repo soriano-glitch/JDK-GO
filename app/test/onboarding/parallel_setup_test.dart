@@ -108,7 +108,7 @@ void main() {
   group('本机: set up while it unpacks', () {
     testWidgets('starts the unpack once, then 外观 with the unpack in a capsule', (tester) async {
       final rig = await pumpGate(tester);
-      expect(find.text('DSH 在哪里运行？'), findsOneWidget);
+      expect(find.text('JDK 在哪里运行？'), findsOneWidget);
       expect(find.byKey(_capsule), findsNothing);
 
       await chooseThisPhone(tester);
@@ -399,7 +399,7 @@ void main() {
     testWidgets('unpack died with the app: same page, unpacking again', (tester) async {
       final rig = await pumpGate(tester, prefs: _seen.copyWith(setupStep: SetupStep.appearance));
       expect(find.byType(AppearanceStepPage), findsOneWidget);
-      expect(find.text('DSH 在哪里运行？'), findsNothing);
+      expect(find.text('JDK 在哪里运行？'), findsNothing);
       expect(rig.runtime.calls, ['install']);
       expect(find.byKey(_capsule), findsOneWidget);
     });

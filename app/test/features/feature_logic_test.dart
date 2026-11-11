@@ -1,4 +1,4 @@
-// 全部功能 logic: deep-link targets (what the DSH Web bridge receives), the
+// 全部功能 logic: deep-link targets (what the JDK Web bridge receives), the
 // feature catalog's invariants, and the Chinese wording of schedule rules,
 // job states and presets.
 

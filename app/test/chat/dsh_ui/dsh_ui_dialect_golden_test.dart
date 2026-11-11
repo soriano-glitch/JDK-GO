@@ -13,7 +13,7 @@ import '../support/harness.dart';
 String j(Object json) => jsonEncode(json);
 
 /// A build report: figures, a table, progress, a warning, and two parts the
-/// app leaves to DSH Web.
+/// app leaves to JDK Web.
 final report = j({
   'title': '本周构建',
   'items': [
@@ -80,7 +80,7 @@ final explainer = j({
       'type': 'keyvalue',
       'pairs': [
         {'key': '版本', 'value': '0.10.0'},
-        {'key': '引擎', 'value': 'DSH 0.2.1-rc.4'},
+        {'key': '引擎', 'value': 'JDK 0.2.1-rc.4'},
       ],
     },
     {'type': 'code', 'lang': 'sh', 'code': 'flutter build apk --release'},

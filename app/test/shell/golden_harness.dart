@@ -134,7 +134,7 @@ const sampleLogs = [
   'dsh web: http://127.0.0.1:3080/?token=•••',
   '\x1B[2m[gateway]\x1B[0m listening on 127.0.0.1:3080',
   '[gateway] session store: /root/.dsh/sessions (12 sessions)',
-  '[dsh-app] DSH is listening at http://127.0.0.1:3080',
+  '[dsh-app] JDK is listening at http://127.0.0.1:3080',
   '[agent] model deepseek-v4-pro · thinking: medium',
   '[agent] turn started · session 01JB7Q…',
   '[tool] bash: flutter test test/auth --reporter compact',

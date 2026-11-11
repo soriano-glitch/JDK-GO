@@ -190,7 +190,7 @@ void main() {
       expect(find.widgetWithText(TextButton, '继续'), findsNothing);
     });
   }
-  group('the engine refuses the model (DSH 0.2.1-rc.4 listed catalog)', () {
+  group('the engine refuses the model (JDK 0.2.1-rc.4 listed catalog)', () {
     const unsupported =
         'DeepSeek model "deepseek-x" is not supported by DeepSeek Harness; current version is 0.2.1-rc.4';
     const upgrade =
@@ -372,7 +372,7 @@ class _UpToDate extends AppUpdateController {
   }
 }
 
-/// A DSH Remote host is the active one.
+/// A JDK Remote host is the active one.
 class _RelayHost extends ActiveHostController {
   @override
   HostRef build() => const HostRef.relay('r1', name: 'Mac');

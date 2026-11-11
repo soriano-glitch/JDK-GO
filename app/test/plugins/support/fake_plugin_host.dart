@@ -174,7 +174,7 @@ MarketCatalog officialFixtureMarket({Map<String, Object?>? index, Map<String, Ob
 
 Map<String, Object?> ok(Object? value) => {'ok': true, 'value': value};
 
-// ── Sample data (shapes from DSH 0.2.1-rc.2 and dshfind) ────────────────────
+// ── Sample data (shapes from JDK 0.2.1-rc.2 and dshfind) ────────────────────
 
 Map<String, Object?> bundleJson(
   String name, {
@@ -242,7 +242,7 @@ Map<String, Object?> _version(String version, {int ts = 1789469760}) => {
 
 final sampleIndex = <String, Object?>{
   'format': 1,
-  'title': {'en': 'dshfind · DSH Plugin Directory', 'zh': 'dshfind · DSH 插件目录'},
+  'title': {'en': 'dshfind · JDK Plugin Directory', 'zh': 'dshfind · JDK 插件目录'},
   'metadata': {
     'categories': {
       'agent': {

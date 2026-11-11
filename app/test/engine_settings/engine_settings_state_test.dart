@@ -269,7 +269,7 @@ void main() {
       final items = inventoryItems(inventory, bundles);
       final loop = items.global.firstWhere((i) => i.entryId == 'include:agent-loop');
       expect(loop.title, isNot(contains('@deepseek-ai')));
-      expect(loop.source, 'DSH 内置');
+      expect(loop.source, 'JDK 内置');
       expect(loop.version, '0.2.1-rc.2');
       expect(loop.status, InventoryStatus.running);
       expect(loop.rowId, 'agent-loop');

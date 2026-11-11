@@ -222,7 +222,7 @@ class L10nZh extends L10n {
   String get accessRestrictedTitle => '先允许受限制的设置';
 
   @override
-  String get accessRestrictedTap => '在无障碍里点一下「DSH 手机操控」，出现「受限制的设置」时点确定';
+  String get accessRestrictedTap => '在无障碍里点一下「JDK 手机操控」，出现「受限制的设置」时点确定';
 
   @override
   String get accessRestrictedMenu => '在应用信息里点右上角的三个点，选「允许受限制的设置」';
@@ -231,7 +231,7 @@ class L10nZh extends L10n {
   String get accessRestrictedAdvanced => '在应用信息的「高级设置」里打开「允许受限制的设置」';
 
   @override
-  String get accessRestrictedBack => '回到无障碍，打开「DSH 手机操控」';
+  String get accessRestrictedBack => '回到无障碍，打开「JDK 手机操控」';
 
   @override
   String get accessRestrictedHelp => '看图示';
@@ -2810,7 +2810,7 @@ class L10nZh extends L10n {
   String get botsPetCodexFps => '帧率换算成毫秒时取了整';
 
   @override
-  String get botsPetCodexOneShot => '只播一次的动作，播完回到哪里由 DSH 决定';
+  String get botsPetCodexOneShot => '只播一次的动作，播完回到哪里由 JDK 决定';
 
   @override
   String get botsPetCodexMissingAuthor => '包里没写作者';
@@ -3421,7 +3421,7 @@ class L10nZh extends L10n {
   String get catalogDiagnosticsSummary => '导出诊断包';
 
   @override
-  String get catalogWebSummary => 'DSH 官方界面';
+  String get catalogWebSummary => 'JDK 官方界面';
 
   @override
   String get catalogPluginPanel => '插件面板';
@@ -3705,7 +3705,7 @@ class L10nZh extends L10n {
   String get chatGeneratingSteerHint => '生成中 · 可直接插话';
 
   @override
-  String get chatComposerHint => '给 DSH 发消息…';
+  String get chatComposerHint => '给 JDK 发消息…';
 
   @override
   String get chatStopGenerating => '停止生成';
@@ -3895,7 +3895,7 @@ class L10nZh extends L10n {
   String get chatImageNotFound => '找不到图片';
 
   @override
-  String get chatImageOffline => '未连接 DSH';
+  String get chatImageOffline => '未连接 JDK';
 
   @override
   String get chatImageTooLarge => '图片过大';
@@ -5032,7 +5032,7 @@ class L10nZh extends L10n {
   String get companionMemoryUnsupported => '这台主机还不能保存她的记忆';
 
   @override
-  String get companionMemoryUnsupportedHint => '经 DSH Remote 中继连接时用不了，或者这台主机的 dsh-go 桥接比较旧。';
+  String get companionMemoryUnsupportedHint => '经 JDK Remote 中继连接时用不了，或者这台主机的 dsh-go 桥接比较旧。';
 
   @override
   String get companionMemoryLoadFailed => '没读到';
@@ -5098,7 +5098,7 @@ class L10nZh extends L10n {
   String get companionModeFull => '完整';
 
   @override
-  String get companionModeFullHint => '主机上的 DSH 引擎，带工具和手机操控';
+  String get companionModeFullHint => '主机上的 JDK 引擎，带工具和手机操控';
 
   @override
   String get companionLightNoKey => '轻量模式要用 DeepSeek API Key，在设置里填上就能和我聊啦。';
@@ -5843,7 +5843,7 @@ class L10nZh extends L10n {
   String get engineAccountUsageFact => '用量从账号余额中扣除';
 
   @override
-  String get engineAccountBrowserFact => '在浏览器中登录，密码不经过 DSH';
+  String get engineAccountBrowserFact => '在浏览器中登录，密码不经过 JDK';
 
   @override
   String get engineAccountCredentialsFact => '登录凭据只保存在本机';
@@ -5933,7 +5933,7 @@ class L10nZh extends L10n {
   String get engineGeneralMissing => '这台主机没有通用设置';
 
   @override
-  String get engineSettingsVersionRequired => '需要 DSH 0.2.1 或更新版本';
+  String get engineSettingsVersionRequired => '需要 JDK 0.2.1 或更新版本';
 
   @override
   String get engineGeneralWebDisplay => '网页版显示';
@@ -6838,7 +6838,7 @@ class L10nZh extends L10n {
   String get featuresCordisUnavailable => '这个连接看不到 Cordis';
 
   @override
-  String get featuresCordisRemoteUnavailable => '经 DSH Remote 中转时不可用';
+  String get featuresCordisRemoteUnavailable => '经 JDK Remote 中转时不可用';
 
   @override
   String get featuresCordisReadFailed => '没能读取插件';
@@ -7003,7 +7003,7 @@ class L10nZh extends L10n {
   String get featuresPresetMinimalDescription => '只用终端和读图，适合测试对比';
 
   @override
-  String get featuresPresetCreatorDescription => '让 Agent 写插件，定制 DSH 本身';
+  String get featuresPresetCreatorDescription => '让 Agent 写插件，定制 JDK 本身';
 
   @override
   String featuresHostUnreachable(String name) {
@@ -7056,7 +7056,7 @@ class L10nZh extends L10n {
   }
 
   @override
-  String get featuresJobOutputSubject => 'DSH 任务输出';
+  String get featuresJobOutputSubject => 'JDK 任务输出';
 
   @override
   String get featuresJobOutputReadFailed => '没能读取输出';
@@ -7913,7 +7913,7 @@ class L10nZh extends L10n {
   String get featuresExportUnavailable => '这个连接导不了';
 
   @override
-  String get featuresExportRemoteHint => '经 DSH Remote 中转时拿不到日志，可以在电脑上的网页版导出';
+  String get featuresExportRemoteHint => '经 JDK Remote 中转时拿不到日志，可以在电脑上的网页版导出';
 
   @override
   String get featuresExportShareHint => '附在问题反馈里，或发给自己';
@@ -8359,7 +8359,7 @@ class L10nZh extends L10n {
   String get hubPluginInstalledVersion => '已装版本';
 
   @override
-  String get hubPluginRequiresDsh => '需要 DSH';
+  String get hubPluginRequiresDsh => '需要 JDK';
 
   @override
   String get hubPluginPackageName => '包名';
@@ -8395,7 +8395,7 @@ class L10nZh extends L10n {
   String get hubPluginRetryInstall => '重试安装';
 
   @override
-  String get hubPluginOfficial => 'DSH 官方';
+  String get hubPluginOfficial => 'JDK 官方';
 
   @override
   String get hubPluginNotLoaded => '没有正常加载';
@@ -8564,7 +8564,7 @@ class L10nZh extends L10n {
   String get hubInterfaceHome => '首页';
 
   @override
-  String get hubInterfaceWebHint => 'DSH 官方网页版';
+  String get hubInterfaceWebHint => 'JDK 官方网页版';
 
   @override
   String get hubInterfaceOpenWeb => '打开网页版';
@@ -8830,16 +8830,16 @@ class L10nZh extends L10n {
   String get liveChipFailed => '出错';
 
   @override
-  String get livePublicRunning => 'DSH 正在干活';
+  String get livePublicRunning => 'JDK 正在干活';
 
   @override
-  String get livePublicWaiting => 'DSH 在等你处理';
+  String get livePublicWaiting => 'JDK 在等你处理';
 
   @override
-  String get livePublicDone => 'DSH 做完了';
+  String get livePublicDone => 'JDK 做完了';
 
   @override
-  String get livePublicFailed => 'DSH 出错了';
+  String get livePublicFailed => 'JDK 出错了';
 
   @override
   String get liveSettingsTitle => '实时活动';
@@ -8876,7 +8876,7 @@ class L10nZh extends L10n {
   String get localeEn => 'English';
 
   @override
-  String get localEnvChooseTitle => 'DSH 在哪里运行？';
+  String get localEnvChooseTitle => 'JDK 在哪里运行？';
 
   @override
   String get localEnvChooseMessage => '之后可以在设置里更改';
@@ -8897,7 +8897,7 @@ class L10nZh extends L10n {
   }
 
   @override
-  String get localEnvRemoteDetail => '连接电脑或服务器上的 DSH';
+  String get localEnvRemoteDetail => '连接电脑或服务器上的 JDK';
 
   @override
   String get localEnvRecommended => '推荐';
@@ -8906,7 +8906,7 @@ class L10nZh extends L10n {
   String get localEnvInstallTitle => '安装本机运行环境';
 
   @override
-  String get localEnvInstallMessage => '在这台手机上运行 DSH';
+  String get localEnvInstallMessage => '在这台手机上运行 JDK';
 
   @override
   String localEnvFactStorage(int storage) {
@@ -9965,7 +9965,7 @@ class L10nZh extends L10n {
   String get phoneLogEmpty => '还没有日志';
 
   @override
-  String get phoneLogShareTitle => 'DSH 引擎日志';
+  String get phoneLogShareTitle => 'JDK 引擎日志';
 
   @override
   String get phoneLogCopyAll => '复制全部';
@@ -10055,7 +10055,7 @@ class L10nZh extends L10n {
   String get phoneActionLogEmpty => '还没有记录';
 
   @override
-  String get phoneActionLogEmptyHint => 'DSH 在手机上的每一步都会记在这里';
+  String get phoneActionLogEmptyHint => 'JDK 在手机上的每一步都会记在这里';
 
   @override
   String get phoneAppRuleDeny => '不碰';
@@ -10286,13 +10286,13 @@ class L10nZh extends L10n {
   String get phoneDndWirelessDebuggingStep => '在开发者选项里打开「无线调试」，要连着 Wi‑Fi。开发者选项一般在「系统」或「其他设置」里。';
 
   @override
-  String get phoneDndStartPairingStep => '回到这里点「开始配对」，DSH 会发一条通知。';
+  String get phoneDndStartPairingStep => '回到这里点「开始配对」，JDK 会发一条通知。';
 
   @override
   String get phoneDndGetPairingCodeStep => '在「无线调试」里点「使用配对码配对设备」，屏幕上会出现 6 位配对码。';
 
   @override
-  String get phoneDndEnterPairingCodeStep => '下拉通知栏，把配对码填进 DSH 的通知。配对成功后点「连接」。';
+  String get phoneDndEnterPairingCodeStep => '下拉通知栏，把配对码填进 JDK 的通知。配对成功后点「连接」。';
 
   @override
   String get phoneDndStartPairing => '开始配对';
@@ -10370,7 +10370,7 @@ class L10nZh extends L10n {
   String get phoneDisabled => '已关闭';
 
   @override
-  String get phoneOpenAccessibilityFailed => '打不开系统设置，请到「设置 → 无障碍」里找到 DSH';
+  String get phoneOpenAccessibilityFailed => '打不开系统设置，请到「设置 → 无障碍」里找到 JDK';
 
   @override
   String get phoneOpenAppInfoFailed => '打不开应用信息，请到「设置 → 应用」里找到 JDK-Go';
@@ -10472,7 +10472,7 @@ class L10nZh extends L10n {
   String get phoneControlReadScreen => '读一下当前屏幕';
 
   @override
-  String get phoneControlReadScreenHint => '看看 DSH 读到了什么，不发给模型';
+  String get phoneControlReadScreenHint => '看看 JDK 读到了什么，不发给模型';
 
   @override
   String get phoneControlEnableAccessibilityFirst => '先打开无障碍服务';
@@ -10559,7 +10559,7 @@ class L10nZh extends L10n {
   String get phoneDisclosureTitle => '开启手机操控前';
 
   @override
-  String get phoneDisclosureIntro => 'DSH 会像你一样看屏幕、点按，帮你把事办完。开启前，先了解这几点：';
+  String get phoneDisclosureIntro => 'JDK 会像你一样看屏幕、点按，帮你把事办完。开启前，先了解这几点：';
 
   @override
   String get phoneDisclosureRestartNote => '开启后引擎会重启一次，进行中的回复会中断';
@@ -10595,13 +10595,13 @@ class L10nZh extends L10n {
   String get phoneRestrictedOpenOverlay => '去开悬浮窗';
 
   @override
-  String get phoneRestrictedTryAccessibility => '先去「无障碍」里点一次 DSH 的开关，看到「受限制的设置」提示后点「确定」。做过这一步，下面的选项才会出现。';
+  String get phoneRestrictedTryAccessibility => '先去「无障碍」里点一次 JDK 的开关，看到「受限制的设置」提示后点「确定」。做过这一步，下面的选项才会出现。';
 
   @override
   String get phoneRestrictedOpenInfoStep => '回到这里，点「打开应用信息」。';
 
   @override
-  String get phoneRestrictedBackAccessibility => '回到「无障碍」，打开 DSH。';
+  String get phoneRestrictedBackAccessibility => '回到「无障碍」，打开 JDK。';
 
   @override
   String get phoneRestrictedMenuStep => '点右上角的三个点，选「允许受限制的设置」，按提示验证锁屏密码。';
@@ -10616,7 +10616,7 @@ class L10nZh extends L10n {
   String get phoneRestrictedHuaweiOverlay => '华为 HarmonyOS 4 及更早的系统大多没有这一步，直接去「悬浮窗」设置打开 JDK-Go。';
 
   @override
-  String get phoneRestrictedHuaweiAccessibility => '华为 HarmonyOS 4 及更早的系统大多没有这一步，直接去「无障碍」打开 DSH。';
+  String get phoneRestrictedHuaweiAccessibility => '华为 HarmonyOS 4 及更早的系统大多没有这一步，直接去「无障碍」打开 JDK。';
 
   @override
   String get phoneRestrictedVivoNote => '不同 OriginOS 版本位置可能不同。右上角没有三个点时，把应用信息页往下翻到底找一找。';
@@ -10625,7 +10625,7 @@ class L10nZh extends L10n {
   String get phoneRestrictedAdvancedStep => '在「高级设置」里找到「允许受限制的设置」，打开它。';
 
   @override
-  String get phoneRestrictedOppoNote => 'ColorOS 有时找不到这个选项。这时用系统自带的「文件管理」找到 DSH 的安装包，点它覆盖安装一次（不用卸载，对话和设置都在），再去开无障碍。';
+  String get phoneRestrictedOppoNote => 'ColorOS 有时找不到这个选项。这时用系统自带的「文件管理」找到 JDK 的安装包，点它覆盖安装一次（不用卸载，对话和设置都在），再去开无障碍。';
 
   @override
   String get phoneRestrictedHuaweiNote => '如果在无障碍里看到「受限制的设置」提示，按「原生 / 其他」的步骤做。';
@@ -10727,13 +10727,13 @@ class L10nZh extends L10n {
   String get phoneFailureNoSpaceHint => '清理一些空间后重试';
 
   @override
-  String get phoneFailureStartup => 'DSH 启动失败';
+  String get phoneFailureStartup => 'JDK 启动失败';
 
   @override
-  String get phoneFailureCrashedEarly => 'DSH 启动后很快崩溃了';
+  String get phoneFailureCrashedEarly => 'JDK 启动后很快崩溃了';
 
   @override
-  String get phoneFailureCrashedLate => 'DSH 运行中崩溃了';
+  String get phoneFailureCrashedLate => 'JDK 运行中崩溃了';
 
   @override
   String get phoneFailureFatal => '引擎报告了致命错误';
@@ -10793,7 +10793,7 @@ class L10nZh extends L10n {
   String get phoneSafeRestartIncomplete => '配置操作已完成，但引擎还未停止，暂未重启。请等待停止完成后再启动。';
 
   @override
-  String get phoneSafeRestoreIntro => 'DSH 会回到上次正常运行时的配置：';
+  String get phoneSafeRestoreIntro => 'JDK 会回到上次正常运行时的配置：';
 
   @override
   String get phoneSafeRestoreSettings => '• 设置恢复到当时的版本（现在的另存为备份）';
@@ -10915,7 +10915,7 @@ class L10nZh extends L10n {
 
   @override
   String phoneAppRulesLoosenTitle(String app) {
-    return '让 DSH 操作「$app」？';
+    return '让 JDK 操作「$app」？';
   }
 
   @override
@@ -10979,7 +10979,7 @@ class L10nZh extends L10n {
 
   @override
   String phoneControlRemoteHint(String host) {
-    return '「$host」上的 DSH 操作不了这台手机，切回「本机」后可用';
+    return '「$host」上的 JDK 操作不了这台手机，切回「本机」后可用';
   }
 
   @override
@@ -11004,7 +11004,7 @@ class L10nZh extends L10n {
 
   @override
   String phoneSafeRestoreAt(String when) {
-    return 'DSH 会回到 $when 正常运行时的配置：';
+    return 'JDK 会回到 $when 正常运行时的配置：';
   }
 
   @override
@@ -11049,7 +11049,7 @@ class L10nZh extends L10n {
   }
 
   @override
-  String get phoneAppRulesLoosenBody => '银行、支付类 App 会检测自动操作，可能限制登录甚至冻结账号；DSH 默认不输密码、不付款。';
+  String get phoneAppRulesLoosenBody => '银行、支付类 App 会检测自动操作，可能限制登录甚至冻结账号；JDK 默认不输密码、不付款。';
 
   @override
   String get phoneAppRulesSkipStepsBody => '微信这类 App 有风控，曾有手机助手操作后账号被强制下线。改成照常后，只有发消息这类操作还会先问你。';
@@ -12471,7 +12471,7 @@ class L10nZh extends L10n {
   String get pluginsReadingPlugins => '正在读取插件…';
 
   @override
-  String get pluginsDshOfficial => 'DSH 官方';
+  String get pluginsDshOfficial => 'JDK 官方';
 
   @override
   String get pluginsOfficialToggleOnly => '官方组件只能开关，不能卸载；对这台主机上的所有对话生效';
@@ -12483,7 +12483,7 @@ class L10nZh extends L10n {
   String get pluginsNoThirdParty => '还没装第三方插件';
 
   @override
-  String get pluginsPluginsDescription => '插件能给 DSH 加工具、记忆和模型';
+  String get pluginsPluginsDescription => '插件能给 JDK 加工具、记忆和模型';
 
   @override
   String get pluginsBrowseMarket => '逛逛插件市场';
@@ -12548,7 +12548,7 @@ class L10nZh extends L10n {
 
   @override
   String pluginsInstalledRemoteRestart(String name, String host) {
-    return '已安装「$name」，重启$host上的 DSH 后生效';
+    return '已安装「$name」，重启$host上的 JDK 后生效';
   }
 
   @override
@@ -12583,7 +12583,7 @@ class L10nZh extends L10n {
 
   @override
   String pluginsBuildScriptWarning(String host) {
-    return '脚本会以 DSH 的权限在$host上执行，能读写文件、联网。只在你信任这个插件时允许。';
+    return '脚本会以 JDK 的权限在$host上执行，能读写文件、联网。只在你信任这个插件时允许。';
   }
 
   @override
@@ -12628,7 +12628,7 @@ class L10nZh extends L10n {
   String get pluginsThatComputer => '那台电脑';
 
   @override
-  String get pluginsCommandAfterInstall => '装好后重启那台电脑上的 DSH，再回来刷新';
+  String get pluginsCommandAfterInstall => '装好后重启那台电脑上的 JDK，再回来刷新';
 
   @override
   String get pluginsError => '出错';
@@ -12736,14 +12736,14 @@ class L10nZh extends L10n {
   String get pluginsMissingFiles => '插件文件缺失，重新安装可修复';
 
   @override
-  String get pluginsNotDshPlugin => '不是 DSH 插件，无法加载';
+  String get pluginsNotDshPlugin => '不是 JDK 插件，无法加载';
 
   @override
-  String get pluginsIncompatible => '与当前 DSH 版本不兼容，未加载';
+  String get pluginsIncompatible => '与当前 JDK 版本不兼容，未加载';
 
   @override
   String pluginsRequiresDshVersion(String requiredVersion, String currentVersion) {
-    return '需要 DSH $requiredVersion，当前 $currentVersion，未加载';
+    return '需要 JDK $requiredVersion，当前 $currentVersion，未加载';
   }
 
   @override
@@ -13204,7 +13204,7 @@ class L10nZh extends L10n {
 
   @override
   String pluginsRemoteRestartToApply(String host) {
-    return '重启$host上的 DSH 后生效';
+    return '重启$host上的 JDK 后生效';
   }
 
   @override
@@ -13326,7 +13326,7 @@ class L10nZh extends L10n {
 
   @override
   String pluginsUninstalledRestartRemote(String title, String host) {
-    return '已卸载「$title」，重启$host上的 DSH 后完全移除';
+    return '已卸载「$title」，重启$host上的 JDK 后完全移除';
   }
 
   @override
@@ -13340,7 +13340,7 @@ class L10nZh extends L10n {
 
   @override
   String pluginsEnabledRestartRemote(String host) {
-    return '已启用，重启$host上的 DSH 后生效';
+    return '已启用，重启$host上的 JDK 后生效';
   }
 
   @override
@@ -13348,26 +13348,26 @@ class L10nZh extends L10n {
 
   @override
   String pluginsDisabledRestartRemote(String host) {
-    return '已停用，重启$host上的 DSH 后生效';
+    return '已停用，重启$host上的 JDK 后生效';
   }
 
   @override
   String pluginsRelayCommandInstruction(String host) {
-    return '经 DSH Remote 中转时只能开关插件。在$host的终端里运行：';
+    return '经 JDK Remote 中转时只能开关插件。在$host的终端里运行：';
   }
 
   @override
   String get pluginsPermissionLocalThirdParty =>
-      '插件以 DSH 的权限运行：能读写文件、执行命令、读取 API Key 和已授权的手机存储，不受工作区沙箱限制。由第三方提供，DSH 官方未审核。';
+      '插件以 JDK 的权限运行：能读写文件、执行命令、读取 API Key 和已授权的手机存储，不受工作区沙箱限制。由第三方提供，JDK 官方未审核。';
 
   @override
-  String get pluginsPermissionLocalTrusted => '插件以 DSH 的权限运行：能读写文件、执行命令、读取 API Key 和已授权的手机存储，不受工作区沙箱限制。只装你信任的插件。';
+  String get pluginsPermissionLocalTrusted => '插件以 JDK 的权限运行：能读写文件、执行命令、读取 API Key 和已授权的手机存储，不受工作区沙箱限制。只装你信任的插件。';
 
   @override
-  String get pluginsPermissionRemoteThirdParty => '插件以 DSH 的权限运行：能读写文件、执行命令、读取 API Key，不受工作区沙箱限制。由第三方提供，DSH 官方未审核。';
+  String get pluginsPermissionRemoteThirdParty => '插件以 JDK 的权限运行：能读写文件、执行命令、读取 API Key，不受工作区沙箱限制。由第三方提供，JDK 官方未审核。';
 
   @override
-  String get pluginsPermissionRemoteTrusted => '插件以 DSH 的权限运行：能读写文件、执行命令、读取 API Key，不受工作区沙箱限制。只装你信任的插件。';
+  String get pluginsPermissionRemoteTrusted => '插件以 JDK 的权限运行：能读写文件、执行命令、读取 API Key，不受工作区沙箱限制。只装你信任的插件。';
 
   @override
   String pluginsSelectedQrCount(int count) {
@@ -13910,7 +13910,7 @@ class L10nZh extends L10n {
   String get remoteStepVerifyHostKey => '验证主机指纹';
 
   @override
-  String get remoteStepStartDsh => '启动 DSH';
+  String get remoteStepStartDsh => '启动 JDK';
 
   @override
   String get remoteStepTunnel => '建立隧道';
@@ -13946,11 +13946,11 @@ class L10nZh extends L10n {
 
   @override
   String remoteErrHostRemoved(String name) {
-    return '$name已不在你的 DSH Remote 账号下';
+    return '$name已不在你的 JDK Remote 账号下';
   }
 
   @override
-  String get remoteErrRelaySignInExpired => 'DSH Remote 登录已失效';
+  String get remoteErrRelaySignInExpired => 'JDK Remote 登录已失效';
 
   @override
   String get remoteErrIdentityKeyChanged => '主机身份密钥和上次不一致';
@@ -13965,13 +13965,13 @@ class L10nZh extends L10n {
   String get remoteErrHostRejected => '主机拒绝了连接';
 
   @override
-  String get remoteErrHostNotOwned => '主机不在你的 DSH Remote 账号下';
+  String get remoteErrHostNotOwned => '主机不在你的 JDK Remote 账号下';
 
   @override
   String get remoteErrUpdateNeeded => '版本不匹配，请更新 JDK-Go 和主机上的远程插件';
 
   @override
-  String get remoteErrVersionIncompatible => '主机上的 DSH 或远程插件需要更新';
+  String get remoteErrVersionIncompatible => '主机上的 JDK 或远程插件需要更新';
 
   @override
   String get remoteErrSignInTimeout => '登录超时';
@@ -14008,11 +14008,11 @@ class L10nZh extends L10n {
 
   @override
   String remoteBootstrapReusePort(int port) {
-    return '复用已在运行的 DSH（端口 $port）';
+    return '复用已在运行的 JDK（端口 $port）';
   }
 
   @override
-  String get remoteBootstrapStarting => '正在远端启动 DSH…';
+  String get remoteBootstrapStarting => '正在远端启动 JDK…';
 
   @override
   String remoteErrCommandNotFound(String command) {
@@ -14026,13 +14026,13 @@ class L10nZh extends L10n {
   String get remoteStartCommandExample => '启动命令示例：~/.nvm/versions/node/v22.0.0/bin/dsh web';
 
   @override
-  String get remoteErrDshStartTimeout => '远端 DSH 启动超时';
+  String get remoteErrDshStartTimeout => '远端 JDK 启动超时';
 
   @override
-  String get remoteErrDshExited => '远端 DSH 启动后立即退出';
+  String get remoteErrDshExited => '远端 JDK 启动后立即退出';
 
   @override
-  String get remoteErrDshStart => '没能在远端启动 DSH';
+  String get remoteErrDshStart => '没能在远端启动 JDK';
 
   @override
   String remoteExitCode(int code) {
@@ -14052,31 +14052,31 @@ class L10nZh extends L10n {
   String get remoteHostTrustCancelled => '已取消信任主机';
 
   @override
-  String get remoteCheckingDsh => '检查远端的 DSH…';
+  String get remoteCheckingDsh => '检查远端的 JDK…';
 
   @override
-  String get remoteErrDshPort => '远端 DSH 端口连不上';
+  String get remoteErrDshPort => '远端 JDK 端口连不上';
 
   @override
-  String get remoteDshReused => '复用了远端已在运行的 DSH';
+  String get remoteDshReused => '复用了远端已在运行的 JDK';
 
   @override
-  String get remoteDshStarted => '已在远端启动 DSH';
+  String get remoteDshStarted => '已在远端启动 JDK';
 
   @override
-  String get remoteErrDshTokenRejected => '远端 DSH 拒绝了登录令牌';
+  String get remoteErrDshTokenRejected => '远端 JDK 拒绝了登录令牌';
 
   @override
-  String get remoteErrDshSignIn => '没能登录远端 DSH';
+  String get remoteErrDshSignIn => '没能登录远端 JDK';
 
   @override
-  String get remoteErrDshTunnel => '没能通过隧道连接 DSH';
+  String get remoteErrDshTunnel => '没能通过隧道连接 JDK';
 
   @override
-  String get remoteErrDshSignInExpired => '远端 DSH 登录已失效';
+  String get remoteErrDshSignInExpired => '远端 JDK 登录已失效';
 
   @override
-  String get remoteErrDshStopped => '远端 DSH 已停止运行';
+  String get remoteErrDshStopped => '远端 JDK 已停止运行';
 
   @override
   String get remoteErrSshDisconnected => 'SSH 连接已断开';
@@ -14633,7 +14633,7 @@ class L10nZh extends L10n {
   String get remoteSwitchHost => '切换主机';
 
   @override
-  String get remoteThisPhoneDsh => '这台手机上的 DSH';
+  String get remoteThisPhoneDsh => '这台手机上的 JDK';
 
   @override
   String get remoteRemoteLabel => '远程';
@@ -14644,7 +14644,7 @@ class L10nZh extends L10n {
   }
 
   @override
-  String get remoteRelaySwitchWarning => 'DSH Remote 一次只连一台主机，切换会断开上一台';
+  String get remoteRelaySwitchWarning => 'JDK Remote 一次只连一台主机，切换会断开上一台';
 
   @override
   String get remoteConnectComputer => '连接电脑或服务器';
@@ -14653,7 +14653,7 @@ class L10nZh extends L10n {
   String get remoteManageHosts => '管理远程主机';
 
   @override
-  String get remoteConnectionMethods => '通过 SSH 或 DSH Remote';
+  String get remoteConnectionMethods => '通过 SSH 或 JDK Remote';
 
   @override
   String get remoteRelayLoginRequired => '填写服务器地址、邮箱和密码';
@@ -14683,13 +14683,13 @@ class L10nZh extends L10n {
   String get remoteConsole => '远程控制台';
 
   @override
-  String get remoteHostsIntro => '在手机上接着用电脑或服务器上的 DSH';
+  String get remoteHostsIntro => '在手机上接着用电脑或服务器上的 JDK';
 
   @override
   String get remoteSshHosts => 'SSH 主机';
 
   @override
-  String get remoteSshRequirements => '需要那台主机开着 SSH，并装好 DSH';
+  String get remoteSshRequirements => '需要那台主机开着 SSH，并装好 JDK';
 
   @override
   String get remoteAddSshHost => '添加 SSH 主机';
@@ -14772,16 +14772,16 @@ class L10nZh extends L10n {
   String get remoteNoHosts => '还没有主机';
 
   @override
-  String get remoteRelaySetupHelp => '在主机的 DSH 里装好远程插件并登录';
+  String get remoteRelaySetupHelp => '在主机的 JDK 里装好远程插件并登录';
 
   @override
-  String get remoteRelaySignOutTitle => '退出 DSH Remote？';
+  String get remoteRelaySignOutTitle => '退出 JDK Remote？';
 
   @override
-  String get remoteRelaySignOutBody => '这台手机会从账号中移除。主机上的 DSH 和对话不受影响，随时可以重新登录。';
+  String get remoteRelaySignOutBody => '这台手机会从账号中移除。主机上的 JDK 和对话不受影响，随时可以重新登录。';
 
   @override
-  String get remoteRelaySignInTitle => '登录 DSH Remote';
+  String get remoteRelaySignInTitle => '登录 JDK Remote';
 
   @override
   String get remoteRelaySignInHelp => '无需配置网络，连接端到端加密';
@@ -14833,7 +14833,7 @@ class L10nZh extends L10n {
   }
 
   @override
-  String get remoteDeleteHostBody => '这台主机的设置和保存在手机上的密码、私钥都会删除。主机上的 DSH 和对话不受影响。';
+  String get remoteDeleteHostBody => '这台主机的设置和保存在手机上的密码、私钥都会删除。主机上的 JDK 和对话不受影响。';
 
   @override
   String remoteErrReadKey(String error) {
@@ -14850,7 +14850,7 @@ class L10nZh extends L10n {
   String get remoteEditHost => '编辑主机';
 
   @override
-  String get remoteSshHostIntro => '连接你电脑或服务器上的 DSH';
+  String get remoteSshHostIntro => '连接你电脑或服务器上的 JDK';
 
   @override
   String get remoteHostBasicInfo => '基本信息';
@@ -15226,7 +15226,7 @@ class L10nZh extends L10n {
 
   @override
   String remoteSshInstallCommand(String command) {
-    return '还没装 DSH？在主机上运行 $command';
+    return '还没装 JDK？在主机上运行 $command';
   }
 
   @override
@@ -15348,7 +15348,7 @@ class L10nZh extends L10n {
   String get remoteErrHistoryModeChanged => '主机已不支持精简历史，请切换到其他主机后再连回来，或重启 App，重新加载历史';
 
   @override
-  String get remoteCompactHistoryHint => '支持的 DSH Remote 主机会精简历史工具详情，实时回复和审批不变。切换主机或重启 App 后生效；旧主机仍传输完整历史。';
+  String get remoteCompactHistoryHint => '支持的 JDK Remote 主机会精简历史工具详情，实时回复和审批不变。切换主机或重启 App 后生效；旧主机仍传输完整历史。';
 
   @override
   String get searchKwRemoteCompactHistory => '精简 简洁 历史 工具 传输 流量 远程 compact slim lite';
@@ -15705,7 +15705,7 @@ class L10nZh extends L10n {
   String get searchKwDnd => '免打扰,Shizuku,Sui,root,ADB,后台操作';
 
   @override
-  String get searchKwEngine => '引擎,运行环境,启动,停止,重启,DSH';
+  String get searchKwEngine => '引擎,运行环境,启动,停止,重启,JDK';
 
   @override
   String get searchKwBackground => '后台保活,保活,后台,电池优化,自启动,被杀,杀后台,省电';
@@ -15750,7 +15750,7 @@ class L10nZh extends L10n {
   String get searchKwAccount => '账号,余额,充值,登录,退出登录,API Key,用量,DeepSeek';
 
   @override
-  String get searchKwRemote => '远程,SSH,电脑,服务器,DSH Remote,连接电脑';
+  String get searchKwRemote => '远程,SSH,电脑,服务器,JDK Remote,连接电脑';
 
   @override
   String get searchKwPermission => '权限,别问我,确认,审批,自动允许,只读,完全权限,自动执行命令';
@@ -16877,7 +16877,7 @@ class L10nZh extends L10n {
   String get shellConfigSlotName => 'slot 名格式不对';
 
   @override
-  String get shellConfigUnknownSlot => '当前 DSH 没有这个 slot，先保留';
+  String get shellConfigUnknownSlot => '当前 JDK 没有这个 slot，先保留';
 
   @override
   String get shellConfigUnseatableSlot => '这个位置不放插件';
@@ -17410,7 +17410,7 @@ class L10nZh extends L10n {
   String get statePrivateKeyTooLarge => '文件太大，不像是私钥';
 
   @override
-  String get stateBotTeamBusy => '另一个 DSH 正在使用这个团队';
+  String get stateBotTeamBusy => '另一个 JDK 正在使用这个团队';
 
   @override
   String get stateBotOperationFailed => '没能完成操作，再试一次';
@@ -17692,7 +17692,7 @@ class L10nZh extends L10n {
   String get stateInventoryConditional => '条件启用';
 
   @override
-  String get stateBundleBuiltIn => 'DSH 内置';
+  String get stateBundleBuiltIn => 'JDK 内置';
 
   @override
   String get stateBundleHeadless => '无界面运行';
@@ -17764,7 +17764,7 @@ class L10nZh extends L10n {
   String get stateRegistryMirror => 'npmmirror 镜像';
 
   @override
-  String get statePluginIncompatible => '这个插件不支持当前的 DSH 版本。';
+  String get statePluginIncompatible => '这个插件不支持当前的 JDK 版本。';
 
   @override
   String get statePluginInstallCancelled => '已取消安装';
@@ -17773,7 +17773,7 @@ class L10nZh extends L10n {
   String get statePluginNoChanges => '没有改动任何东西';
 
   @override
-  String get statePluginIncompatibleTitle => '和当前 DSH 不兼容';
+  String get statePluginIncompatibleTitle => '和当前 JDK 不兼容';
 
   @override
   String get statePluginNetworkFailed => '网络连不上';
@@ -17842,7 +17842,7 @@ class L10nZh extends L10n {
   String get statePluginUninstallFirst => '换版本需先卸载';
 
   @override
-  String get statePluginInvalid => '这不是 DSH 插件';
+  String get statePluginInvalid => '这不是 JDK 插件';
 
   @override
   String get statePluginNoEntry => '这个包没有插件入口，已撤销安装';
@@ -18253,12 +18253,12 @@ class L10nZh extends L10n {
 
   @override
   String statePluginRuntimeIncompatible(String version) {
-    return '这个插件不支持当前的 DSH 版本（$version）。';
+    return '这个插件不支持当前的 JDK 版本（$version）。';
   }
 
   @override
   String statePluginRequiredVersion(String wanted, String current) {
-    return '这个插件要求 DSH $wanted，当前是 $current。';
+    return '这个插件要求 JDK $wanted，当前是 $current。';
   }
 
   @override
@@ -18309,7 +18309,7 @@ class L10nZh extends L10n {
 
   @override
   String stateSafeRepairPrompt(String what) {
-    return '我的 DSH 正常模式出了问题（$what）。请按「安全模式」说明排查原因，先用可逆的办法修好 web 配置，修完用 dsh-app-plugins trial 试启动验证，再告诉我改了什么。';
+    return '我的 JDK 正常模式出了问题（$what）。请按「安全模式」说明排查原因，先用可逆的办法修好 web 配置，修完用 dsh-app-plugins trial 试启动验证，再告诉我改了什么。';
   }
 
   @override
@@ -18472,7 +18472,7 @@ class L10nZh extends L10n {
   String get updateSignatureMismatchMessage => '手机上的 JDK-Go 签名不同（多半是测试包），需要先卸载旧版再装新版。卸载会清空对话、Linux 环境和设置。';
 
   @override
-  String get updateWrongPackage => '不是 DSH 的安装包';
+  String get updateWrongPackage => '不是 JDK 的安装包';
 
   @override
   String get updateWrongPackageMessage => '下载到的文件不对，已删除，请稍后重试。';
@@ -18481,7 +18481,7 @@ class L10nZh extends L10n {
   String get updateDowngradeBlocked => '不能降级安装';
 
   @override
-  String get updateDowngradeBlockedMessage => '手机上的 DSH 比这个安装包还新。';
+  String get updateDowngradeBlockedMessage => '手机上的 JDK 比这个安装包还新。';
 
   @override
   String get updateIncompatible => '和这台手机不兼容';
@@ -19286,7 +19286,7 @@ class L10nZh extends L10n {
   String get viewTipFolderNewChat => '长按侧栏的文件夹，可以直接在里面开新对话';
 
   @override
-  String get viewTipSwitchHost => '点侧栏底部的主机名，可以切到电脑上的 DSH';
+  String get viewTipSwitchHost => '点侧栏底部的主机名，可以切到电脑上的 JDK';
 
   @override
   String get viewTipPasteImage => '输入法里的截图和贴图，可以直接贴进输入框';
@@ -19747,10 +19747,10 @@ class L10nZh extends L10n {
   String get viewShareProjectQr => '项目主页二维码';
 
   @override
-  String get viewShareBrandLine => '手机上的 DSH · 扫码获取';
+  String get viewShareBrandLine => '手机上的 JDK · 扫码获取';
 
   @override
-  String get viewShareBrandLineNoQr => '手机上的 DSH';
+  String get viewShareBrandLineNoQr => '手机上的 JDK';
 
   @override
   String viewShareSteps(int count) {
@@ -19792,7 +19792,7 @@ class L10nZh extends L10n {
 
   @override
   String viewSharePluginTitle(String value) {
-    return 'DSH 插件「$value」';
+    return 'JDK 插件「$value」';
   }
 
   @override
@@ -20411,13 +20411,13 @@ class L10nZh extends L10n {
   String get searchKwWallpaper => '背景,背景图,聊天背景,自定义背景,换背景,模糊,壁纸图片';
 
   @override
-  String get webTitle => 'DSH 网页版';
+  String get webTitle => 'JDK 网页版';
 
   @override
   String get webSshAppOnly => '经 SSH 隧道的地址只能在 App 内打开';
 
   @override
-  String get webRelayUnavailable => '经 DSH Remote 中转时打不开网页版，请在那台电脑上打开';
+  String get webRelayUnavailable => '经 JDK Remote 中转时打不开网页版，请在那台电脑上打开';
 
   @override
   String get webSshHost => 'SSH 主机';

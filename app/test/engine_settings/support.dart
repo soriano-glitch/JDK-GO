@@ -3,7 +3,7 @@
 // an optional home-patch overlay that locks the namespace), schema checks on
 // writes, revisions and stale-revision conflicts, the credential store, the
 // model catalog, the plugin inventory and the bundle list. The namespaces
-// start from a recorded DSH 0.2.1-rc.2 `settings/describe`.
+// start from a recorded JDK 0.2.1-rc.2 `settings/describe`.
 
 import 'dart:async';
 import 'dart:convert';
@@ -25,7 +25,7 @@ import '../shell/golden_harness.dart' show FakeSettings, goldenApp, loadGoldenFo
 
 Object? _fixture(String name) => jsonDecode(File('../packages/dsh_client/test/fixtures/$name').readAsStringSync());
 
-/// `settings/describe` of a throwaway DSH 0.2.1-rc.2 (fresh HOME; the
+/// `settings/describe` of a throwaway JDK 0.2.1-rc.2 (fresh HOME; the
 /// thinking-translation and plugin-market bundles on).
 Map<String, Object?> recordedDescribe() => _fixture('settings_describe.json')! as Map<String, Object?>;
 
@@ -34,7 +34,7 @@ Map<String, Object?> recordedInventory() => _fixture('plugin_inventory.json')! a
 
 /// The two official optional bundles that Host had on (`listBundles`,
 /// trimmed): what makes `cot-translation` and `plugin-market` plugins
-/// (PluginConfigScope), the rest of [recordedDescribe] being DSH's own.
+/// (PluginConfigScope), the rest of [recordedDescribe] being JDK's own.
 List<Object?> recordedBundles() => [
   for (final (name, rows) in [
     (

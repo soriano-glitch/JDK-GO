@@ -140,7 +140,7 @@ void main() {
     testWidgets('asks first; 本机 installs, with what it costs', (tester) async {
       var remote = 0;
       final (runtime, _) = await pump(tester, onRemote: () => remote++);
-      expect(find.text('DSH 在哪里运行？'), findsOneWidget);
+      expect(find.text('JDK 在哪里运行？'), findsOneWidget);
       expect(find.text('存储约 750 MB · 内存约 300 MB'), findsOneWidget);
       expect(find.text('推荐'), findsNothing);
       expect(tester.getSemantics(find.byKey(_local)), isSemantics(isSelected: true));
@@ -152,7 +152,7 @@ void main() {
       expect(runtime.calls, ['install']);
       expect(remote, 0);
       await tester.pump(const Duration(milliseconds: 600));
-      expect(find.text('DSH 在哪里运行？'), findsNothing);
+      expect(find.text('JDK 在哪里运行？'), findsNothing);
       expect(find.text('正在准备运行环境'), findsOneWidget);
     });
 
@@ -230,7 +230,7 @@ void main() {
 
     testWidgets('resume, upgrade and reset install at once', (tester) async {
       final (runtime, _) = await pump(tester, choose: false, onRemote: () {});
-      expect(find.text('DSH 在哪里运行？'), findsNothing);
+      expect(find.text('JDK 在哪里运行？'), findsNothing);
       expect(runtime.calls, ['install']);
     });
 
@@ -310,7 +310,7 @@ void main() {
 
     testWidgets('远程主机 → pick a host → home, nothing installed', (tester) async {
       final (runtime, container) = await pumpGate(tester);
-      expect(find.text('DSH 在哪里运行？'), findsOneWidget);
+      expect(find.text('JDK 在哪里运行？'), findsOneWidget);
       await chooseRemote(tester);
       expect(find.byType(RemoteScreen), findsOneWidget);
 
@@ -329,7 +329,7 @@ void main() {
       await tester.binding.handlePopRoute();
       await _frames(tester);
       expect(find.byType(RemoteScreen), findsNothing);
-      expect(find.text('DSH 在哪里运行？'), findsOneWidget);
+      expect(find.text('JDK 在哪里运行？'), findsOneWidget);
       expect(container.read(onboardingPrefsProvider).localDeclined, isFalse);
       expect(runtime.calls, isEmpty);
     });
@@ -381,7 +381,7 @@ void main() {
       runtime.emit(missingStatus);
       await _frames(tester);
       expect(find.byType(RuntimeSetupPage), findsOneWidget);
-      expect(find.text('DSH 在哪里运行？'), findsNothing);
+      expect(find.text('JDK 在哪里运行？'), findsNothing);
       expect(runtime.calls, ['install']);
     });
   });
@@ -575,7 +575,7 @@ void main() {
       await tester.tap(find.text('open'));
       await _frames(tester, 6);
       expect(find.text('未安装'), findsOneWidget);
-      await tester.tap(find.text('这台手机上的 DSH'));
+      await tester.tap(find.text('这台手机上的 JDK'));
       await _frames(tester, 8);
       expect(find.byType(HostSheet), findsNothing);
       expect(find.byType(LocalInstallPage), findsOneWidget);

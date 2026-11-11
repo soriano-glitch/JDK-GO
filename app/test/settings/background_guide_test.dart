@@ -26,7 +26,7 @@ class _VendorBridge extends _BatteryBridge {
   int opened = 0;
 
   @override
-  Future<BackgroundSettingsInfo?> backgroundSettings() async => BackgroundSettingsInfo(vendor: vendor, label: 'DSH');
+  Future<BackgroundSettingsInfo?> backgroundSettings() async => BackgroundSettingsInfo(vendor: vendor, label: 'JDK');
 
   @override
   Future<String?> openBackgroundSettings() async {
@@ -63,7 +63,7 @@ void main() {
     );
     await tester.pumpAndSettle();
     expect(find.text('vivo / iQOO'), findsOneWidget);
-    expect(find.text('电池 › 后台耗电管理 › DSH'), findsOneWidget);
+    expect(find.text('电池 › 后台耗电管理 › JDK'), findsOneWidget);
     expect(tester.getRect(find.text('允许后台高耗电')).top, lessThan(tester.getRect(find.text('系统电池优化')).top));
     expect(find.text('其他品牌'), findsOneWidget);
     expect(find.text(_makers.first), findsNothing);

@@ -71,7 +71,7 @@ void main() {
           children: [
             StatusDot(tone: StatusTone.ok, size: 7),
             SizedBox(width: 6),
-            Text('运行中 · DSH 0.2.1'),
+            Text('运行中 · JDK 0.2.1'),
           ],
         ),
         stats: const [('2 小时', '已运行'), ('34', '对话'), ('1.2 GB', '占用')],
@@ -160,7 +160,7 @@ void main() {
             EmptyView(
               icon: AppIcons.time,
               title: '还没有自动化任务',
-              message: '定时让 DSH 帮你跑一遍',
+              message: '定时让 JDK 帮你跑一遍',
               actionLabel: '新建',
               onAction: _noop,
             ),

@@ -1,5 +1,5 @@
 // The lineage, header facts and team roster derived from the host session
-// list (support.dart mirrors DSH 0.2.1-rc.2's `session/list`).
+// list (support.dart mirrors JDK 0.2.1-rc.2's `session/list`).
 
 import 'package:dsh_app/state/agents_state.dart';
 import 'package:dsh_app/state/connection_state.dart';

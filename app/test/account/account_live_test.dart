@@ -1,4 +1,4 @@
-// Live check of the account flow against a real `dsh web` (DSH 0.2.1-rc.2).
+// Live check of the account flow against a real `dsh web` (JDK 0.2.1-rc.2).
 // Skipped unless DSH_LIVE_LAUNCH_URL is set; plain `test`s (no widget binding),
 // so dart:io HTTP reaches the Host for real.
 //

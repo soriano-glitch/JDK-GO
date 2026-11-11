@@ -1,5 +1,5 @@
 // 「Cordis」: the native mirror of the official Cordis panel. Grouping and
-// states, the plugin sheet and its Remote calls, the DSH Web hand-off, and
+// states, the plugin sheet and its Remote calls, the JDK Web hand-off, and
 // goldens (light + dark). Regenerate the goldens with
 // `flutter test --update-goldens test/cordis`.
 

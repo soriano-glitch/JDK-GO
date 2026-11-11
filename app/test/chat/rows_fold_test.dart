@@ -2,7 +2,7 @@
 // a turn steered into while it ran (cut into pieces), several turns between
 // two user messages (auto-triggered, goal rounds, job callbacks), retries,
 // and the stopped / failed turns that stay open. Synthetic items with real
-// seqs, plus one transcript built from DSH log events (turn/start before the
+// seqs, plus one transcript built from JDK log events (turn/start before the
 // opening user/message, the steer inside the same turn).
 
 import 'dart:convert';
@@ -317,7 +317,7 @@ void main() {
     });
   });
 
-  group('from DSH log events', () {
+  group('from JDK log events', () {
     var seq = 0;
     final events = <Map<String, Object?>>[];
     void ev(String type, Map<String, Object?> data) => events.add({

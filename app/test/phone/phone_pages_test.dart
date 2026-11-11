@@ -307,7 +307,7 @@ void main() {
       }
 
       await pick('支付宝', '照常');
-      expect(find.text('让 DSH 操作「支付宝」？'), findsOneWidget);
+      expect(find.text('让 JDK 操作「支付宝」？'), findsOneWidget);
       expect(find.textContaining('冻结账号'), findsOneWidget);
       // Every time, in the danger colour: the cost lands outside the app.
       final notice = tester.widget<RiskNoticeSheet>(find.byType(RiskNoticeSheet)).notice;

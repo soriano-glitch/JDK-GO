@@ -6,7 +6,7 @@
 
 - [Chat](zh/01-chat.md): new chats, models, images and voice, steering and queueing, questions and approvals, message menu, chat list, hardware keyboard
 - [Models and providers](zh/02-models.md): switching models, thinking effort, custom providers, model settings, DeepSeek account and API key
-- [Engine and remote hosts](zh/03-engine-hosts.md): this phone or remote, starting and auto-start, reset, uninstall, switching hosts, SSH, DSH Remote
+- [Engine and remote hosts](zh/03-engine-hosts.md): this phone or remote, starting and auto-start, reset, uninstall, switching hosts, SSH, JDK Remote
 - [Phone control](zh/04-phone-control.md): turning it on, floating bar, stopping, confirmation, confirmations and return, app rules, lifting limits, non-disruptive mode
 - [Web mode](zh/05-web.md): switching interfaces, app features in Web, Web phone layout
 - [Pets](zh/06-pets.md): choosing a pet, bubbles, showing outside the app
@@ -21,7 +21,7 @@
 
 - [Chat](en/01-chat.md): new chats, models, images and voice, steering and queueing, questions and approvals, message menu, chat list, hardware keyboard
 - [Models and providers](en/02-models.md): switching models, thinking effort, custom providers, model settings, DeepSeek account and API key
-- [Engine and remote hosts](en/03-engine-hosts.md): this phone or remote, starting and auto-start, reset, uninstall, switching hosts, SSH, DSH Remote
+- [Engine and remote hosts](en/03-engine-hosts.md): this phone or remote, starting and auto-start, reset, uninstall, switching hosts, SSH, JDK Remote
 - [Phone control](en/04-phone-control.md): turning it on, floating bar, stopping, confirmation, confirmations and return, app rules, lifting limits, non-disruptive mode
 - [Web mode](en/05-web.md): switching interfaces, app features in Web, Web phone layout
 - [Pets](en/06-pets.md): choosing a pet, bubbles, showing outside the app

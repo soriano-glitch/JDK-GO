@@ -224,7 +224,7 @@ void main() {
     testWidgets('remote host: explains it only works on the local engine', (tester) async {
       await pumpPhone(tester, const PhoneControlScreen(), host: const HostRef.ssh('lab'));
       expect(find.text('当前连的是远程主机'), findsOneWidget);
-      expect(find.textContaining('「实验室服务器」上的 DSH 操作不了这台手机'), findsOneWidget);
+      expect(find.textContaining('「实验室服务器」上的 JDK 操作不了这台手机'), findsOneWidget);
       expect(find.text('只在本机引擎可用'), findsOneWidget);
     });
   });

@@ -1,4 +1,4 @@
-// Byte and message counter at the DshCarrier boundary of a DSH Remote
+// Byte and message counter at the DshCarrier boundary of a JDK Remote
 // client. Sizes are the JSON a `RemoteTunnelCarrier` hands to the secure
 // channel (before Noise + Relay framing, which add roughly a third plus a
 // fixed envelope per frame), counted the way the tunnel maps them:

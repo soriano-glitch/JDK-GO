@@ -1,5 +1,5 @@
 // The web pages in landscape and on tablets: where the app's controls sit,
-// where the page's content may go, and which layout DSH Web gets. Measured
+// where the page's content may go, and which layout JDK Web gets. Measured
 // on real window shapes from the emulator (a side punch-hole in landscape)
 // and a vivo phone (no bottom inset reported in landscape). The app hands
 // every page the cutout's inset on both sides (MirroredSideInsets), as the
@@ -107,7 +107,7 @@ Future<void> _pump(
 void main() {
   setUp(() => WebViewPlatform.instance = _platform = FakeWebViewPlatform());
 
-  group('DSH Web layout follows the official breakpoint', () {
+  group('JDK Web layout follows the official breakpoint', () {
     test('below 1024 the sidebar is a drawer, from 1024 up the official layout stays', () {
       for (final w in [_phonePortrait, _phoneLandscape, _vivoLandscape, _tablet600, _tablet840]) {
         expect(_resolve(w).chrome, WebChrome.inline, reason: '${w.size}');
@@ -122,7 +122,7 @@ void main() {
       );
     });
 
-    test('DSH Web as shipped: a seat in its own header on phones, the bar above', () {
+    test('JDK Web as shipped: a seat in its own header on phones, the bar above', () {
       // Below its own drawer breakpoint the official layout keeps a leading
       // seat in the header row: the handle takes the far left of it, with no
       // bar of its own.
@@ -132,17 +132,17 @@ void main() {
       expect(_resolve(_tablet840, adapt: false).chrome, WebChrome.bar);
       expect(_resolve(_phoneLandscape, adapt: false).chrome, WebChrome.bar);
       expect(_resolve(_tablet1280, adapt: false).chrome, WebChrome.bar);
-      // Other sites are not DSH Web: the bar as before.
+      // Other sites are not JDK Web: the bar as before.
       expect(_resolve(_phoneLandscape, dshWeb: false, adapt: false).chrome, WebChrome.bar);
     });
 
-    test("DSH Web as shipped on a phone: the handle takes the far left, the page's own opener moves past it", () {
+    test("JDK Web as shipped on a phone: the handle takes the far left, the page's own opener moves past it", () {
       final i = _resolve(_phonePortrait, adapt: false);
       // The page starts under the status bar: its drawer layout keeps the
       // leading room (11 down, 12 from the side) for the handle.
       expect((i.chrome, i.rootTop, i.left), (WebChrome.seat, 52, 0));
       expect(i.layerTop, 52 + WebChromeMetrics.seatTop + WebChromeMetrics.seatButton + 6);
-      // The official seat holds DSH Web's own sidebar opener: it moves past
+      // The official seat holds JDK Web's own sidebar opener: it moves past
       // the marker instead of under it (12 → 48), one row.
       expect(i.script, contains('[data-sidebar-drawer]>[data-shell-leading]{left:48.0px!important}'));
       // The reserve covers marker, gap, the official opener and the gap after
@@ -171,7 +171,7 @@ void main() {
       final i = _resolve(_vivoLandscape);
       expect(i.rootBottom, WebChromeMetrics.gestureFloor);
       expect(i.bottom, WebChromeMetrics.gestureFloor);
-      // A reported inset wins; the keyboard takes the place of both: DSH
+      // A reported inset wins; the keyboard takes the place of both: JDK
       // Web's root and its layers end at it (the WebView keeps its size).
       expect(_resolve(_phoneLandscape).bottom, 24);
       expect(_resolve(_vivoLandscape, keyboard: 200).layerBottom, 200);
@@ -242,12 +242,12 @@ void main() {
       expect(menu.size, back.size);
       expect(menu.left - back.right, 8);
       expect(menu.center.dy, back.center.dy);
-      // DSH Web runs edge to edge and pads its own root.
+      // JDK Web runs edge to edge and pads its own root.
       expect(tester.getRect(find.byKey(fakeWebViewKey)), Offset.zero & _phoneLandscape.size);
       expect(_platform.controller.insetsScript, contains('left:52.0px'));
     });
 
-    testWidgets('DSH Web as shipped on a phone: the app\'s mark sits left of the page\'s own opener', (tester) async {
+    testWidgets('JDK Web as shipped on a phone: the app\'s mark sits left of the page\'s own opener', (tester) async {
       await _pump(tester, _phonePortrait, phoneLayout: false);
       // Its own drawer layout keeps the leading room; no bar above the page.
       expect(find.byKey(const ValueKey('web-controls-seat')), findsOneWidget);
@@ -265,7 +265,7 @@ void main() {
       expect(back.top, 52 + WebChromeMetrics.seatTop);
       expect(back.size, const Size.square(WebChromeMetrics.seatButton));
       // The page's own opener, in its own seat, moves past the marker: the
-      // marker never covers it. Both sit in the one header row DSH Web lays
+      // marker never covers it. Both sit in the one header row JDK Web lays
       // out, and the title starts past both.
       expect(
         _platform.controller.insetsScript,
@@ -279,7 +279,7 @@ void main() {
       );
     });
 
-    testWidgets('DSH Web\'s sidebar as a drawer: the marker steps aside, not over it', (tester) async {
+    testWidgets('JDK Web\'s sidebar as a drawer: the marker steps aside, not over it', (tester) async {
       await _pump(tester, _phonePortrait, phoneLayout: false);
       final seat = find.byKey(const ValueKey('web-controls-seat'));
       AnimatedOpacity fade() =>
@@ -301,7 +301,7 @@ void main() {
       expect(touches().ignoring, isFalse);
     });
 
-    testWidgets("DSH Web's sidebar state reaches the app (dsh_web_sidebar.js)", (tester) async {
+    testWidgets("JDK Web's sidebar state reaches the app (dsh_web_sidebar.js)", (tester) async {
       await _pump(tester, _phonePortrait, phoneLayout: false);
       expect(_platform.controller.channels, contains('DshAppSidebar'));
       // The bridge loads from the asset bundle: real time, then frames.
@@ -445,7 +445,7 @@ void main() {
 
     int insetScripts() => _platform.controller.scripts.where((s) => s.contains('dsh-app-insets')).length;
 
-    testWidgets('DSH Web keeps its size; its root rises once per slide', (tester) async {
+    testWidgets('JDK Web keeps its size; its root rises once per slide', (tester) async {
       await _pump(tester, _phonePortrait);
       final controller = _platform.controller;
       final full = Offset.zero & _phonePortrait.size;
@@ -497,8 +497,8 @@ void main() {
   group('load error', () {
     for (final (name, window, dshWeb) in [
       ('other sites, landscape', _phoneLandscape, false),
-      ('DSH Web, landscape', _phoneLandscape, true),
-      ('DSH Web, tablet', _tablet1280, true),
+      ('JDK Web, landscape', _phoneLandscape, true),
+      ('JDK Web, tablet', _tablet1280, true),
     ]) {
       testWidgets('$name: the way back stays above the message', (tester) async {
         _useWindow(tester, window);

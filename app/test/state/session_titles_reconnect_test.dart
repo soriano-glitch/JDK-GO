@@ -7,7 +7,7 @@
 // what they answer belongs to a queue that's gone.
 //
 // Real DshClient HTTP and WebSocket transport against an owned loopback
-// imitation of the wire (not a DSH Host): plain test(), so no test binding
+// imitation of the wire (not a JDK Host): plain test(), so no test binding
 // fakes the sockets (flutter_test_config.dart installs none).
 import 'dart:convert';
 import 'dart:io';

@@ -97,7 +97,7 @@ class _RemoteNetworkDetailsSheetState extends ConsumerState<RemoteNetworkDetails
             SheetGroup(
               children: [
                 _NetworkValue(label: l10n.remoteHost, value: name),
-                _NetworkValue(label: l10n.hostDetailsConnectionType, value: relay ? 'DSH Remote' : 'SSH'),
+                _NetworkValue(label: l10n.hostDetailsConnectionType, value: relay ? 'JDK Remote' : 'SSH'),
                 _NetworkValue(label: l10n.commonStatus, value: status.summary),
                 _NetworkValue(
                   label: l10n.remoteNetworkCurrentPath,

@@ -16,7 +16,7 @@ import '../plugins/support/fake_plugin_host.dart';
 import '../remote/support/wait.dart';
 
 /// The main profile once an older app saved Auto as the default for new chats
-/// (DSH's settings forms write it this way).
+/// (JDK's settings forms write it this way).
 const _poisoned = '''
 # Your patch layer for this dsh profile, applied after every bundle layer:
 - id: model
@@ -29,7 +29,7 @@ const _poisoned = '''
 ''';
 
 /// The on-device engine: it reads the profile when it starts, and an Auto
-/// default fails its permission presets (DSH 0.2.1 `PermissionPresetService`).
+/// default fails its permission presets (JDK 0.2.1 `PermissionPresetService`).
 class _Engine extends LocalRuntimeController {
   _Engine(this.patch);
 

@@ -563,7 +563,7 @@ class _SshHostFormPageState extends ConsumerState<SshHostFormPage> {
               ],
             ),
             SettingsSection(
-              title: 'DSH',
+              title: 'JDK',
               footer: Text.rich(
                 TextSpan(
                   children: [

@@ -1,4 +1,4 @@
-// The seats' pure parts: where an occupant lands in DSH Web, the names an island
+// The seats' pure parts: where an occupant lands in JDK Web, the names an island
 // looks for, what a row calls an occupant, and the route-guard report the
 // islands' security gate reads from the inventory.
 

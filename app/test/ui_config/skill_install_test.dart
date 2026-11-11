@@ -65,7 +65,7 @@ void main() {
     expect(File('${skillDir(root).path}/schema.json').readAsStringSync(), '{}');
   });
 
-  test('no DSH home yet: nothing is written', () async {
+  test('no JDK home yet: nothing is written', () async {
     root.deleteSync(recursive: true);
     root = tempRootfs(withHome: false);
     expect(await installUiSkill(root, bundle), UiSkillInstallResult.noHome);

@@ -256,14 +256,14 @@ void main() {
 
     test('the dsh-go welcome topic (captured from the live forum)', () {
       const cooked =
-          '<p>dsh-go 是在 Android 手机上运行 DeepSeek Harness（DSH）的客户端。</p>\n<div class="md-table">\n<table>\n'
+          '<p>dsh-go 是在 Android 手机上运行 DeepSeek Harness（JDK）的客户端。</p>\n<div class="md-table">\n<table>\n'
           '<thead>\n<tr>\n<th>分类</th>\n<th>发什么</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><a href="/c/plugins">插件</a></td>\n'
           '<td>插件发布、推荐与评测</td>\n</tr>\n</tbody>\n</table>\n</div><p><strong>提问前</strong>先搜一下。</p>\n'
           '<p>请友善交流，详见<a href="/guidelines">社区准则</a>。</p>';
       final md = (parseCooked(cooked, base: Uri.parse('https://forum.example')).single as CookedMarkdown).markdown;
       expect(
         md,
-        'dsh-go 是在 Android 手机上运行 DeepSeek Harness（DSH）的客户端。\n\n'
+        'dsh-go 是在 Android 手机上运行 DeepSeek Harness（JDK）的客户端。\n\n'
         '| 分类 | 发什么 |\n| --- | --- |\n| [插件](https://forum.example/c/plugins) | 插件发布、推荐与评测 |\n\n'
         '**提问前**先搜一下。\n\n请友善交流，详见[社区准则](https://forum.example/guidelines)。',
       );

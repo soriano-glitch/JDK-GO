@@ -78,7 +78,7 @@ void main() {
         ),
       );
       expect(find.byType(QrCodeView), findsNothing);
-      expect(find.text('手机上的 DSH'), findsOneWidget);
+      expect(find.text('手机上的 JDK'), findsOneWidget);
       await expectLater(find.byKey(_cardKey), matchesGoldenFile('goldens/card_plugin_link_${template.name}.png'));
     });
   }
@@ -182,7 +182,7 @@ void main() {
       ),
       overrides: [attachmentsFrom(p)],
     );
-    for (final word in ['无法显示', '找不到图片', '未连接 DSH', '轻点重试']) {
+    for (final word in ['无法显示', '找不到图片', '未连接 JDK', '轻点重试']) {
       expect(find.textContaining(word), findsNothing);
     }
     await expectLater(find.byKey(_cardKey), matchesGoldenFile('goldens/card_images_missing_paper.png'));

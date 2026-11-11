@@ -65,7 +65,7 @@ void main() {
       }
       final host = map('HARNESS_VERSION_INCOMPATIBLE', retryable: true);
       expect(host.retryable, isFalse);
-      expect(host.message, '主机上的 DSH 或远程插件需要更新');
+      expect(host.message, '主机上的 JDK 或远程插件需要更新');
     });
 
     test('a retryable malformed frame (a reconnect race) reads as a connection problem', () {

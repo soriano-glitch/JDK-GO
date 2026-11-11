@@ -1,6 +1,6 @@
 // Which entries the plugin settings page offers, on what a real Host lists
 // (docs/design/plugin-config.md §7). The fixtures come from one r13 runtime
-// (DSH 0.2.1-rc.4 + dsh-go-bridge 0.4.0) launched like the App launches it —
+// (JDK 0.2.1-rc.4 + dsh-go-bridge 0.4.0) launched like the App launches it —
 // its own overlay, voice, sign-in, message search and phone control —
 // after the person switched on the official voice-input kit and installed a
 // local plugin (`local-notes`):
@@ -10,7 +10,7 @@
 //                                      (`meta.icon` data URLs cut to "<icon>",
 //                                      the local plugin's source path shortened)
 //
-// 202 entries, 84 configurable: 79 of them DSH's own core rows, one the
+// 202 entries, 84 configurable: 79 of them JDK's own core rows, one the
 // App's phone control, four the person's plugins. The old namespace
 // blacklist let 58 core entries through, writable.
 

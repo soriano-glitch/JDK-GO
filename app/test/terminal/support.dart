@@ -1,6 +1,6 @@
 // A scripted terminal Host for the terminal page tests: real
 // TerminalAttachment protocol handling over in-memory pipes, frames shaped like
-// DSH 0.2.1-rc.2's (recorded from a throwaway `dsh web`).
+// JDK 0.2.1-rc.2's (recorded from a throwaway `dsh web`).
 
 import 'dart:async';
 

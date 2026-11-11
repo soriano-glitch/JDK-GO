@@ -13,7 +13,7 @@ void main() {
     test('version, notes, page, date', () {
       expect(release.version.name, '1.2.0');
       expect(release.tag, 'v1.2.0');
-      expect(release.title, 'DSH 1.2.0');
+      expect(release.title, 'JDK 1.2.0');
       expect(release.notes, startsWith('## 新功能\n\n- 应用内更新'));
       expect(release.notes, isNot(contains('\r')));
       expect(release.publishedAt, DateTime.utc(2026, 11, 1, 8));

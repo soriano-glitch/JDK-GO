@@ -225,7 +225,7 @@ class L10nEn extends L10n {
 
   @override
   String get accessRestrictedTap =>
-      'In Accessibility, tap “DSH Phone Control”; when “Restricted setting” appears, tap OK';
+      'In Accessibility, tap “JDK Phone Control”; when “Restricted setting” appears, tap OK';
 
   @override
   String get accessRestrictedMenu =>
@@ -236,7 +236,7 @@ class L10nEn extends L10n {
       'In App info, open “Advanced settings” and turn on “Allow restricted settings”';
 
   @override
-  String get accessRestrictedBack => 'Back in Accessibility, turn on “DSH Phone Control”';
+  String get accessRestrictedBack => 'Back in Accessibility, turn on “JDK Phone Control”';
 
   @override
   String get accessRestrictedHelp => 'See how';
@@ -2985,7 +2985,7 @@ class L10nEn extends L10n {
   String get botsPetCodexFps => 'Frame rates were rounded to whole milliseconds';
 
   @override
-  String get botsPetCodexOneShot => 'Where a play-once motion returns to is decided by DSH';
+  String get botsPetCodexOneShot => 'Where a play-once motion returns to is decided by JDK';
 
   @override
   String get botsPetCodexMissingAuthor => 'The pack names no author';
@@ -3327,10 +3327,10 @@ class L10nEn extends L10n {
   String get botsMobileUnsupportedTitle => 'DS Bot isn\'t on mobile yet';
 
   @override
-  String get botsMobileApiRequired => 'Use it in DSH Web for now';
+  String get botsMobileApiRequired => 'Use it in JDK Web for now';
 
   @override
-  String get botsMobileApiMissing => 'Not on mobile yet. Use it in DSH Web for now';
+  String get botsMobileApiMissing => 'Not on mobile yet. Use it in JDK Web for now';
 
   @override
   String get botsCreationConnectionChanged => 'The connection changed. Reopen this form to create on the current host.';
@@ -3597,7 +3597,7 @@ class L10nEn extends L10n {
   String get catalogDiagnosticsSummary => 'Export diagnostics bundle';
 
   @override
-  String get catalogWebSummary => 'Official DSH interface';
+  String get catalogWebSummary => 'Official JDK interface';
 
   @override
   String get catalogPluginPanel => 'Plugin panel';
@@ -3609,7 +3609,7 @@ class L10nEn extends L10n {
   String get catalogAllFeatures => 'All features';
 
   @override
-  String get catalogAllFeaturesSubtitle => 'DSH Web features, all here';
+  String get catalogAllFeaturesSubtitle => 'JDK Web features, all here';
 
   @override
   String get catalogOpenChatFirst => 'Open a chat first';
@@ -3913,7 +3913,7 @@ class L10nEn extends L10n {
   String get chatGeneratingSteerHint => 'Generating · Type to steer';
 
   @override
-  String get chatComposerHint => 'Message DSH…';
+  String get chatComposerHint => 'Message JDK…';
 
   @override
   String get chatStopGenerating => 'Stop generating';
@@ -4114,7 +4114,7 @@ class L10nEn extends L10n {
   String get chatImageNotFound => 'Image not found';
 
   @override
-  String get chatImageOffline => 'Not connected to DSH';
+  String get chatImageOffline => 'Not connected to JDK';
 
   @override
   String get chatImageTooLarge => 'Image too large';
@@ -4955,7 +4955,7 @@ class L10nEn extends L10n {
   String get commonOpenWith => 'Open in another app';
 
   @override
-  String get commonOpenInWeb => 'Open in DSH Web';
+  String get commonOpenInWeb => 'Open in JDK Web';
 
   @override
   String get commonUntitledChat => 'Untitled chat';
@@ -5353,7 +5353,7 @@ class L10nEn extends L10n {
 
   @override
   String get companionMemoryUnsupportedHint =>
-      'It isn\'t available over the DSH Remote relay, or this host\'s dsh-go bridge is older.';
+      'It isn\'t available over the JDK Remote relay, or this host\'s dsh-go bridge is older.';
 
   @override
   String get companionMemoryLoadFailed => 'Couldn\'t load';
@@ -5419,7 +5419,7 @@ class L10nEn extends L10n {
   String get companionModeFull => 'Full';
 
   @override
-  String get companionModeFullHint => 'DSH on the host, with tools and phone control';
+  String get companionModeFullHint => 'JDK on the host, with tools and phone control';
 
   @override
   String get companionLightNoKey => 'Light mode needs a DeepSeek API key. Add one in Settings and we can talk.';
@@ -6196,7 +6196,7 @@ class L10nEn extends L10n {
   String get engineAccountUsageFact => 'Usage is charged to your account balance';
 
   @override
-  String get engineAccountBrowserFact => 'Sign in with your browser. DSH never sees your password';
+  String get engineAccountBrowserFact => 'Sign in with your browser. JDK never sees your password';
 
   @override
   String get engineAccountCredentialsFact => 'Sign-in credentials stay on this phone';
@@ -6286,7 +6286,7 @@ class L10nEn extends L10n {
   String get engineGeneralMissing => 'This host has no general settings';
 
   @override
-  String get engineSettingsVersionRequired => 'Requires DSH 0.2.1 or later';
+  String get engineSettingsVersionRequired => 'Requires JDK 0.2.1 or later';
 
   @override
   String get engineGeneralWebDisplay => 'Web display';
@@ -6713,7 +6713,7 @@ class L10nEn extends L10n {
   String get engineProviderNoModels => 'No models yet';
 
   @override
-  String get engineProviderWebConfigured => 'Configured in DSH Web. You can view or delete it here';
+  String get engineProviderWebConfigured => 'Configured in JDK Web. You can view or delete it here';
 
   @override
   String get engineProviderDelete => 'Delete provider';
@@ -7222,7 +7222,7 @@ class L10nEn extends L10n {
   String get featuresCordisUnavailable => 'Cordis isn’t available here';
 
   @override
-  String get featuresCordisRemoteUnavailable => 'Unavailable over DSH Remote';
+  String get featuresCordisRemoteUnavailable => 'Unavailable over JDK Remote';
 
   @override
   String get featuresCordisReadFailed => 'Couldn’t load plugins';
@@ -7387,7 +7387,7 @@ class L10nEn extends L10n {
   String get featuresPresetMinimalDescription => 'Terminal and image viewing only, for testing and comparison';
 
   @override
-  String get featuresPresetCreatorDescription => 'Have the agent write plugins to customize DSH';
+  String get featuresPresetCreatorDescription => 'Have the agent write plugins to customize JDK';
 
   @override
   String featuresHostUnreachable(String name) {
@@ -7442,7 +7442,7 @@ class L10nEn extends L10n {
   }
 
   @override
-  String get featuresJobOutputSubject => 'DSH job output';
+  String get featuresJobOutputSubject => 'JDK job output';
 
   @override
   String get featuresJobOutputReadFailed => 'Couldn’t read output';
@@ -8321,7 +8321,7 @@ class L10nEn extends L10n {
 
   @override
   String get featuresExportRemoteHint =>
-      'Logs aren’t available over DSH Remote. Export them from DSH Web on your computer.';
+      'Logs aren’t available over JDK Remote. Export them from JDK Web on your computer.';
 
   @override
   String get featuresExportShareHint => 'Attach to feedback or send to yourself';
@@ -8734,7 +8734,7 @@ class L10nEn extends L10n {
   String get hubSettingsWebPhoneLayout => 'Web phone layout';
 
   @override
-  String get hubSettingsWebPhoneLayoutHint => 'Adapt DSH Web to phone screens';
+  String get hubSettingsWebPhoneLayoutHint => 'Adapt JDK Web to phone screens';
 
   @override
   String get hubSettingsEngineExtensions => 'Engine and extensions';
@@ -8806,7 +8806,7 @@ class L10nEn extends L10n {
   String get hubPluginInstalledVersion => 'Installed version';
 
   @override
-  String get hubPluginRequiresDsh => 'Requires DSH';
+  String get hubPluginRequiresDsh => 'Requires JDK';
 
   @override
   String get hubPluginPackageName => 'Package name';
@@ -8842,7 +8842,7 @@ class L10nEn extends L10n {
   String get hubPluginRetryInstall => 'Retry install';
 
   @override
-  String get hubPluginOfficial => 'Official DSH';
+  String get hubPluginOfficial => 'Official JDK';
 
   @override
   String get hubPluginNotLoaded => 'Couldn’t load';
@@ -9043,7 +9043,7 @@ class L10nEn extends L10n {
   String get hubInterfaceHome => 'Home';
 
   @override
-  String get hubInterfaceWebHint => 'DSH\'s own web app';
+  String get hubInterfaceWebHint => 'JDK\'s own web app';
 
   @override
   String get hubInterfaceOpenWeb => 'Open the web app';
@@ -9321,16 +9321,16 @@ class L10nEn extends L10n {
   String get liveChipFailed => 'Failed';
 
   @override
-  String get livePublicRunning => 'DSH is working';
+  String get livePublicRunning => 'JDK is working';
 
   @override
-  String get livePublicWaiting => 'DSH is waiting for you';
+  String get livePublicWaiting => 'JDK is waiting for you';
 
   @override
-  String get livePublicDone => 'DSH is done';
+  String get livePublicDone => 'JDK is done';
 
   @override
-  String get livePublicFailed => 'DSH ran into an error';
+  String get livePublicFailed => 'JDK ran into an error';
 
   @override
   String get liveSettingsTitle => 'Live activity';
@@ -9340,7 +9340,7 @@ class L10nEn extends L10n {
 
   @override
   String get liveSettingsSubtitle =>
-      'While DSH works, waits on you or controls the phone: in the status bar chip and on the lock screen, and in the island on phones that have one';
+      'While JDK works, waits on you or controls the phone: in the status bar chip and on the lock screen, and in the island on phones that have one';
 
   @override
   String get liveSettingsFooter =>
@@ -9369,7 +9369,7 @@ class L10nEn extends L10n {
   String get localeEn => 'English';
 
   @override
-  String get localEnvChooseTitle => 'Where should DSH run?';
+  String get localEnvChooseTitle => 'Where should JDK run?';
 
   @override
   String get localEnvChooseMessage => 'You can change this later in Settings';
@@ -9390,7 +9390,7 @@ class L10nEn extends L10n {
   }
 
   @override
-  String get localEnvRemoteDetail => 'Use DSH on your computer or server';
+  String get localEnvRemoteDetail => 'Use JDK on your computer or server';
 
   @override
   String get localEnvRecommended => 'Recommended';
@@ -9399,7 +9399,7 @@ class L10nEn extends L10n {
   String get localEnvInstallTitle => 'Install on this phone';
 
   @override
-  String get localEnvInstallMessage => 'Run DSH right on this phone';
+  String get localEnvInstallMessage => 'Run JDK right on this phone';
 
   @override
   String localEnvFactStorage(int storage) {
@@ -9440,7 +9440,7 @@ class L10nEn extends L10n {
   String get localEnvPhoneNeedsRuntime => 'Available after installing on this phone';
 
   @override
-  String get localEnvSignInNeedsRuntime => 'Needs DSH on this phone';
+  String get localEnvSignInNeedsRuntime => 'Needs JDK on this phone';
 
   @override
   String get localEnvSignInInstallFirst => 'Install it to sign in';
@@ -10484,7 +10484,7 @@ class L10nEn extends L10n {
   String get phoneLogEmpty => 'No logs yet';
 
   @override
-  String get phoneLogShareTitle => 'DSH engine logs';
+  String get phoneLogShareTitle => 'JDK engine logs';
 
   @override
   String get phoneLogCopyAll => 'Copy all';
@@ -10574,7 +10574,7 @@ class L10nEn extends L10n {
   String get phoneActionLogEmpty => 'No actions yet';
 
   @override
-  String get phoneActionLogEmptyHint => 'Every step DSH takes on your phone appears here';
+  String get phoneActionLogEmptyHint => 'Every step JDK takes on your phone appears here';
 
   @override
   String get phoneAppRuleDeny => 'Hands off';
@@ -10816,7 +10816,7 @@ class L10nEn extends L10n {
       'Turn on “Wireless debugging” in Developer options while connected to Wi-Fi. Developer options is usually in “System” or “Additional settings”.';
 
   @override
-  String get phoneDndStartPairingStep => 'Return here and tap “Start pairing”. DSH sends a notification.';
+  String get phoneDndStartPairingStep => 'Return here and tap “Start pairing”. JDK sends a notification.';
 
   @override
   String get phoneDndGetPairingCodeStep =>
@@ -10824,7 +10824,7 @@ class L10nEn extends L10n {
 
   @override
   String get phoneDndEnterPairingCodeStep =>
-      'Pull down notifications and enter the code in DSH’s notification. Once paired, tap “Connect”.';
+      'Pull down notifications and enter the code in JDK’s notification. Once paired, tap “Connect”.';
 
   @override
   String get phoneDndStartPairing => 'Start pairing';
@@ -10903,7 +10903,7 @@ class L10nEn extends L10n {
   String get phoneDisabled => 'Off';
 
   @override
-  String get phoneOpenAccessibilityFailed => 'Can’t open settings. Find DSH in Settings → Accessibility.';
+  String get phoneOpenAccessibilityFailed => 'Can’t open settings. Find JDK in Settings → Accessibility.';
 
   @override
   String get phoneOpenAppInfoFailed => 'Can’t open app info. Find JDK-Go in Settings → Apps.';
@@ -11007,7 +11007,7 @@ class L10nEn extends L10n {
   String get phoneControlReadScreen => 'Read current screen';
 
   @override
-  String get phoneControlReadScreenHint => 'See what DSH reads, without sending it to the model';
+  String get phoneControlReadScreenHint => 'See what JDK reads, without sending it to the model';
 
   @override
   String get phoneControlEnableAccessibilityFirst => 'Turn on the accessibility service first';
@@ -11099,7 +11099,7 @@ class L10nEn extends L10n {
 
   @override
   String get phoneDisclosureIntro =>
-      'DSH reads the screen and taps like you do to get things done. Before turning it on, here’s what to know:';
+      'JDK reads the screen and taps like you do to get things done. Before turning it on, here’s what to know:';
 
   @override
   String get phoneDisclosureRestartNote => 'The engine will restart, interrupting any reply in progress';
@@ -11136,7 +11136,7 @@ class L10nEn extends L10n {
 
   @override
   String get phoneRestrictedTryAccessibility =>
-      'First try turning on DSH in “Accessibility”. When “Restricted setting” appears, tap “OK”. The option below appears only after this step.';
+      'First try turning on JDK in “Accessibility”. When “Restricted setting” appears, tap “OK”. The option below appears only after this step.';
 
   @override
   String get phoneRestrictedOpenInfoStep => 'Return here and tap “Open app info”.';
@@ -11161,7 +11161,7 @@ class L10nEn extends L10n {
 
   @override
   String get phoneRestrictedHuaweiAccessibility =>
-      'HarmonyOS 4 and earlier usually skip this step. Turn on DSH directly in “Accessibility”.';
+      'HarmonyOS 4 and earlier usually skip this step. Turn on JDK directly in “Accessibility”.';
 
   @override
   String get phoneRestrictedVivoNote =>
@@ -11172,7 +11172,7 @@ class L10nEn extends L10n {
 
   @override
   String get phoneRestrictedOppoNote =>
-      'ColorOS may hide this option. Use the built-in Files app to find DSH’s installer and install over the existing app (no need to uninstall; chats and settings stay). Then turn on accessibility.';
+      'ColorOS may hide this option. Use the built-in Files app to find JDK’s installer and install over the existing app (no need to uninstall; chats and settings stay). Then turn on accessibility.';
 
   @override
   String get phoneRestrictedHuaweiNote =>
@@ -11281,13 +11281,13 @@ class L10nEn extends L10n {
   String get phoneFailureNoSpaceHint => 'Free up some space and try again';
 
   @override
-  String get phoneFailureStartup => 'DSH couldn’t start';
+  String get phoneFailureStartup => 'JDK couldn’t start';
 
   @override
-  String get phoneFailureCrashedEarly => 'DSH crashed soon after starting';
+  String get phoneFailureCrashedEarly => 'JDK crashed soon after starting';
 
   @override
-  String get phoneFailureCrashedLate => 'DSH crashed while running';
+  String get phoneFailureCrashedLate => 'JDK crashed while running';
 
   @override
   String get phoneFailureFatal => 'The engine reported a fatal error';
@@ -11350,7 +11350,7 @@ class L10nEn extends L10n {
       'The configuration operation finished, but the engine has not stopped or restarted. Wait for it to stop before starting it again.';
 
   @override
-  String get phoneSafeRestoreIntro => 'DSH will restore the last working configuration:';
+  String get phoneSafeRestoreIntro => 'JDK will restore the last working configuration:';
 
   @override
   String get phoneSafeRestoreSettings => '• Restore settings to that version (save current settings as a backup)';
@@ -11482,7 +11482,7 @@ class L10nEn extends L10n {
 
   @override
   String phoneAppRulesLoosenTitle(String app) {
-    return 'Let DSH operate “$app”?';
+    return 'Let JDK operate “$app”?';
   }
 
   @override
@@ -11558,7 +11558,7 @@ class L10nEn extends L10n {
 
   @override
   String phoneControlRemoteHint(String host) {
-    return 'DSH on “$host” can’t control this phone. Switch to “This phone” to use it.';
+    return 'JDK on “$host” can’t control this phone. Switch to “This phone” to use it.';
   }
 
   @override
@@ -11583,7 +11583,7 @@ class L10nEn extends L10n {
 
   @override
   String phoneSafeRestoreAt(String when) {
-    return 'DSH will restore the working configuration from $when:';
+    return 'JDK will restore the working configuration from $when:';
   }
 
   @override
@@ -11629,7 +11629,7 @@ class L10nEn extends L10n {
 
   @override
   String get phoneAppRulesLoosenBody =>
-      'Banking and payment apps detect automation and may restrict sign-in or freeze your account. By default, DSH won’t enter passwords or pay.';
+      'Banking and payment apps detect automation and may restrict sign-in or freeze your account. By default, JDK won’t enter passwords or pay.';
 
   @override
   String get phoneAppRulesSkipStepsBody =>
@@ -12429,7 +12429,7 @@ class L10nEn extends L10n {
   String get phoneSkillUnavailable => 'Skill drafts are unavailable. Check the local engine state and try again.';
 
   @override
-  String get phoneModeTitle => 'How DSH confirms';
+  String get phoneModeTitle => 'How JDK confirms';
 
   @override
   String get phoneModeMessage => 'You can change this in Settings anytime';
@@ -13116,7 +13116,7 @@ class L10nEn extends L10n {
   String get pluginsReadingPlugins => 'Reading plugins…';
 
   @override
-  String get pluginsDshOfficial => 'DSH official';
+  String get pluginsDshOfficial => 'JDK official';
 
   @override
   String get pluginsOfficialToggleOnly =>
@@ -13129,7 +13129,7 @@ class L10nEn extends L10n {
   String get pluginsNoThirdParty => 'No third-party plugins yet';
 
   @override
-  String get pluginsPluginsDescription => 'Add tools, memory, and models to DSH';
+  String get pluginsPluginsDescription => 'Add tools, memory, and models to JDK';
 
   @override
   String get pluginsBrowseMarket => 'Browse plugins';
@@ -13201,7 +13201,7 @@ class L10nEn extends L10n {
 
   @override
   String pluginsInstalledRemoteRestart(String name, String host) {
-    return 'Installed “$name”. Restart DSH on $host to apply.';
+    return 'Installed “$name”. Restart JDK on $host to apply.';
   }
 
   @override
@@ -13236,7 +13236,7 @@ class L10nEn extends L10n {
 
   @override
   String pluginsBuildScriptWarning(String host) {
-    return 'Scripts run with DSH’s permissions on $host and can read and write files and access the internet. Only allow this if you trust the plugin.';
+    return 'Scripts run with JDK’s permissions on $host and can read and write files and access the internet. Only allow this if you trust the plugin.';
   }
 
   @override
@@ -13281,7 +13281,7 @@ class L10nEn extends L10n {
   String get pluginsThatComputer => 'That computer';
 
   @override
-  String get pluginsCommandAfterInstall => 'After installing, restart DSH on that computer, then refresh here';
+  String get pluginsCommandAfterInstall => 'After installing, restart JDK on that computer, then refresh here';
 
   @override
   String get pluginsError => 'Error';
@@ -13393,14 +13393,14 @@ class L10nEn extends L10n {
   String get pluginsMissingFiles => 'Plugin files are missing. Reinstall to fix.';
 
   @override
-  String get pluginsNotDshPlugin => 'Not a DSH plugin, can’t load';
+  String get pluginsNotDshPlugin => 'Not a JDK plugin, can’t load';
 
   @override
-  String get pluginsIncompatible => 'Incompatible with this DSH version, not loaded';
+  String get pluginsIncompatible => 'Incompatible with this JDK version, not loaded';
 
   @override
   String pluginsRequiresDshVersion(String requiredVersion, String currentVersion) {
-    return 'Requires DSH $requiredVersion, currently $currentVersion, not loaded';
+    return 'Requires JDK $requiredVersion, currently $currentVersion, not loaded';
   }
 
   @override
@@ -13876,7 +13876,7 @@ class L10nEn extends L10n {
 
   @override
   String pluginsRemoteRestartToApply(String host) {
-    return 'Restart DSH on $host to apply';
+    return 'Restart JDK on $host to apply';
   }
 
   @override
@@ -14009,7 +14009,7 @@ class L10nEn extends L10n {
 
   @override
   String pluginsUninstalledRestartRemote(String title, String host) {
-    return 'Uninstalled “$title”. Restart DSH on $host to finish removing it.';
+    return 'Uninstalled “$title”. Restart JDK on $host to finish removing it.';
   }
 
   @override
@@ -14023,7 +14023,7 @@ class L10nEn extends L10n {
 
   @override
   String pluginsEnabledRestartRemote(String host) {
-    return 'Enabled. Restart DSH on $host to apply.';
+    return 'Enabled. Restart JDK on $host to apply.';
   }
 
   @override
@@ -14031,29 +14031,29 @@ class L10nEn extends L10n {
 
   @override
   String pluginsDisabledRestartRemote(String host) {
-    return 'Disabled. Restart DSH on $host to apply.';
+    return 'Disabled. Restart JDK on $host to apply.';
   }
 
   @override
   String pluginsRelayCommandInstruction(String host) {
-    return 'DSH Remote only supports turning plugins on or off. Run this in a terminal on $host:';
+    return 'JDK Remote only supports turning plugins on or off. Run this in a terminal on $host:';
   }
 
   @override
   String get pluginsPermissionLocalThirdParty =>
-      'Plugins run with DSH’s permissions: they can read and write files, run commands, and read API keys and phone storage you’ve granted access to. They aren’t restricted by the workspace sandbox. Provided by a third party and not reviewed by DSH.';
+      'Plugins run with JDK’s permissions: they can read and write files, run commands, and read API keys and phone storage you’ve granted access to. They aren’t restricted by the workspace sandbox. Provided by a third party and not reviewed by DSH.';
 
   @override
   String get pluginsPermissionLocalTrusted =>
-      'Plugins run with DSH’s permissions: they can read and write files, run commands, and read API keys and phone storage you’ve granted access to. They aren’t restricted by the workspace sandbox. Only install plugins you trust.';
+      'Plugins run with JDK’s permissions: they can read and write files, run commands, and read API keys and phone storage you’ve granted access to. They aren’t restricted by the workspace sandbox. Only install plugins you trust.';
 
   @override
   String get pluginsPermissionRemoteThirdParty =>
-      'Plugins run with DSH’s permissions: they can read and write files, run commands, and read API keys. They aren’t restricted by the workspace sandbox. Provided by a third party and not reviewed by DSH.';
+      'Plugins run with JDK’s permissions: they can read and write files, run commands, and read API keys. They aren’t restricted by the workspace sandbox. Provided by a third party and not reviewed by DSH.';
 
   @override
   String get pluginsPermissionRemoteTrusted =>
-      'Plugins run with DSH’s permissions: they can read and write files, run commands, and read API keys. They aren’t restricted by the workspace sandbox. Only install plugins you trust.';
+      'Plugins run with JDK’s permissions: they can read and write files, run commands, and read API keys. They aren’t restricted by the workspace sandbox. Only install plugins you trust.';
 
   @override
   String pluginsSelectedQrCount(int count) {
@@ -14394,7 +14394,7 @@ class L10nEn extends L10n {
   String get plugslotsPickerFailed => 'Could not share the files with this plugin. Try again';
 
   @override
-  String get plugslotsWebPlacesTitle => 'In DSH Web';
+  String get plugslotsWebPlacesTitle => 'In JDK Web';
 
   @override
   String get plugslotsPlaceBesideComposer => 'Beside the composer';
@@ -14619,7 +14619,7 @@ class L10nEn extends L10n {
   String get remoteStepVerifyHostKey => 'Verify host fingerprint';
 
   @override
-  String get remoteStepStartDsh => 'Start DSH';
+  String get remoteStepStartDsh => 'Start JDK';
 
   @override
   String get remoteStepTunnel => 'Create tunnel';
@@ -14655,11 +14655,11 @@ class L10nEn extends L10n {
 
   @override
   String remoteErrHostRemoved(String name) {
-    return '$name is no longer in your DSH Remote account';
+    return '$name is no longer in your JDK Remote account';
   }
 
   @override
-  String get remoteErrRelaySignInExpired => 'DSH Remote sign-in expired';
+  String get remoteErrRelaySignInExpired => 'JDK Remote sign-in expired';
 
   @override
   String get remoteErrIdentityKeyChanged => 'Host identity key has changed';
@@ -14674,13 +14674,13 @@ class L10nEn extends L10n {
   String get remoteErrHostRejected => 'Host declined the connection';
 
   @override
-  String get remoteErrHostNotOwned => 'Host isn’t in your DSH Remote account';
+  String get remoteErrHostNotOwned => 'Host isn’t in your JDK Remote account';
 
   @override
   String get remoteErrUpdateNeeded => 'Version mismatch. Update JDK-Go and the host’s remote plugin';
 
   @override
-  String get remoteErrVersionIncompatible => 'Update DSH or the remote plugin on the host';
+  String get remoteErrVersionIncompatible => 'Update JDK or the remote plugin on the host';
 
   @override
   String get remoteErrSignInTimeout => 'Sign-in timed out';
@@ -14721,7 +14721,7 @@ class L10nEn extends L10n {
   }
 
   @override
-  String get remoteBootstrapStarting => 'Starting remote DSH…';
+  String get remoteBootstrapStarting => 'Starting remote JDK…';
 
   @override
   String remoteErrCommandNotFound(String command) {
@@ -14736,13 +14736,13 @@ class L10nEn extends L10n {
   String get remoteStartCommandExample => 'Example start command: ~/.nvm/versions/node/v22.0.0/bin/dsh web';
 
   @override
-  String get remoteErrDshStartTimeout => 'Remote DSH took too long to start';
+  String get remoteErrDshStartTimeout => 'Remote JDK took too long to start';
 
   @override
-  String get remoteErrDshExited => 'Remote DSH exited right after starting';
+  String get remoteErrDshExited => 'Remote JDK exited right after starting';
 
   @override
-  String get remoteErrDshStart => 'Couldn’t start remote DSH';
+  String get remoteErrDshStart => 'Couldn’t start remote JDK';
 
   @override
   String remoteExitCode(int code) {
@@ -14762,31 +14762,31 @@ class L10nEn extends L10n {
   String get remoteHostTrustCancelled => 'Host trust cancelled';
 
   @override
-  String get remoteCheckingDsh => 'Checking remote DSH…';
+  String get remoteCheckingDsh => 'Checking remote JDK…';
 
   @override
-  String get remoteErrDshPort => 'Can’t reach the remote DSH port';
+  String get remoteErrDshPort => 'Can’t reach the remote JDK port';
 
   @override
-  String get remoteDshReused => 'Using DSH already running on the host';
+  String get remoteDshReused => 'Using JDK already running on the host';
 
   @override
-  String get remoteDshStarted => 'Started DSH on the host';
+  String get remoteDshStarted => 'Started JDK on the host';
 
   @override
-  String get remoteErrDshTokenRejected => 'Remote DSH rejected the sign-in token';
+  String get remoteErrDshTokenRejected => 'Remote JDK rejected the sign-in token';
 
   @override
-  String get remoteErrDshSignIn => 'Couldn’t sign in to remote DSH';
+  String get remoteErrDshSignIn => 'Couldn’t sign in to remote JDK';
 
   @override
-  String get remoteErrDshTunnel => 'Couldn’t connect to DSH through the tunnel';
+  String get remoteErrDshTunnel => 'Couldn’t connect to JDK through the tunnel';
 
   @override
-  String get remoteErrDshSignInExpired => 'Remote DSH sign-in expired';
+  String get remoteErrDshSignInExpired => 'Remote JDK sign-in expired';
 
   @override
-  String get remoteErrDshStopped => 'Remote DSH stopped running';
+  String get remoteErrDshStopped => 'Remote JDK stopped running';
 
   @override
   String get remoteErrSshDisconnected => 'SSH disconnected';
@@ -15356,7 +15356,7 @@ class L10nEn extends L10n {
   }
 
   @override
-  String get remoteHostKeyChangeWarning => 'DSH will refuse to connect if the fingerprint changes.';
+  String get remoteHostKeyChangeWarning => 'JDK will refuse to connect if the fingerprint changes.';
 
   @override
   String get remoteHostKeyTrustAgain => 'Trust again';
@@ -15373,7 +15373,7 @@ class L10nEn extends L10n {
   String get remoteSwitchHost => 'Switch host';
 
   @override
-  String get remoteThisPhoneDsh => 'DSH on this phone';
+  String get remoteThisPhoneDsh => 'JDK on this phone';
 
   @override
   String get remoteRemoteLabel => 'Remote';
@@ -15385,7 +15385,7 @@ class L10nEn extends L10n {
 
   @override
   String get remoteRelaySwitchWarning =>
-      'DSH Remote connects to one host at a time. Switching disconnects the previous host.';
+      'JDK Remote connects to one host at a time. Switching disconnects the previous host.';
 
   @override
   String get remoteConnectComputer => 'Connect a computer or server';
@@ -15394,7 +15394,7 @@ class L10nEn extends L10n {
   String get remoteManageHosts => 'Manage remote hosts';
 
   @override
-  String get remoteConnectionMethods => 'Via SSH or DSH Remote';
+  String get remoteConnectionMethods => 'Via SSH or JDK Remote';
 
   @override
   String get remoteRelayLoginRequired => 'Enter the server address, email and password';
@@ -15424,13 +15424,13 @@ class L10nEn extends L10n {
   String get remoteConsole => 'Remote console';
 
   @override
-  String get remoteHostsIntro => 'Keep using DSH from your computer or server on your phone';
+  String get remoteHostsIntro => 'Keep using JDK from your computer or server on your phone';
 
   @override
   String get remoteSshHosts => 'SSH hosts';
 
   @override
-  String get remoteSshRequirements => 'Host needs SSH enabled and DSH installed';
+  String get remoteSshRequirements => 'Host needs SSH enabled and JDK installed';
 
   @override
   String get remoteAddSshHost => 'Add SSH host';
@@ -15513,17 +15513,17 @@ class L10nEn extends L10n {
   String get remoteNoHosts => 'No hosts yet';
 
   @override
-  String get remoteRelaySetupHelp => 'Install the remote plugin in the host’s DSH and sign in';
+  String get remoteRelaySetupHelp => 'Install the remote plugin in the host’s JDK and sign in';
 
   @override
-  String get remoteRelaySignOutTitle => 'Sign out of DSH Remote?';
+  String get remoteRelaySignOutTitle => 'Sign out of JDK Remote?';
 
   @override
   String get remoteRelaySignOutBody =>
-      'This phone will be removed from your account. DSH and chats on the host stay. You can sign in again anytime.';
+      'This phone will be removed from your account. JDK and chats on the host stay. You can sign in again anytime.';
 
   @override
-  String get remoteRelaySignInTitle => 'Sign in to DSH Remote';
+  String get remoteRelaySignInTitle => 'Sign in to JDK Remote';
 
   @override
   String get remoteRelaySignInHelp => 'No network setup. End-to-end encrypted connection.';
@@ -15577,7 +15577,7 @@ class L10nEn extends L10n {
 
   @override
   String get remoteDeleteHostBody =>
-      'This host’s settings and the password and private key saved on this phone will be deleted. DSH and chats on the host stay.';
+      'This host’s settings and the password and private key saved on this phone will be deleted. JDK and chats on the host stay.';
 
   @override
   String remoteErrReadKey(String error) {
@@ -15594,7 +15594,7 @@ class L10nEn extends L10n {
   String get remoteEditHost => 'Edit host';
 
   @override
-  String get remoteSshHostIntro => 'Connect to DSH on your computer or server';
+  String get remoteSshHostIntro => 'Connect to JDK on your computer or server';
 
   @override
   String get remoteHostBasicInfo => 'Basic information';
@@ -15667,7 +15667,7 @@ class L10nEn extends L10n {
   String get remoteTestConnection => 'Test';
 
   @override
-  String get remoteHostedUpdateRequired => 'Update DSH to open this link';
+  String get remoteHostedUpdateRequired => 'Update JDK to open this link';
 
   @override
   String get remoteHostedCannotOpen => 'Can’t open this link';
@@ -16019,12 +16019,12 @@ class L10nEn extends L10n {
 
   @override
   String remoteHostKeyVerifyCommand(String command) {
-    return 'Run $command on that host to see the same fingerprint. DSH will refuse to connect if it changes.';
+    return 'Run $command on that host to see the same fingerprint. JDK will refuse to connect if it changes.';
   }
 
   @override
   String remoteSshInstallCommand(String command) {
-    return 'DSH not installed? Run $command on the host.';
+    return 'JDK not installed? Run $command on the host.';
   }
 
   @override
@@ -16151,7 +16151,7 @@ class L10nEn extends L10n {
 
   @override
   String get remoteCompactHistoryHint =>
-      'Reduces historical tool details on supporting DSH Remote Hosts; live replies and approvals stay unchanged. Switch hosts or restart the app to apply. Older Hosts keep full history.';
+      'Reduces historical tool details on supporting JDK Remote Hosts; live replies and approvals stay unchanged. Switch hosts or restart the app to apply. Older Hosts keep full history.';
 
   @override
   String get searchKwRemoteCompactHistory => 'compact slim lite history tools transfer bandwidth remote';
@@ -16532,7 +16532,7 @@ class L10nEn extends L10n {
   String get searchKwDnd => 'dnd,shizuku,sui,root,adb,background';
 
   @override
-  String get searchKwEngine => 'engine,runtime,start,stop,restart,DSH';
+  String get searchKwEngine => 'engine,runtime,start,stop,restart,JDK';
 
   @override
   String get searchKwBackground => 'keep alive,background activity,battery optimization,autostart,killed';
@@ -16578,7 +16578,7 @@ class L10nEn extends L10n {
   String get searchKwAccount => 'account,balance,top up,sign in,sign out,api key,usage,DeepSeek';
 
   @override
-  String get searchKwRemote => 'remote,ssh,computer,server,DSH Remote,connect';
+  String get searchKwRemote => 'remote,ssh,computer,server,JDK Remote,connect';
 
   @override
   String get searchKwPermission => 'permissions,approval,don\'t ask,read only,full access,auto-run commands';
@@ -17592,7 +17592,7 @@ class L10nEn extends L10n {
   String get shellSeatIsland => 'Embedded Web';
 
   @override
-  String get shellSeatWeb => 'Open in DSH Web';
+  String get shellSeatWeb => 'Open in JDK Web';
 
   @override
   String get shellPlugins => 'Plugins';
@@ -17804,7 +17804,7 @@ class L10nEn extends L10n {
   String get shellConfigSlotName => 'Invalid slot name format';
 
   @override
-  String get shellConfigUnknownSlot => 'This slot isn’t in DSH yet, kept for later';
+  String get shellConfigUnknownSlot => 'This slot isn’t in JDK yet, kept for later';
 
   @override
   String get shellConfigUnseatableSlot => 'Plugins aren’t supported here';
@@ -18365,7 +18365,7 @@ class L10nEn extends L10n {
   String get statePrivateKeyTooLarge => 'File is too large to be a private key';
 
   @override
-  String get stateBotTeamBusy => 'Another DSH is using this team';
+  String get stateBotTeamBusy => 'Another JDK is using this team';
 
   @override
   String get stateBotOperationFailed => 'Couldn’t finish. Try again.';
@@ -18499,7 +18499,7 @@ class L10nEn extends L10n {
   String get stateAllFeatures => 'All features';
 
   @override
-  String get stateCommandFeaturesDescription => 'Access every feature in DSH Web';
+  String get stateCommandFeaturesDescription => 'Access every feature in JDK Web';
 
   @override
   String get stateCompactLabel => 'Compact';
@@ -18651,7 +18651,7 @@ class L10nEn extends L10n {
   String get stateInventoryConditional => 'Conditional';
 
   @override
-  String get stateBundleBuiltIn => 'Built into DSH';
+  String get stateBundleBuiltIn => 'Built into JDK';
 
   @override
   String get stateBundleHeadless => 'Headless';
@@ -18723,7 +18723,7 @@ class L10nEn extends L10n {
   String get stateRegistryMirror => 'npmmirror mirror';
 
   @override
-  String get statePluginIncompatible => 'This plugin doesn’t support the current DSH version.';
+  String get statePluginIncompatible => 'This plugin doesn’t support the current JDK version.';
 
   @override
   String get statePluginInstallCancelled => 'Installation cancelled';
@@ -18732,7 +18732,7 @@ class L10nEn extends L10n {
   String get statePluginNoChanges => 'Nothing was changed';
 
   @override
-  String get statePluginIncompatibleTitle => 'Incompatible with this DSH';
+  String get statePluginIncompatibleTitle => 'Incompatible with this JDK';
 
   @override
   String get statePluginNetworkFailed => 'Can’t connect';
@@ -18801,7 +18801,7 @@ class L10nEn extends L10n {
   String get statePluginUninstallFirst => 'Uninstall before switching versions';
 
   @override
-  String get statePluginInvalid => 'Not a DSH plugin';
+  String get statePluginInvalid => 'Not a JDK plugin';
 
   @override
   String get statePluginNoEntry => 'This package has no plugin entry. Installation rolled back.';
@@ -19275,12 +19275,12 @@ class L10nEn extends L10n {
 
   @override
   String statePluginRuntimeIncompatible(String version) {
-    return 'This plugin doesn’t support the current DSH version ($version).';
+    return 'This plugin doesn’t support the current JDK version ($version).';
   }
 
   @override
   String statePluginRequiredVersion(String wanted, String current) {
-    return 'This plugin requires DSH $wanted. Current version: $current.';
+    return 'This plugin requires JDK $wanted. Current version: $current.';
   }
 
   @override
@@ -19331,7 +19331,7 @@ class L10nEn extends L10n {
 
   @override
   String stateSafeRepairPrompt(String what) {
-    return 'My DSH has a problem in normal mode ($what). Follow the Safe mode instructions to find the cause. Fix the web configuration using reversible changes, verify startup with dsh-app-plugins trial, then tell me what changed.';
+    return 'My JDK has a problem in normal mode ($what). Follow the Safe mode instructions to find the cause. Fix the web configuration using reversible changes, verify startup with dsh-app-plugins trial, then tell me what changed.';
   }
 
   @override
@@ -19497,7 +19497,7 @@ class L10nEn extends L10n {
       'The JDK-Go on your phone has a different signature (usually a test build). Uninstall it before installing this version. Uninstalling erases your chats, Linux environment, and settings.';
 
   @override
-  String get updateWrongPackage => 'This isn’t a DSH package';
+  String get updateWrongPackage => 'This isn’t a JDK package';
 
   @override
   String get updateWrongPackageMessage => 'The wrong file was downloaded and deleted. Try again later.';
@@ -19506,7 +19506,7 @@ class L10nEn extends L10n {
   String get updateDowngradeBlocked => 'Can’t install an older version';
 
   @override
-  String get updateDowngradeBlockedMessage => 'The DSH on your phone is newer than this package.';
+  String get updateDowngradeBlockedMessage => 'The JDK on your phone is newer than this package.';
 
   @override
   String get updateIncompatible => 'Incompatible with this phone';
@@ -20391,7 +20391,7 @@ class L10nEn extends L10n {
   String get viewTipFolderNewChat => 'Long-press a folder in the sidebar to start a chat inside it';
 
   @override
-  String get viewTipSwitchHost => 'Tap the host name at the sidebar\'s foot to switch to DSH on your computer';
+  String get viewTipSwitchHost => 'Tap the host name at the sidebar\'s foot to switch to JDK on your computer';
 
   @override
   String get viewTipPasteImage => 'Screenshots and stickers from your keyboard can go straight into the composer';
@@ -20861,10 +20861,10 @@ class L10nEn extends L10n {
   String get viewShareProjectQr => 'Project QR code';
 
   @override
-  String get viewShareBrandLine => 'DSH on your phone · Scan to get it';
+  String get viewShareBrandLine => 'JDK on your phone · Scan to get it';
 
   @override
-  String get viewShareBrandLineNoQr => 'DSH on your phone';
+  String get viewShareBrandLineNoQr => 'JDK on your phone';
 
   @override
   String viewShareSteps(int count) {
@@ -20907,7 +20907,7 @@ class L10nEn extends L10n {
 
   @override
   String viewSharePluginTitle(String value) {
-    return 'DSH plugin “$value”';
+    return 'JDK plugin “$value”';
   }
 
   @override
@@ -21169,7 +21169,7 @@ class L10nEn extends L10n {
 
   @override
   String viewUiDialectWebOnly(String kind) {
-    return '$kind · View in DSH Web';
+    return '$kind · View in JDK Web';
   }
 
   @override
@@ -21203,10 +21203,10 @@ class L10nEn extends L10n {
   String get viewUiDialectKindOther => 'This part';
 
   @override
-  String get viewUiDialectInvalid => 'This block shows in DSH Web';
+  String get viewUiDialectInvalid => 'This block shows in JDK Web';
 
   @override
-  String get viewUiDialectNote => 'Shown in DSH Web';
+  String get viewUiDialectNote => 'Shown in JDK Web';
 
   @override
   String get voiceSettingsTitle => 'Voice input';
@@ -21557,13 +21557,13 @@ class L10nEn extends L10n {
   String get searchKwWallpaper => 'background,background image,chat background,custom background,backdrop,blur,photo';
 
   @override
-  String get webTitle => 'DSH Web';
+  String get webTitle => 'JDK Web';
 
   @override
   String get webSshAppOnly => 'SSH tunnel links only open in the app';
 
   @override
-  String get webRelayUnavailable => 'DSH Web isn’t available through DSH Remote. Open it on that computer.';
+  String get webRelayUnavailable => 'JDK Web isn’t available through JDK Remote. Open it on that computer.';
 
   @override
   String get webSshHost => 'SSH host';
@@ -21587,10 +21587,10 @@ class L10nEn extends L10n {
   String get webEngineProblem => 'The engine ran into a problem';
 
   @override
-  String get webStartingSoon => 'DSH Web will be ready in a moment';
+  String get webStartingSoon => 'JDK Web will be ready in a moment';
 
   @override
-  String get webStartToOpen => 'Start this phone’s engine to open DSH Web';
+  String get webStartToOpen => 'Start this phone’s engine to open JDK Web';
 
   @override
   String get webRestart => 'Restart';
@@ -21614,16 +21614,16 @@ class L10nEn extends L10n {
   String get webSwitchHost => 'Switch host';
 
   @override
-  String get webAttachmentTooLarge => 'Attachment is too large for DSH Web';
+  String get webAttachmentTooLarge => 'Attachment is too large for JDK Web';
 
   @override
   String get webTextCopied => 'Text copied. Paste it into the input box.';
 
   @override
-  String get webAttachmentFailed => 'Couldn’t add attachments to DSH Web';
+  String get webAttachmentFailed => 'Couldn’t add attachments to JDK Web';
 
   @override
-  String get webHostUnavailable => 'DSH Web isn’t available on this host';
+  String get webHostUnavailable => 'JDK Web isn’t available on this host';
 
   @override
   String get webChatGone => 'This chat is gone';
@@ -21653,10 +21653,10 @@ class L10nEn extends L10n {
   String get webCheckConnection => 'Check your network or engine status and try again';
 
   @override
-  String get webTargetSessionMissing => 'Couldn’t find this chat in DSH Web. You’re on the home page.';
+  String get webTargetSessionMissing => 'Couldn’t find this chat in JDK Web. You’re on the home page.';
 
   @override
-  String get webTargetNotLoaded => 'DSH Web hasn’t finished loading';
+  String get webTargetNotLoaded => 'JDK Web hasn’t finished loading';
 
   @override
   String get webTargetSettingsMissing => 'Couldn’t find these settings. You may need to sign in or enable the plugin.';
@@ -21665,20 +21665,20 @@ class L10nEn extends L10n {
   String get webTargetPluginMissing => 'Couldn’t find this plugin. It may be missing from this profile.';
 
   @override
-  String get webTargetSidebarFailed => 'Couldn’t open the sidebar. Open this chat in DSH Web and try again.';
+  String get webTargetSidebarFailed => 'Couldn’t open the sidebar. Open this chat in JDK Web and try again.';
 
   @override
   String get webTargetCordisMissing => 'Couldn’t find the Cordis panel. The plugin may have been removed.';
 
   @override
-  String get webTargetNewChatFailed => 'Couldn’t start a chat. You’re on the DSH Web home page.';
+  String get webTargetNewChatFailed => 'Couldn’t start a chat. You’re on the JDK Web home page.';
 
   @override
-  String get webTargetPageFailed => 'Couldn’t open this page. You’re on the DSH Web home page.';
+  String get webTargetPageFailed => 'Couldn’t open this page. You’re on the JDK Web home page.';
 
   @override
   String webConnectHostFirst(String name) {
-    return 'Connect to “$name” to open DSH Web';
+    return 'Connect to “$name” to open JDK Web';
   }
 
   @override

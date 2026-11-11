@@ -1,4 +1,4 @@
-// A small fake DSH Host for share-code tests: settings, plugins and presets
+// A small fake JDK Host for share-code tests: settings, plugins and presets
 // answered from in-memory state, every call recorded.
 
 import 'dart:async';
@@ -180,7 +180,7 @@ class FakeShareNet implements ShareNet {
   Future<String> fetchGist(String id) async => gists[id] ?? (throw const GistException('找不到这个 Gist'));
 }
 
-/// A throwaway rootfs with DSH home in it.
+/// A throwaway rootfs with JDK home in it.
 GuestFs tempGuest() {
   final runtime = Directory.systemTemp.createTempSync('share-guest-');
   final root = Directory('${runtime.path}/rootfs')..createSync();

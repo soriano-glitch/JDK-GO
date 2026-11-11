@@ -53,7 +53,7 @@ void main() {
     expect(live.title, '修登录页');
     expect(live.text, '正在干活');
     expect(live.chip, '干活中');
-    expect(live.publicText, 'DSH 正在干活');
+    expect(live.publicText, 'JDK 正在干活');
     expect(live.mood, PetStateName.working);
     // The subagent started first: the conversation has been at it since then.
     expect(live.since, _t0.add(const Duration(seconds: 2)));

@@ -72,7 +72,7 @@ void main() {
         find.descendant(of: find.widgetWithText(BundleTile, 'dsh-approval-gate'), matching: find.byType(Switch)),
       );
       await tester.pumpAndSettle();
-      expect(find.text(remote ? '已停用，重启电脑上的 DSH 后生效' : '已停用，重启引擎后生效'), findsOneWidget);
+      expect(find.text(remote ? '已停用，重启电脑上的 JDK 后生效' : '已停用，重启引擎后生效'), findsOneWidget);
       expect(find.byType(SnackBarAction), remote ? findsNothing : findsOneWidget);
       if (!remote) expect(find.text('立即重启'), findsOneWidget);
     });
@@ -101,7 +101,7 @@ void main() {
       expect(find.text('会话搜索'), findsOneWidget);
       expect(find.text('官方'), findsOneWidget);
       expect(find.text('@deepseek-ai/dsh-base'), findsNothing);
-      expect(find.text('不是 DSH 插件，无法加载'), findsOneWidget);
+      expect(find.text('不是 JDK 插件，无法加载'), findsOneWidget);
     });
 
     testWidgets('switch calls setBundleEnabled', (tester) async {
@@ -204,8 +204,8 @@ void main() {
       carrier.handlers['pluginManager/installBundle'] = (_) => finish.future;
       await pumpScreen(tester, tab: PluginsTab.market);
       await openSheet(tester, 'novel-writer');
-      expect(find.textContaining('插件以 DSH 的权限运行'), findsOneWidget);
-      expect(find.textContaining('由第三方提供，DSH 官方未审核。'), findsOneWidget);
+      expect(find.textContaining('插件以 JDK 的权限运行'), findsOneWidget);
+      expect(find.textContaining('由第三方提供，JDK 官方未审核。'), findsOneWidget);
       expect(carrier.argsOf('pluginManager/installBundle'), isEmpty, reason: 'opening the sheet installs nothing');
 
       await tapSheetAction(tester, '安装到本机');
@@ -357,7 +357,7 @@ void main() {
         // code until it restarts: the restart offer appears, nothing restarts.
         expect(find.text('已安装「Approval Gate」'), findsNothing);
         if (remote) {
-          expect(find.text('已安装「Approval Gate」，重启电脑上的 DSH 后生效'), findsOneWidget);
+          expect(find.text('已安装「Approval Gate」，重启电脑上的 JDK 后生效'), findsOneWidget);
           expect(find.text('需要重启引擎'), findsNothing);
         } else {
           expect(find.text('需要重启引擎'), findsOneWidget);

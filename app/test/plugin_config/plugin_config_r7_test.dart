@@ -1,5 +1,5 @@
 // The plugin settings on a bridge R7 Host (runtime r14), from what a real one
-// answered (backend stack R7 on DSH 0.2.1-rc.4, with the voice-input kit and
+// answered (backend stack R7 on JDK 0.2.1-rc.4, with the voice-input kit and
 // session search switched on, a local bundle with covered and uncovered rows,
 // the App's phone control and an observer as overlays):
 //

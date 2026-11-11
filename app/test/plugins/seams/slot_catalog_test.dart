@@ -15,8 +15,8 @@ void main() {
   });
 
   test('the table matches the extracted catalog', () {
-    // Extracted from DSH's client runner (docs/design/plugin-seams.md, appendix A);
-    // key / kind / scope / replaceRisk only. A DSH bump brings a new extract.
+    // Extracted from JDK's client runner (docs/design/plugin-seams.md, appendix A);
+    // key / kind / scope / replaceRisk only. A JDK bump brings a new extract.
     final file = File('test/plugins/seams/fixtures/slot-catalog-$slotCatalogRelease.json');
     final rows = (jsonDecode(file.readAsStringSync()) as List).cast<Map<String, Object?>>();
     expect(rows.length, 109);

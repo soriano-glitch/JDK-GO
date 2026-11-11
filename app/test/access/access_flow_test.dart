@@ -237,7 +237,7 @@ void main() {
 
       expect(find.text('打开无障碍'), findsOneWidget);
       expect(find.text('先允许受限制的设置'), findsOneWidget);
-      expect(find.text('在无障碍里点一下「DSH 手机操控」，出现「受限制的设置」时点确定'), findsOneWidget);
+      expect(find.text('在无障碍里点一下「JDK 手机操控」，出现「受限制的设置」时点确定'), findsOneWidget);
       expect(find.text('在应用信息里点右上角的三个点，选「允许受限制的设置」'), findsOneWidget);
       expect(find.text('看图示'), findsOneWidget);
       expect(_primaryLabel(tester), '去无障碍');

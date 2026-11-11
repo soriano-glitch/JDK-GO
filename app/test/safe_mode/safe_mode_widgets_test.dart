@@ -58,7 +58,7 @@ void main() {
 
   testWidgets('failure card: restoring the last good config confirms, restores, starts normally', (tester) async {
     await pump(tester, page(const EngineFailureCard()), failedStatus());
-    expect(find.text('DSH 启动失败'), findsOneWidget);
+    expect(find.text('JDK 启动失败'), findsOneWidget);
     expect(find.widgetWithText(FilledButton, '恢复配置'), findsOneWidget);
     expect(find.widgetWithText(OutlinedButton, '进入安全模式'), findsOneWidget);
     expect(find.text('查看日志'), findsOneWidget);
@@ -77,7 +77,7 @@ void main() {
 
   testWidgets('failure card: entering safe mode offers to move home-level files aside', (tester) async {
     bridge = FakeBridge(
-      hazards: const [SafeHazard(path: '/root/.dsh/.env', kind: 'homeEnv', detail: '设置了 NODE_OPTIONS，DSH 会拒绝启动。')],
+      hazards: const [SafeHazard(path: '/root/.dsh/.env', kind: 'homeEnv', detail: '设置了 NODE_OPTIONS，JDK 会拒绝启动。')],
     );
     await pump(tester, page(const EngineFailureCard()), failedStatus());
     // No useful LKG: safe mode is the primary action.
@@ -141,7 +141,7 @@ void main() {
 
   testWidgets('failure card stays hidden while the engine runs', (tester) async {
     await pump(tester, page(const EngineFailureCard()), const RuntimeStatus(phase: RuntimePhase.running));
-    expect(find.text('DSH 启动失败'), findsNothing);
+    expect(find.text('JDK 启动失败'), findsNothing);
     expect(find.byType(FilledButton), findsNothing);
   });
 
@@ -152,7 +152,7 @@ void main() {
     await tester.tap(find.text('帮我修复'));
     await tester.pump();
     final draft = container.read(repairDraftProvider);
-    expect(draft, startsWith('我的 DSH 正常模式出了问题（启动失败，可疑插件：break-required）'));
+    expect(draft, startsWith('我的 JDK 正常模式出了问题（启动失败，可疑插件：break-required）'));
     expect(container.read(repairDraftProvider.notifier).take(), draft);
     expect(container.read(repairDraftProvider), isNull);
 
@@ -184,9 +184,9 @@ void main() {
 
   testWidgets('notices show once as snack bars', (tester) async {
     await pump(tester, page(const SafeModeNoticeListener(child: SizedBox.expand())), safeStatus());
-    runtime.emit(runtime.state.copyWith(notice: const RuntimeNotice(1, 'DSH 连续两次启动失败，已用安全模式启动。你的对话都在。')));
+    runtime.emit(runtime.state.copyWith(notice: const RuntimeNotice(1, 'JDK 连续两次启动失败，已用安全模式启动。你的对话都在。')));
     await tester.pump();
-    expect(find.text('DSH 连续两次启动失败，已用安全模式启动。你的对话都在。'), findsOneWidget);
+    expect(find.text('JDK 连续两次启动失败，已用安全模式启动。你的对话都在。'), findsOneWidget);
   });
 
   testWidgets('settings tiles switch automatic safe mode natively', (tester) async {

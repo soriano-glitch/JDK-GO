@@ -137,7 +137,7 @@ void main() {
     expect(server.connects, isEmpty);
   });
 
-  test('signing out of DSH Remote while the preference is off drops the saved relay host', () async {
+  test('signing out of JDK Remote while the preference is off drops the saved relay host', () async {
     seed(const HostRef.relay('mac'), autoConnect: false);
     final c = container();
     await loaded(c);

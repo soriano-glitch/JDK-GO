@@ -38,7 +38,7 @@ void main() {
     before: (tester) async {
       await tester.tap(find.text('open'));
       await settle(tester);
-      await tester.enterText(find.byType(TextField).at(0), '手机上跑 DSH 的省电配置');
+      await tester.enterText(find.byType(TextField).at(0), '手机上跑 JDK 的省电配置');
       await tester.tap(find.text('配置分享'));
       await tester.enterText(
         find.byType(TextField).at(1),

@@ -137,7 +137,7 @@ void main() {
           title: const Text('雾蓝'),
           subtitle: const Text('余额 ¥128.45'),
           onTap: () {},
-          footer: const OverviewFooter(tone: StatusTone.ok, text: '引擎 · 运行中 · DSH 0.2.1'),
+          footer: const OverviewFooter(tone: StatusTone.ok, text: '引擎 · 运行中 · JDK 0.2.1'),
           onFooterTap: () {},
         ),
         textScale: scale,
@@ -153,7 +153,7 @@ void main() {
       final dot = tester.getRect(find.byType(AnimatedStatusDot));
       expect(dot.center.dx, moreOrLessEquals(avatar.center.dx, epsilon: _tol));
       expect(
-        tester.getRect(find.text('引擎 · 运行中 · DSH 0.2.1')).left,
+        tester.getRect(find.text('引擎 · 运行中 · JDK 0.2.1')).left,
         moreOrLessEquals(tester.getRect(find.text('雾蓝')).left, epsilon: _tol),
       );
       expect(tester.getRect(find.text('雾蓝')).left - card.left, moreOrLessEquals(OverviewCard.textStart, epsilon: _tol));

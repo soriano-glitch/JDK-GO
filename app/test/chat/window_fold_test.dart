@@ -4,7 +4,7 @@
 // there is no TurnTrace for it and it can neither fold nor carry a footnote.
 // The chat asks for the official web window (at least 50 messages and
 // two turns, capped at 500), so the cut lands on a turn start. The fake Host
-// below pages exactly as DSH does (dsh-api-session-controller `paginate`).
+// below pages exactly as JDK does (dsh-api-session-controller `paginate`).
 
 import 'dart:async';
 import 'dart:convert';

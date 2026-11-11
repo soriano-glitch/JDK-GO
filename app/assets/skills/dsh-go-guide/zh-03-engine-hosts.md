@@ -1,15 +1,15 @@
 # Engine and remote hosts
 
-DSH can run right on this phone (this phone's engine), or on your computer or server with your phone connecting to it. Chats, workspaces and plugins belong to each host.
+JDK can run right on this phone (this phone's engine), or on your computer or server with your phone connecting to it. Chats, workspaces and plugins belong to each host.
 
 ## This phone or remote
 
-The first time you open the app, choose where DSH runs:
+The first time you open the app, choose where JDK runs:
 
 - **This phone**: installs the runtime on your phone; everything runs on this phone. The option shows the storage and memory it needs.
-- **Remote host**: uses DSH on your computer or server, with nothing installed on the phone. Recommended when the phone is short on memory or storage.
+- **Remote host**: uses JDK on your computer or server, with nothing installed on the phone. Recommended when the phone is short on memory or storage.
 
-You can add DSH to this phone anytime: tap **Install runtime** on the engine page, or tap **This phone** when switching hosts. It starts once installed.
+You can add JDK to this phone anytime: tap **Install runtime** on the engine page, or tap **This phone** when switching hosts. It starts once installed.
 
 ## This phone's engine
 
@@ -18,7 +18,7 @@ You can add DSH to this phone anytime: tap **Install runtime** on the engine pag
 
 - **Start**, **Stop**, **Restart**: stopping asks first; both stopping and restarting interrupt active chats.
 - If the engine fails to start, the page shows the cause and ways to fix it, such as retrying, **Start in Safe mode** or viewing logs.
-- **Start when JDK-Go opens**: on by default. As long as DSH is installed on this phone, opening the app starts it, even while you use a remote host. Turn it off if you don't need that.
+- **Start when JDK-Go opens**: on by default. As long as JDK is installed on this phone, opening the app starts it, even while you use a remote host. Turn it off if you don't need that.
 - **Automatic Safe mode**: on by default. After two failed starts in a row, starts without plugins.
 - **Start in Safe mode**: enter Safe mode by hand. Once fixed, tap **Return to normal mode**. Entering and leaving both restart the engine.
 - **Logs**: the engine's live output.
@@ -26,7 +26,7 @@ You can add DSH to this phone anytime: tap **Install runtime** on the engine pag
 
 ## Updates and installed tools
 
-Normal engine updates replace only app-managed engine components, without rebuilding your Linux system. Apt tools such as gh, npm global packages in their default location, Python/pip packages, settings and workspaces stay. Bundled DSH, Node, pnpm, the bridge and their dedicated directories remain app-managed; do not install your own software there. A Node version change may still require rebuilding third-party native extensions: preserving files does not guarantee extension compatibility.
+Normal engine updates replace only app-managed engine components, without rebuilding your Linux system. Apt tools such as gh, npm global packages in their default location, Python/pip packages, settings and workspaces stay. Bundled JDK, Node, pnpm, the bridge and their dedicated directories remain app-managed; do not install your own software there. A Node version change may still require rebuilding third-party native extensions: preserving files does not guarantee extension compatibility.
 
 Older runtimes are adopted after checking the architecture, Ubuntu version and Python. If compatibility cannot be confirmed, the update manifest is invalid, or a leftover process has not stopped, the update stops with an explanation. It never automatically wipes or rebuilds the environment. Retry an interrupted installation; do not delete recovery directories by hand.
 
@@ -69,22 +69,22 @@ On launch, the app reconnects to the host you used last. To start on this phone 
 
 ## Add an SSH host
 
-The host needs SSH enabled and DSH installed (`npm i -g @deepseek-ai/dsh`).
+The host needs SSH enabled and JDK installed (`npm i -g @deepseek-ai/dsh`).
 
 1. On the remote hosts page, tap **Add SSH host**.
 2. Enter the **Host** and **Username**. **Port** defaults to 22. The name is optional.
 3. Sign in with a **Password** or a **Private key**. You can **Import from file**, and add a **Private key passphrase (optional)**. Passwords and keys stay on this phone.
-4. **Start command** defaults to `dsh web`; if you installed DSH with nvm, enter its full path. **Working directory (optional)** is where new chats start.
+4. **Start command** defaults to `dsh web`; if you installed JDK with nvm, enter its full path. **Working directory (optional)** is where new chats start.
 5. Tap **Test connection**. The first time, **Trust this host?** appears: check the fingerprint on the host, and tap **Trust and connect** if it matches.
 6. Tap **Save**, then select the host in the list.
 
-Testing starts DSH on the host, and it keeps running afterwards. To change or delete a host, tap **Edit** next to it to open **Edit host**; **Delete this host** is at the bottom. Deleting removes only the settings, password and key saved on this phone; DSH and chats on the host stay.
+Testing starts JDK on the host, and it keeps running afterwards. To change or delete a host, tap **Edit** next to it to open **Edit host**; **Delete this host** is at the bottom. Deleting removes only the settings, password and key saved on this phone; JDK and chats on the host stay.
 
-## DSH Remote
+## JDK Remote
 
 No network setup, end-to-end encrypted. Good for computers on another network.
 
-1. Install the remote plugin in the host's DSH and sign in.
+1. Install the remote plugin in the host's JDK and sign in.
 2. On the remote hosts page, choose the same sign-in provider you used on that host, for example “Continue with GitHub”, and sign in with the same account. If the page lists no providers and shows only **Sign in in browser**, tap that button.
 3. Select an online host. On first connection, check that the identity fingerprint matches the one the host's remote plugin shows, then tap **Trust and connect**.
 
@@ -95,6 +95,6 @@ Connections automatically try LAN / P2P, then TURN, and finally Relay without a 
 <!-- nav: commonSettings,commonRemoteHost,remoteCompactHistory -->
 `Settings › Remote host › Compact history`
 
-**Compact history** is off by default. Supporting DSH Remote Hosts summarize historical tool arguments and output to reduce history transfer; message text, live replies, approvals and original Host records stay unchanged. Switch to another host (or this phone) and back, or restart the app, to apply. The current client and its automatic reconnects retain their original mode to avoid mixing cached history. After turning it off, select the host again and reopen the chat to load full history. Older Hosts continue sending full history; SSH is unaffected.
+**Compact history** is off by default. Supporting JDK Remote Hosts summarize historical tool arguments and output to reduce history transfer; message text, live replies, approvals and original Host records stay unchanged. Switch to another host (or this phone) and back, or restart the app, to apply. The current client and its automatic reconnects retain their original mode to avoid mixing cached history. After turning it off, select the host again and reopen the chat to load full history. Older Hosts continue sending full history; SSH is unaffected.
 
-DSH Remote connects to one host at a time; switching disconnects the previous one. Over DSH Remote: you can send images only, DSH Web doesn't open in the app, plugins can only be turned on or off, and DS Bot and chat log export aren't available.
+JDK Remote connects to one host at a time; switching disconnects the previous one. Over JDK Remote: you can send images only, JDK Web doesn't open in the app, plugins can only be turned on or off, and DS Bot and chat log export aren't available.

@@ -57,7 +57,7 @@ const _lab = SshHostConfig(
 const _connected = HostLinkStatus(
   HostLinkPhase.connected,
   completed: {...HostLinkStep.values},
-  detail: '复用了远端已在运行的 DSH',
+  detail: '复用了远端已在运行的 JDK',
 );
 
 final _mismatch = HostLinkStatus(
@@ -162,7 +162,7 @@ void main() {
         HostLinkPhase.connecting,
         step: HostLinkStep.startDsh,
         completed: {HostLinkStep.connect, HostLinkStep.verifyHostKey},
-        detail: '正在远端启动 DSH…',
+        detail: '正在远端启动 JDK…',
       ),
     ),
     overrides: _remote,

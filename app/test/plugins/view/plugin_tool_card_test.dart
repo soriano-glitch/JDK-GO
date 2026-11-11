@@ -1,5 +1,5 @@
 // Tool cards: a plugin tool's `presentationMeta` returns
-// {"dsh-go/view": View}; DSH stores it as `tool/result.data.meta`; the app
+// {"dsh-go/view": View}; JDK stores it as `tool/result.data.meta`; the app
 // draws it in the tool row (docs/design/native-plugins-views.md §8).
 
 import 'dart:convert';
@@ -59,7 +59,7 @@ Future<void> expand(WidgetTester tester, String id) async {
 
 Finder inRow(String id, Finder f) => find.descendant(of: find.byKey(ValueKey(id)), matching: f);
 
-/// The events DSH writes for one plugin tool call.
+/// The events JDK writes for one plugin tool call.
 List<SessionLogEvent> events(Object? meta) => [
   for (final (seq, type, data) in [
     (1, 'turn/start', {'turn': 1}),
@@ -311,7 +311,7 @@ void main() {
       expect(card.evaluate().where((e) => (e.widget as InkWell).onTap != null), isEmpty);
     });
 
-    testWidgets('a session log written by DSH 0.2.1-rc.2', (tester) async {
+    testWidgets('a session log written by JDK 0.2.1-rc.2', (tester) async {
       // fixtures/live_tool_card.jsonl: a real `dsh headless` run (fake model,
       // a plugin tool with presentationMeta), system prompts and paths
       // removed. The tool result's data.meta is presentationMeta's value.

@@ -42,7 +42,7 @@ String sampleFeed({int revision = 7, String tagline = '开源项目，欢迎点�
     {
       'date': '2026-10-24',
       'title': 'dsh-go 1.0',
-      'summary': '本机运行 DSH、远程主机、插件广场。',
+      'summary': '本机运行 JDK、远程主机、插件广场。',
       'url': 'https://example.com/releases',
     },
   ],

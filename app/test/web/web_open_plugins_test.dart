@@ -1,5 +1,5 @@
-// The open bridge on DSH Web's Plugins page (assets/web/dsh_web_open.js),
-// run under node against a model of DSH 0.2.1-rc.4's page
+// The open bridge on JDK Web's Plugins page (assets/web/dsh_web_open.js),
+// run under node against a model of JDK 0.2.1-rc.4's page
 // (test/web/support/plugins_page_harness.mjs): how it finds a plugin's
 // card, and that an open never outstays its welcome — bounded in time, only
 // the latest one acting, stopping once the person uses the page, never

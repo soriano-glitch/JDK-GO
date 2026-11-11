@@ -128,7 +128,7 @@ void main() {
     await until(() => lastText()?.contains('comfortable') ?? false);
   });
 
-  test('DSH home missing (engine never ran): no directory is made', () async {
+  test('JDK home missing (engine never ran): no directory is made', () async {
     root.deleteSync(recursive: true);
     root = tempRootfs(withHome: false);
     rootfs = root;

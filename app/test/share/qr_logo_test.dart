@@ -335,7 +335,7 @@ void main() {
         const QrCodeView(data: 'https://github.com/ccch1mneyyy/dsh-go', logo: true, semanticLabel: 'QR'),
       );
       expect(find.bySemanticsLabel('QR'), findsOneWidget);
-      expect(find.bySemanticsLabel('DSH'), findsNothing, reason: "the tile's own label");
+      expect(find.bySemanticsLabel('JDK'), findsNothing, reason: "the tile's own label");
       handle.dispose();
     });
   });

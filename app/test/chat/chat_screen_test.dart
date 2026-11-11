@@ -567,7 +567,7 @@ void main() {
       await tester.pump();
       expect(harness.controllers['s2']!.cancels, 1);
 
-      // With text in the field the same button sends (DSH queues it).
+      // With text in the field the same button sends (JDK queues it).
       await tester.enterText(find.byType(TextField), '再补充一句');
       await pumpFrames(tester, 3);
       expect(find.byIcon(AppIcons.stopGenerating), findsNothing);
@@ -714,7 +714,7 @@ void main() {
       expect(find.textContaining('第 11 条消息'), findsOneWidget);
     });
 
-    testWidgets('a captured DSH turn renders through the transcript', (tester) async {
+    testWidgets('a captured JDK turn renders through the transcript', (tester) async {
       final transcript = ChatTranscript();
       final file = File('../packages/dsh_client/test/fixtures/follow_approval_with_resync.jsonl');
       for (final line in file.readAsLinesSync()) {

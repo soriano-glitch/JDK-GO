@@ -1,4 +1,4 @@
-// Inventory rows shaped like `dynamicCordisRunner/inventory` on DSH
+// Inventory rows shaped like `dynamicCordisRunner/inventory` on JDK
 // 0.2.1-rc.2 (`DynamicCordisInventoryRow`), and the pages' fixed overrides.
 
 import 'package:dsh_app/state/cordis_state.dart';

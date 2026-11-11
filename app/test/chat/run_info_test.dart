@@ -1,7 +1,7 @@
 // Run information derived from turn traces: formatting, the live activity,
 // footnote placement, trajectory rows and numbered diff hunks, over the
 // synthetic timed session (support/run_info_fixture.dart) and the captured
-// DSH frames.
+// JDK frames.
 
 import 'dart:convert';
 import 'dart:io';

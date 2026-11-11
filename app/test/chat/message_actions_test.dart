@@ -85,7 +85,7 @@ Map<String, Object?> _reply(int seq, String text, {int turn = 1}) => _wire(seq, 
   },
 });
 
-/// Two finished turns as DSH 0.2.1 writes them.
+/// Two finished turns as JDK 0.2.1 writes them.
 final _log = [
   _wire(0, 'permission/preset'),
   _wire(1, 'sandbox/mode'),
@@ -270,7 +270,7 @@ void main() {
   });
 
   group('reply actions', () {
-    testWidgets('the row: copy, and branch when DSH allows; no rating', (tester) async {
+    testWidgets('the row: copy, and branch when JDK allows; no rating', (tester) async {
       final platform = _platform(tester);
       final harness = ChatHarness(session: 's1', states: {'s1': _conversation()});
       await _pump(tester, harness);

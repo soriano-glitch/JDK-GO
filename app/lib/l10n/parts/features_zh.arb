@@ -1,7 +1,7 @@
 {
   "featuresCordisSubtitle": "动态插件 · 引擎重启后清空",
   "featuresCordisUnavailable": "这个连接看不到 Cordis",
-  "featuresCordisRemoteUnavailable": "经 DSH Remote 中转时不可用",
+  "featuresCordisRemoteUnavailable": "经 JDK Remote 中转时不可用",
   "featuresCordisReadFailed": "没能读取插件",
   "featuresCordisEmpty": "还没有动态插件",
   "featuresCordisEmptyHint": "插件创建后会出现在这里",
@@ -116,7 +116,7 @@
   "featuresPresetStandardDescription": "代码、文件和资料，适合大多数任务",
   "featuresPresetPtcDescription": "批量调用工具，再筛选、统计、汇总",
   "featuresPresetMinimalDescription": "只用终端和读图，适合测试对比",
-  "featuresPresetCreatorDescription": "让 Agent 写插件，定制 DSH 本身",
+  "featuresPresetCreatorDescription": "让 Agent 写插件，定制 JDK 本身",
   "featuresHostUnreachable": "连不上「{name}」",
   "@featuresHostUnreachable": {
     "placeholders": {
@@ -159,7 +159,7 @@
       }
     }
   },
-  "featuresJobOutputSubject": "DSH 任务输出",
+  "featuresJobOutputSubject": "JDK 任务输出",
   "featuresJobOutputReadFailed": "没能读取输出",
   "featuresJobOutputWaiting": "等待输出…",
   "featuresJobOutputEmpty": "没有输出",
@@ -658,7 +658,7 @@
   "featuresExportTitle": "导出对话日志",
   "featuresExportSubtitle": "打包成一个 ZIP，用于反馈或备份",
   "featuresExportUnavailable": "这个连接导不了",
-  "featuresExportRemoteHint": "经 DSH Remote 中转时拿不到日志，可以在电脑上的网页版导出",
+  "featuresExportRemoteHint": "经 JDK Remote 中转时拿不到日志，可以在电脑上的网页版导出",
   "featuresExportShareHint": "附在问题反馈里，或发给自己",
   "featuresExportSaveDownloads": "存到「下载」",
   "featuresExportDownloadsHint": "存进 下载/DSH-Go",

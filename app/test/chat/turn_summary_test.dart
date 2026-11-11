@@ -1,5 +1,5 @@
 // Tool-group summaries, per-turn change detection and their place in the
-// chat rows, over captured DSH frames (packages/dsh_client/test/fixtures)
+// chat rows, over captured JDK frames (packages/dsh_client/test/fixtures)
 // and a synthetic file-editing session in the same wire shape
 // (test/chat/fixtures/follow_file_changes.jsonl).
 
@@ -49,7 +49,7 @@ void main() {
     expect(fileChangesOf([a, b]), same(all));
   });
 
-  group('captured DSH turns', () {
+  group('captured JDK turns', () {
     test('approval turn: one command, no file changes', () {
       final t = _load('$_clientFixtures/follow_approval_with_resync.jsonl');
       final tools = _tools(t);

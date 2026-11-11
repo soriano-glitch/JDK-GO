@@ -1,5 +1,5 @@
 // Agent preset compositions as the editor reads and writes them, against the
-// documents a DSH 0.2.1-rc.2 Host returns from `agentPresets/read`
+// documents a JDK 0.2.1-rc.2 Host returns from `agentPresets/read`
 // (fixtures/preset_*.yaml): rows, official names, the persona prompt, the
 // rendered list and the bundle files.
 

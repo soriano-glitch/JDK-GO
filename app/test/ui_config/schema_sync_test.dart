@@ -114,7 +114,7 @@ void main() {
     final bundle = await loadUiSkillBundle(readAssetFromDisk);
     expect(bundle.files.keys, unorderedEquals(files.values));
     final skill = bundle.skillMd;
-    expect(skill.split('\n').first, '---', reason: 'DSH ignores a skill whose first line is not ---');
+    expect(skill.split('\n').first, '---', reason: 'JDK ignores a skill whose first line is not ---');
     expect(RegExp(r'^name: dsh-go-ui$', multiLine: true).hasMatch(skill), isTrue);
     expect(RegExp(r'^description: \S', multiLine: true).hasMatch(skill), isTrue);
     expect(isManagedUiSkill(skill), isTrue);

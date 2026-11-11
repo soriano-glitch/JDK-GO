@@ -393,7 +393,7 @@ class _RelaySection extends ConsumerWidget {
       final available = ref.watch(relayBackendProvider).available;
       final server = account.server;
       return SettingsSection(
-        title: 'DSH Remote',
+        title: 'JDK Remote',
         // The credit's link takes taps in the margin below it, so it carries it.
         margin: available ? RelayCredit.sectionMargin : kSettingsGroupMargin,
         footer: available
@@ -403,7 +403,7 @@ class _RelaySection extends ConsumerWidget {
       );
     }
     return SettingsSection(
-      title: 'DSH Remote',
+      title: 'JDK Remote',
       footer: account.hostsFailed && account.hosts.isNotEmpty
           ? Text(l10n.remoteErrRefreshHosts, style: TextStyle(color: DshColors.of(context).danger))
           : account.hosts.length > 1

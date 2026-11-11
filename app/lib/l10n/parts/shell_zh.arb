@@ -441,7 +441,7 @@
     }
   },
   "shellConfigSlotName": "slot 名格式不对",
-  "shellConfigUnknownSlot": "当前 DSH 没有这个 slot，先保留",
+  "shellConfigUnknownSlot": "当前 JDK 没有这个 slot，先保留",
   "shellConfigUnseatableSlot": "这个位置不放插件",
   "shellConfigPackageName": "包名格式不对",
   "shellConfigActionNoun": "动作",

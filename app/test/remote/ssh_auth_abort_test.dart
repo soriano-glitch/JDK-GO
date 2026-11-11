@@ -54,7 +54,7 @@ class _MemorySocket extends SSHSocket {
   void destroy() => unawaited(close());
 }
 
-// Client identity is relevant here; no DSH HTTP traffic is part of this test.
+// Client identity is relevant here; no JDK HTTP traffic is part of this test.
 class _OfflineCarrier extends DshCarrier {
   @override
   String get kind => 'ssh-auth-test';
@@ -67,7 +67,7 @@ class _OfflineCarrier extends DshCarrier {
 
   @override
   Future<DshMuxLink> openLink(MuxOptions options) async =>
-      throw const DshTransportException('no DSH traffic in this test');
+      throw const DshTransportException('no JDK traffic in this test');
 
   @override
   Future<void> close() async {}
@@ -148,7 +148,7 @@ void main() {
     });
   }
 
-  test('an interrupted reauthentication recreates SSH and reuses the DSH session', () async {
+  test('an interrupted reauthentication recreates SSH and reuses the JDK session', () async {
     final server = FakeSshServer();
     var clientConnections = 0;
     final client = DshClient.withCarrier(_OfflineCarrier());

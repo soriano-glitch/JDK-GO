@@ -321,7 +321,7 @@ void main() {
       expect(await container.read(botChatProvider('b2').notifier).send('hi'), isFalse);
       final state = container.read(botChatProvider('b2'));
       expect(state.pending, isEmpty);
-      expect(state.error, '另一个 DSH 正在使用这个团队');
+      expect(state.error, '另一个 JDK 正在使用这个团队');
     });
 
     test('a group chat reads its newest page again on its room event; live replies keep their place', () async {

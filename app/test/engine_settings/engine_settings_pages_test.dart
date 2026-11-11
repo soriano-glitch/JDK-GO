@@ -402,7 +402,7 @@ void main() {
       ..bundles = sampleBundles();
     await open(tester, const PluginInventoryPage(), fake: fake);
     expect(find.text('17 个组件 · 13 个已启用'), findsOneWidget);
-    expect(find.text('DSH 内置 · 0.2.1-rc.2'), findsOneWidget);
+    expect(find.text('JDK 内置 · 0.2.1-rc.2'), findsOneWidget);
     expect(find.text('已启用'), findsNothing);
     expect(find.byType(AnimatedStatusDot), findsWidgets);
     expect(find.text('未启用'), findsNothing);

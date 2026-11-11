@@ -1,5 +1,5 @@
 // Shared fixtures for the multi-agent tests: a host session list shaped like
-// DSH 0.2.1-rc.2's `session/list` (checked against a throwaway `dsh web`
+// JDK 0.2.1-rc.2's `session/list` (checked against a throwaway `dsh web`
 // running a scripted model), a team, and fakes for the team panel.
 
 import 'package:dsh_app/state/agents_state.dart';

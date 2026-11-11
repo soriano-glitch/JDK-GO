@@ -121,7 +121,7 @@ void main() {
       final sheet = find.byType(RemoteNetworkDetailsSheet);
       expect(tester.widget<RemoteNetworkDetailsSheet>(sheet).host, _host);
       expect(find.descendant(of: sheet, matching: find.text(_name)), findsOneWidget);
-      expect(find.descendant(of: sheet, matching: find.text('DSH Remote')), findsOneWidget);
+      expect(find.descendant(of: sheet, matching: find.text('JDK Remote')), findsOneWidget);
       expect(find.descendant(of: sheet, matching: find.text(path.label)), findsOneWidget);
       expect(find.text('315 毫秒'), findsOneWidget);
       expect(find.text('47 毫秒'), findsOneWidget);

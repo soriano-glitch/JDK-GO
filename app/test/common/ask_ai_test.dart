@@ -35,8 +35,8 @@ import '../shell/golden_harness.dart';
 
 /// The bundled guide pages, as a map (tests don't read the asset bundle).
 Future<String> _pages(String asset) async => switch (asset) {
-  'assets/skills/dsh-go-guide/zh-04-phone-control.md' => '# 手机操控\n让 DSH 看屏幕。',
-  'assets/skills/dsh-go-guide/en-04-phone-control.md' => '# Phone control\nLet DSH read the screen.',
+  'assets/skills/dsh-go-guide/zh-04-phone-control.md' => '# 手机操控\n让 JDK 看屏幕。',
+  'assets/skills/dsh-go-guide/en-04-phone-control.md' => '# Phone control\nLet JDK read the screen.',
   'assets/skills/dsh-go-guide/zh-03-engine-hosts.md' => '# 本机引擎与远程主机',
   _ => throw StateError('no asset $asset'),
 };
@@ -67,7 +67,7 @@ void main() {
       final file = request.attachments.single;
       expect(file.name, 'dsh-go-guide-phone-control.md');
       expect(file.isImage, isFalse);
-      expect(utf8.decode(file.bytes), '# 手机操控\n让 DSH 看屏幕。');
+      expect(utf8.decode(file.bytes), '# 手机操控\n让 JDK 看屏幕。');
       expect(request.note, isNull);
     });
 
@@ -170,7 +170,7 @@ void main() {
       expect(request.attachments.single.name, 'dsh-go-guide-engine-hosts.md');
     });
 
-    testWidgets('on DSH Remote, which takes no files: the question and the note', (tester) async {
+    testWidgets('on JDK Remote, which takes no files: the question and the note', (tester) async {
       await pumpPage(tester, host: const HostRef.relay('r'));
       await tester.tap(find.byTooltip('问 AI'));
       await tester.pumpAndSettle();

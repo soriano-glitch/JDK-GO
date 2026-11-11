@@ -176,7 +176,7 @@ void main() {
     expect(find.text('插件没有在运行'), findsOneWidget);
   });
 
-  testWidgets('DSH\'s own entry, listed and configurable on the Host: not drawn, not read', (tester) async {
+  testWidgets('JDK\'s own entry, listed and configurable on the Host: not drawn, not read', (tester) async {
     final api = MemoryPluginConfigApi([
       translatorEntry(),
       MemoryPluginEntry(
@@ -311,7 +311,7 @@ void main() {
       await tester.tap(find.text('设置'));
       await flush(tester);
       expect(find.byType(PluginConfigPage), findsOneWidget);
-      expect(find.text('模型精度'), findsOneWidget, reason: 'a field DSH 0.2.1 never served');
+      expect(find.text('模型精度'), findsOneWidget, reason: 'a field JDK 0.2.1 never served');
     });
 
     testWidgets('a market plugin: its native page, not only the web', (tester) async {

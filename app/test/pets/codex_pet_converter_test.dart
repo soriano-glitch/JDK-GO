@@ -111,7 +111,7 @@ void main() {
     expect(converted.warnings, contains('dsh-state-loops-replace-codex-settle-to-idle'));
   });
 
-  test('DSH states, all working tiers, reactions and sleep have explicit mappings', () {
+  test('JDK states, all working tiers, reactions and sleep have explicit mappings', () {
     final pack = CodexPetConverter.convertArchive(petZip(metadata())).validated.pack;
     const expected = {
       'idle': 'idle',

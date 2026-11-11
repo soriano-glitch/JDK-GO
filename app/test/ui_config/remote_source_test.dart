@@ -1,4 +1,4 @@
-// The remote source against a fake host: DSH home from the skill or $HOME,
+// The remote source against a fake host: JDK home from the skill or $HOME,
 // reads, paging, `workspaceFiles/changes`, the polling fallback, refusals.
 
 import 'dart:async';
@@ -26,7 +26,7 @@ class FakeRemoteHost implements UiRemoteHost {
   int probes = 0;
   DshRemoteException? refuse;
 
-  /// Older hosts refuse to watch a file that does not exist; DSH 0.2.1
+  /// Older hosts refuse to watch a file that does not exist; JDK 0.2.1
   /// watches it and reports the creation.
   bool watchMissingFails = false;
   final watchers = <String, StreamController<DshWorkspaceWatchFrame>>{};
@@ -138,14 +138,14 @@ void main() {
     await kicks.close();
   });
 
-  test('DSH home from the skill path', () {
+  test('JDK home from the skill path', () {
     expect(dshHomeFromSkillPath('/srv/dsh/skills/dsh-go-ui/SKILL.md'), '/srv/dsh');
     expect(dshHomeFromSkillPath('/srv/dsh/skills/dsh-go-ui/'), '/srv/dsh');
     expect(dshHomeFromSkillPath('/srv/dsh/skills/other/SKILL.md'), isNull);
     expect(dshHomeFromSkillPath('skills/dsh-go-ui/SKILL.md'), isNull);
   });
 
-  test('reads the file under the skill\'s DSH home and follows its changes', () async {
+  test('reads the file under the skill\'s JDK home and follows its changes', () async {
     host.write(customPath, '{"version": 1, "density": "compact"}');
     start();
     await until(() => lastText() != null);

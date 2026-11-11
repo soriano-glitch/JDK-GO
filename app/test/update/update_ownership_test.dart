@@ -30,7 +30,7 @@ String _apkUrl(String version) =>
     'https://github.com/ccch1mneyyy/dsh-go/releases/download/v$version/${_apkName(version)}';
 
 /// Different bytes per version, so the hashes differ too.
-List<int> _apk(String version) => utf8.encode('PK pretend this is DSH $version for arm64');
+List<int> _apk(String version) => utf8.encode('PK pretend this is JDK $version for arm64');
 
 Map<String, Object?> _release(String version) => {
   'schema': 1,

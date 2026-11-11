@@ -242,7 +242,7 @@ class FakeChatController extends ChatController {
   /// Reply seq -> fork cut, for [branchPointAfter].
   final branchPoints = <int, int>{};
 
-  /// Reply seq -> DSH message id, for [replyMessageId].
+  /// Reply seq -> JDK message id, for [replyMessageId].
   final replyIds = <int, String>{};
   final branched = <int>[];
   final edited = <int>[];
@@ -337,7 +337,7 @@ class FakeUsage extends SessionUsageController {
   SessionUsage build() => usage;
 }
 
-/// `commands/list` as DSH 0.2.x returns it (descriptor JSON).
+/// `commands/list` as JDK 0.2.x returns it (descriptor JSON).
 final testHostCommands = parseCommandList([
   {
     'definitionId': '@deepseek-ai/dsh-command-goal',

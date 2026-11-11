@@ -215,7 +215,7 @@ void main() {
       final update = await pump(tester, FakeUpdate(_offer()));
       await _openSheet(tester);
       expect(find.text('发现新版本'), findsOneWidget);
-      expect(find.text('DSH 1.2.0'), findsOneWidget);
+      expect(find.text('JDK 1.2.0'), findsOneWidget);
       expect(find.textContaining('171.8 MB'), findsOneWidget);
       expect(find.byKey(const ValueKey('update-star')), findsNothing);
       await tester.tap(find.text('立即更新'));

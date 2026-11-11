@@ -127,7 +127,7 @@ void main() {
       }
     });
 
-    test('an unknown slot (newer DSH) gets a web entry only', () {
+    test('an unknown slot (newer JDK) gets a web entry only', () {
       expect(modes(plan('conversation.brand.new', [_o('conversation.brand.new', 'p', cell: 'x')])), [
         (SeatMode.webLink, 'p'),
       ]);

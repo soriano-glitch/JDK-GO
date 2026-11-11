@@ -386,7 +386,7 @@ void main() {
   group('titles', () {
     test('a title that starts with a request shows what follows; a cut-short one, the kind', () {
       expect(chatTitleShown('〔生成图像 · 3:4 · 2 张 · Seedream 5.0〕 画一只橘猫'), '画一只橘猫');
-      // DSH's fallback: the first message's leading eight words.
+      // JDK's fallback: the first message's leading eight words.
       expect(chatTitleShown('〔生成图像 · 3:4 · 2 张 · Seedream'), '生成图像');
       expect(chatTitleShown('〔生成视频 · 5 秒 · 720p〕'), '生成视频');
       expect(chatTitleShown('窗台上的橘猫'), '窗台上的橘猫');

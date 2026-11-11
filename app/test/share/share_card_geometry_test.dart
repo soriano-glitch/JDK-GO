@@ -129,7 +129,7 @@ void main() {
       );
       expect(find.byKey(const ValueKey('share-qr')), findsNothing);
       expect(find.byType(QrCodeView), findsNothing);
-      expect(find.text('手机上的 DSH'), findsOneWidget);
+      expect(find.text('手机上的 JDK'), findsOneWidget);
       expect(find.textContaining('扫码'), findsNothing);
       final card = tester.getRect(find.byType(ShareCard));
       final brand = _rect(tester, 'share-brand');

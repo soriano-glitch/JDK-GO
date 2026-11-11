@@ -117,7 +117,7 @@ class _IconSheet extends StatelessWidget {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text('新对话', style: text.titleSmall?.copyWith(color: ink)),
-                      Text('DSH', style: text.bodySmall?.copyWith(color: ink.withValues(alpha: 0.7))),
+                      Text('JDK', style: text.bodySmall?.copyWith(color: ink.withValues(alpha: 0.7))),
                     ],
                   ),
                 ],
