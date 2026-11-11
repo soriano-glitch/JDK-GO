@@ -2,6 +2,18 @@
 
 每个版本先中文、后英文。发版时把对应版本的正文（不含版本标题）作为 Release 正文，见 `docs/release.md`。
 
+## 1.0.16 · 2026-11-11
+
+### 中文
+
+- **发版流程修正：先建 Release，再发 GitHub 包。** v1.0.15 的发布任务停在「发布插件包」这一步，Release 建出来是空的，GitHub Packages 里也没有 1.0.15 的插件包。这一版把顺序调过来并补齐发布步骤，`@soriano-glitch/jdk-go-plugin-kit` 1.0.16 与 Release 一起发布。
+- **这一版没有 App 功能改动。** 应用代码和 1.0.15 相同，只是修好发布流水线、重新发布插件 SDK；这个 Release 不附带安装包，已经装着 1.0.15 的手机不需要更新。
+
+### English
+
+- **Release flow fix: create the Release before publishing the GitHub package.** The v1.0.15 job stopped at the plugin package step, so the release went out empty and GitHub Packages never got a 1.0.15 build of the kit. This version reorders the steps and finishes publishing, so `@soriano-glitch/jdk-go-plugin-kit` 1.0.16 ships with the release.
+- **No app changes in this version.** The app code is the same as 1.0.15; only the publishing pipeline is fixed and the plugin SDK is republished. The release carries no installer, so phones on 1.0.15 don't need to update.
+
 ## 1.0.15 · 2026-11-10
 
 ### 中文
