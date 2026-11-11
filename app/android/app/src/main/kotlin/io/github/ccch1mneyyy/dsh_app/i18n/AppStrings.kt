@@ -27,11 +27,8 @@ object AppStrings {
     @Volatile private var cache: Pair<String, Context>? = null
 
     /** `zh`, `en`, or null to follow the system. */
-    fun language(ctx: Context): String? =
-        (ctx.applicationContext ?: ctx)
-            .getSharedPreferences(PREFS, Context.MODE_PRIVATE)
-            .getString(KEY, null)
-            ?.takeIf { it == "zh" || it == "en" }
+    @Suppress("UNUSED_PARAMETER")
+    fun language(ctx: Context): String? = "en" // English only
 
     /** True when native text comes out in English. */
     fun isEnglish(ctx: Context): Boolean =
