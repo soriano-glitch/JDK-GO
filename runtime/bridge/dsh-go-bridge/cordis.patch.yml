@@ -12,8 +12,8 @@
       name: '@deepseek-ai/dsh-agent-preset'
       config:
         id: dsh-go-companion
-        name: 伙伴
-        description: 伙伴小屋的对话：只有角色人设，没有工具。
+        name: Companion
+        description: The companion room's chat: persona only, no tools.
         order: 90
         plugins:
           - id: persona
@@ -57,8 +57,8 @@
       name: '@deepseek-ai/dsh-agent-preset'
       config:
         id: dsh-go-companion-full
-        name: 伙伴·完整
-        description: 保留伙伴人设，使用当前主机的标准工具与已连接的手机工具。
+        name: Companion · Full
+        description: Keeps the companion persona, with the current host's standard tools and connected phone tools.
         order: 91
         plugins:
           # This scoped provider owns persona-prefix + fixed persona-suffix.
