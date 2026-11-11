@@ -203,11 +203,18 @@ def check(repo: Path, guide: Path) -> list[str]:
     errors += check_skill((guide / 'SKILL.md').read_text(encoding='utf-8'))
     ids = read_page_ids(repo / 'app/lib/links/page_links.dart', repo / 'app/lib/ui/settings/index/spots.dart')
     res = repo / 'app/android/app/src/main/res'
+    source = {}
     for locale in LOCALES:
         arb = read_arb(repo / 'app/lib/l10n/parts', locale)
-        labels = set(arb.values()) | read_android(res, locale)
+        source[locale] = (arb, set(arb.values()) | read_android(res, locale))
+    for locale in LOCALES:
         for page in sorted((guide / locale).glob('*.md')):
-            errors += check_page(page, guide, locale, arb, labels, ids)
+            # A zh page that is still a byte-for-byte copy of its en page (not yet
+            # translated) can only be checked against the en labels.
+            twin = guide / 'en' / page.name
+            as_locale = 'en' if locale == 'zh' and twin.is_file() and twin.read_bytes() == page.read_bytes() else locale
+            arb, labels = source[as_locale]
+            errors += check_page(page, guide, as_locale, arb, labels, ids)
     for name in ('SKILL.md', 'README.md'):
         errors += check_links(guide / name, guide, ids)
     return errors
