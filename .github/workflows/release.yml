@@ -32,18 +32,20 @@ jobs:
       - name: Pack the plugin kit for GitHub Packages
         working-directory: sdk/plugin-kit
         run: |
-          npm pkg set name=@soriano-glitch/jdk-go-plugin-kit private=false \
-            version="${TAG#v}" publishConfig.registry=https://npm.pkg.github.com \
-            repository.type=git repository.url=git+https://github.com/${{ github.repository }}.git
+          npm pkg set name=@soriano-glitch/jdk-go-plugin-kit private=false             version="${TAG#v}" publishConfig.registry=https://npm.pkg.github.com             repository.type=git repository.url=git+https://github.com/${{ github.repository }}.git
           npm pack
-      - name: Publish package
-        working-directory: sdk/plugin-kit
-        run: npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create the release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create "$TAG" sdk/plugin-kit/*.tgz \
-            --repo "$GITHUB_REPOSITORY" --title "JDK-Go ${TAG#v}" --generate-notes
+          gh release create "$TAG" sdk/plugin-kit/*.tgz             --repo "$GITHUB_REPOSITORY" --title "JDK-Go ${TAG#v}" --generate-notes
+      - name: Publish package
+        working-directory: sdk/plugin-kit
+        run: |
+          printf '@soriano-glitch:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=%s
+' "$NODE_AUTH_TOKEN" > .npmrc
+          npm publish --registry=https://npm.pkg.github.com
+          rm -f .npmrc
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
