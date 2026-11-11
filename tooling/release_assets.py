@@ -20,7 +20,8 @@ and keeps those under 60 % of the new APK: in dist/, SHA256SUMS and update.json'
 --base-url makes update.json point at your own host (self-hosted feed); without
 it the app derives GitHub download URLs from the tag and asset names.
 DSHGO_REPO=owner/repo points update.json's `page` and --delta-from at another
-repository (a fork publishing its own releases).
+repository (a fork publishing its own releases); DSHGO_ASSET_PREFIX renames the
+release files (`dsh-go-…` by default).
 """
 
 import argparse
@@ -44,6 +45,9 @@ FLAVOR_ABI = {"arm64": "arm64-v8a", "x64": "x86_64"}
 # Where the release lives, for update.json's `page` and --delta-from. A fork
 # publishes its own releases, so it can point this at itself with DSHGO_REPO.
 REPO = os.environ.get("DSHGO_REPO", "ccch1mneyyy/dsh-go")
+# Release files are named <prefix>-<version>-<flavor>.apk; a fork that brands
+# its downloads differently sets DSHGO_ASSET_PREFIX.
+ASSET_PREFIX = os.environ.get("DSHGO_ASSET_PREFIX", "dsh-go")
 VERSION_RE = re.compile(r"^(\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?)(?:\+(\d+))?$")
 BADGING_RE = re.compile(r"^package: .*?\bversionCode='(\d*)' versionName='([^']*)'", re.MULTILINE)
 CACHE = pathlib.Path.home() / ".cache" / "dshgo-release" / "apk"
@@ -153,7 +157,7 @@ def listed(sums: pathlib.Path, name: str) -> str | None:
 def published_apk(tag: str, cache: pathlib.Path) -> pathlib.Path:
     """[tag]'s arm64 APK from its GitHub release, kept in [cache], as the
     release's SHA256SUMS says it is."""
-    name = f"dsh-go-{tag.removeprefix('v')}-arm64.apk"
+    name = f"{ASSET_PREFIX}-{tag.removeprefix('v')}-arm64.apk"
     apk, sums = cache / tag / name, cache / tag / "SHA256SUMS"
     if not (apk.is_file() and listed(sums, name) == sha256(apk)):
         gh("release", "download", tag, "--pattern", name, "--pattern", "SHA256SUMS", "--dir", str(cache / tag), "--clobber")
@@ -166,7 +170,7 @@ def patch_from(old: pathlib.Path, old_version: str, new: pathlib.Path, name: str
     """The patch from [old] (version X.Y.Z+N) to the arm64 APK [new] of
     version [name], written to [out]; None, and nothing written, unless it's
     under PATCH_LIMIT of [new]."""
-    patch = out / f"dsh-go-{name}-from-{old_version.partition('+')[0]}-arm64.dshdelta"
+    patch = out / f"{ASSET_PREFIX}-{name}-from-{old_version.partition('+')[0]}-arm64.dshdelta"
     apk_delta.make(old, new, patch)
     size = patch.stat().st_size
     share = size / new.stat().st_size
@@ -237,7 +241,7 @@ def main() -> None:
     assets = {}
     sums = []
     for flavor, path in sources.items():
-        asset = f"dsh-go-{name}-{flavor}.apk"
+        asset = f"{ASSET_PREFIX}-{name}-{flavor}.apk"
         target = args.out / asset
         shutil.copyfile(path, target)
         digest = sha256(target)
