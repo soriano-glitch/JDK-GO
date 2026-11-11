@@ -1,0 +1,316 @@
+// Picks the launcher icon (桌面图标), for the appearance page. The icons
+// themselves: android/app/src/main/res (ic_launcher_*).
+
+import 'dart:async';
+import 'dart:math' as math;
+
+import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
+
+import '../../../l10n/l10n.dart';
+import '../../../state/app_icon_state.dart';
+import '../../common/pressable.dart';
+import '../../shell/brand_mark.dart';
+import '../../theme/theme.dart';
+import '../../common/brief_notice.dart';
+
+/// The four launcher icons in a row, drawn as the launcher draws them (the
+/// system's icon mask), the one on the phone ringed in the accent:
+///
+/// ```
+///   ╭───╮      ╭───╮      ╭───╮      ╭───╮
+///  ( ◖● )     │ ◖● │     │ ◖● │     │ ◖● │    a ring [ringGap] off the chosen
+///   ╰───╯      ╰───╯      ╰───╯      ╰───╯    icon, in the icon's own shape
+///   雾蓝        夜幕        霜白         墨
+/// ```
+///
+/// Equal columns [gap] apart, [padding] on every side; each icon is centred in
+/// a square of [extent] (icon + ring room on every side), so choosing moves
+/// nothing. Sits in a card (`SettingsSection`) or straight on a page.
+class AppIconPicker extends ConsumerWidget {
+  const AppIconPicker({super.key, this.padding = const EdgeInsets.all(16)});
+
+  final EdgeInsetsGeometry padding;
+
+  static const gap = 12.0;
+
+  /// The ring round the chosen icon, and the space between it and the icon.
+  static const ring = 2.0;
+  static const ringGap = 3.0;
+
+  /// Icons are at most this big (a launcher's own size), smaller in narrow columns.
+  static const maxIcon = 56.0;
+
+  /// Icon square to label.
+  static const labelGap = 8.0;
+
+  /// The icon's side in a column [width] wide.
+  static double iconFor(double width) => math.min(maxIcon, width - 2 * (ring + ringGap));
+
+  /// The square an icon of [icon] sits in, ring included.
+  static double extent(double icon) => icon + 2 * (ring + ringGap);
+
+  @override
+  Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(appIconProvider).value;
+    return Padding(
+      padding: padding,
+      child: LayoutBuilder(
+        builder: (context, constraints) {
+          final column = (constraints.maxWidth - gap * (AppIcon.values.length - 1)) / AppIcon.values.length;
+          final icon = iconFor(column);
+          return Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              for (final (i, choice) in AppIcon.values.indexed) ...[
+                if (i > 0) const SizedBox(width: gap),
+                Expanded(
+                  child: _Option(
+                    icon: choice,
+                    size: icon,
+                    mask: state?.mask,
+                    selected: state?.current == choice,
+                    onTap: state == null || state.current == choice
+                        ? null
+                        : () => unawaited(_select(context, ref, choice)),
+                  ),
+                ),
+              ],
+            ],
+          );
+        },
+      ),
+    );
+  }
+
+  Future<void> _select(BuildContext context, WidgetRef ref, AppIcon icon) async {
+    final l10n = context.l10n;
+    final messenger = ScaffoldMessenger.maybeOf(context);
+    final ok = await ref.read(appIconProvider.notifier).select(icon);
+    if (ok) {
+      messenger?.showBriefNotice(l10n.pluginsIconChanged);
+    } else {
+      messenger
+        ?..hideCurrentSnackBar()
+        ..showSnackBar(SnackBar(content: Text(l10n.pluginsIconChangeFailed)));
+    }
+  }
+}
+
+class _Option extends StatelessWidget {
+  const _Option({
+    required this.icon,
+    required this.size,
+    required this.mask,
+    required this.selected,
+    required this.onTap,
+  });
+
+  final AppIcon icon;
+  final double size;
+  final List<double>? mask;
+  final bool selected;
+  final VoidCallback? onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final scheme = theme.colorScheme;
+    final duration = AppMotion.of(context, AppMotion.quick);
+    return Semantics(
+      selected: selected,
+      inMutuallyExclusiveGroup: true,
+      child: Pressable(
+        // Even the chosen one gives feedback; it just has nothing to do.
+        onTap: onTap ?? () {},
+        haptic: onTap != null,
+        semanticLabel: icon.label,
+        child: Column(
+          children: [
+            TweenAnimationBuilder<double>(
+              tween: Tween(end: selected ? 1 : 0),
+              duration: duration,
+              curve: AppMotion.std,
+              builder: (context, t, child) => CustomPaint(
+                key: ValueKey('app-icon-${icon.name}'),
+                painter: _RingPainter(
+                  mask: mask,
+                  icon: size,
+                  color: scheme.primary.withValues(alpha: t),
+                ),
+                child: child,
+              ),
+              child: SizedBox.square(
+                dimension: AppIconPicker.extent(size),
+                child: Center(
+                  child: AppIconPreview(icon, size: size, mask: mask),
+                ),
+              ),
+            ),
+            const SizedBox(height: AppIconPicker.labelGap),
+            AnimatedDefaultTextStyle(
+              duration: duration,
+              style: theme.textTheme.labelMedium!.copyWith(
+                color: selected ? scheme.primary : scheme.onSurfaceVariant,
+                fontWeight: selected ? FontWeight.w600 : FontWeight.w500,
+              ),
+              child: Text(icon.label, textAlign: TextAlign.center, maxLines: 1, overflow: TextOverflow.ellipsis),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+/// The ring: the icon's own outline grown by [AppIconPicker.ringGap], centred
+/// on the square the icon sits in.
+class _RingPainter extends CustomPainter {
+  const _RingPainter({required this.mask, required this.icon, required this.color});
+
+  final List<double>? mask;
+  final double icon;
+  final Color color;
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (color.a == 0) return;
+    final side = icon + 2 * AppIconPicker.ringGap + AppIconPicker.ring;
+    final inset = (size.width - side) / 2;
+    canvas.drawPath(
+      launcherMaskPath(mask, side).shift(Offset(inset, (size.height - side) / 2)),
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = AppIconPicker.ring
+        ..color = color,
+    );
+  }
+
+  @override
+  bool shouldRepaint(_RingPainter old) => old.color != color || old.icon != icon || old.mask != mask;
+}
+
+/// How each launcher icon is drawn: the gradient of its background layer
+/// (`res/drawable/ic_launcher[_<name>]_background.xml`, the same diagonal for
+/// all four) and its glyph. Generated by `tool/make_jdkgo_icons.py`.
+class AppIconArt {
+  const AppIconArt._(this.from, this.to, {this.mono = false});
+
+  /// Top-left and bottom-right of the background gradient.
+  final Color from;
+  final Color to;
+
+  /// A flat white glyph instead of the colour one.
+  final bool mono;
+
+  /// The flat glyph colour, for [mono].
+  static const monoColor = Color(0xFFFFFFFF);
+
+  /// The gradient's ends in the launcher's 108 grid (ic_launcher_background.xml).
+  static const start = Offset(7.57, -5.87);
+  static const end = Offset(100.43, 113.87);
+
+  static AppIconArt of(AppIcon icon) => switch (icon) {
+    AppIcon.mist => const AppIconArt._(Color(0xFF010530), Color(0xFF010530)),
+    AppIcon.night => const AppIconArt._(Color(0xFF2C3D6C), Color(0xFF0C122D)),
+    AppIcon.frost => const AppIconArt._(Color(0xFF3FB6FF), Color(0xFF1F4FD8)),
+    AppIcon.ink => const AppIconArt._(Color(0xFF292B30), Color(0xFF0D0E11), mono: true),
+  };
+}
+
+/// [icon] as the launcher shows it: [size] square, cut to [mask] (an outline
+/// in 0…1, see [AppIconState.mask]; a rounded square when null), with a
+/// hairline inside its edge so the light icon keeps its shape on a light card.
+class AppIconPreview extends StatelessWidget {
+  const AppIconPreview(this.icon, {super.key, this.size = AppIconPicker.maxIcon, this.mask});
+
+  final AppIcon icon;
+  final double size;
+  final List<double>? mask;
+
+  @override
+  Widget build(BuildContext context) {
+    final art = AppIconArt.of(icon);
+    final edge = Theme.of(context).colorScheme.onSurface.withValues(alpha: 0.08);
+    // The launcher shows the visible 72 of the 108 grid; the glyph is 60% of 108 wide.
+    final glyphWidth = size * 0.6 * 108 / 72;
+    return SizedBox.square(
+      dimension: size,
+      child: ClipPath(
+        clipper: _MaskClipper(mask),
+        child: Stack(
+          fit: StackFit.expand,
+          children: [
+            DecoratedBox(
+              decoration: BoxDecoration(
+                gradient: LinearGradient(
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                  colors: [art.from, art.to],
+                ),
+              ),
+            ),
+            Center(
+              child: Image.asset(
+                BrandMark.glyphAsset,
+                width: glyphWidth,
+                fit: BoxFit.contain,
+                filterQuality: FilterQuality.medium,
+                color: art.mono ? AppIconArt.monoColor : null,
+                colorBlendMode: art.mono ? BlendMode.srcIn : null,
+                excludeFromSemantics: true,
+              ),
+            ),
+            CustomPaint(painter: _EdgePainter(mask, edge)),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class _MaskClipper extends CustomClipper<Path> {
+  const _MaskClipper(this.mask);
+
+  final List<double>? mask;
+
+  @override
+  Path getClip(Size size) => launcherMaskPath(mask, size.width);
+
+  @override
+  bool shouldReclip(_MaskClipper old) => old.mask != mask;
+}
+
+/// A 1 px line just inside the icon's edge (half of the 2 px stroke is clipped).
+class _EdgePainter extends CustomPainter {
+  const _EdgePainter(this.mask, this.edge);
+
+  final List<double>? mask;
+  final Color edge;
+
+  @override
+  void paint(Canvas canvas, Size size) => canvas.drawPath(
+    launcherMaskPath(mask, size.width),
+    Paint()
+      ..style = PaintingStyle.stroke
+      ..strokeWidth = 2
+      ..color = edge,
+  );
+
+  @override
+  bool shouldRepaint(_EdgePainter old) => old.mask != mask || old.edge != edge;
+}
+
+/// The launcher's icon shape at [side] × [side]: [mask] (a closed outline in
+/// 0…1 from the system) or, without one, a rounded square.
+Path launcherMaskPath(List<double>? mask, double side) {
+  if (mask == null || mask.length < 6) {
+    return RoundedSuperellipseBorder(borderRadius: BorderRadius.circular(side * 0.32))
+        .getOuterPath(Rect.fromLTWH(0, 0, side, side));
+  }
+  final path = Path()..moveTo(mask[0] * side, mask[1] * side);
+  for (var i = 2; i + 1 < mask.length; i += 2) {
+    path.lineTo(mask[i] * side, mask[i + 1] * side);
+  }
+  return path..close();
+}

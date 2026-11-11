@@ -1,0 +1,15 @@
+# List isolation agreement for single-item session storage faults
+
+Refs #591; base 63e255f, DSH 0.2.2-rc.1.
+
+`sessionPersistence.list()` enumerates sessions that are readable and identity-consistent. A known file read fault, identity/generation mismatch or uninterpretable format in some project subdirectory, session subdirectory or log only makes that item absent from this round's list, and a warning containing the path and reason is recorded. Other valid sessions keep being returned, and the real workspaceRegistry can finish initialization with these headers. When duplicate physical records declare the same session ID, all ambiguous records for that ID are excluded; one can't be guessed by traversal order.
+
+Enumeration doesn't rename, delete or rewrite any original session directory or log. Identity errors and post-read content validation failures use the official SessionPersistenceCorruptionError; unsupported physical layouts/compression use the official SessionFormatUnsupportedError. Filesystem errors keep the original errno, and cancellation takes priority over isolation. Root directory read failures, resource exhaustion and unknown program errors are still rejected and not converted into a successful empty list.
+
+Tolerant enumeration is enabled only by the public list, and this scan isn't recorded as a successful strict rootEncodingCheck; direct open/stat/create and the internal scans of historical migration keep their original strict entry points. When the list generates a corpus revision for the historical generation, it still includes recognizable bad header paths; when a single path's stat can't be read, an unreadable marker containing that path and errno takes part in the fingerprint, without faking its content. Becoming readable again later will change the revision.
+
+A leading dot by itself doesn't mean corruption. The official SessionId encoding allows legal IDs such as `.ordinary` and `.retired-valid`; such sessions whose header matches their physical identity can still be listed. Renamed hidden backups and `.retired-*` leftovers are isolated by identity validation, not by globally filtering the dot prefix.
+
+The existing workspace.json in #401 with two IDs on the same path is a separate problem from bad session logs; the existing deduplication of concurrent creates doesn't mean old data has been repaired. This item doesn't automatically delete rows, merge IDs or rewrite member order; its current real reproduction and data retention constraints are described separately in REPLY. A separate DSH_HOME for safe mode is only analyzed, not implemented in this patch; the app's reset copy is out of scope.
+
+The tests use real Cordis, JSONL, JSON Storage, Domain, WorkspaceRegistry and their own temporary files. POSIX permission-denied tests are skipped on root or Windows, and a skip can't be counted as a measured permission pass. Not compiled for Android; PRoot/ARM/real devices not verified. Changes runtimeVersion; pins are recorded by the owner.

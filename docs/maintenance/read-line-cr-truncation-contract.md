@@ -1,0 +1,9 @@
+# Truncation marker contract for internal CRs in long lines read by read
+
+Base 63e255f, DSH 0.2.2-rc.1. Pre-implementation source contract: read's line-by-line display limits length in UTF-16 units, and exceeding the limit should add the existing truncation marker; a real trailing CR (CRLF or a CR before EOF) is stripped per existing semantics, and an internal CR should not hide the fact that the line is too long.
+
+With the public actual read input 2000a+CR+tail, the max+1 buffer trimmed it to 2000a+CR, stripCarriageReturn wrongly removed the internal CR, and the original output omitted the marker. The minimal fix changes the buffer from N+1 to N+2, without adding flags or changing the truncation function. If the complete line L<=N+2, the real trailing CR is still judged on the full line; if L>N+2, even if the cut end happens to be a CR and is stripped, at least N+1 remain and the marker is still triggered. The first N units, the original marker, offset/limit/line count and the byte cap computed on the final output are kept; at most one extra UTF-16 unit stays resident in the line buffer.
+
+668 fixes valid surrogate pairs in truncateLine; this group only changes the buffer limit in buildWindow, independently and without depending on 668; combined, the N+1 neighbor that 668 needs is also kept. After the fix, the marker adds real output bytes, so near the byte cap a line that was wrongly included before may now be correctly excluded as a whole; it isn't claimed that all boundary output is identical character for character.
+
+Only the display is fixed; files, permissions, cancellation, decoding and interfaces are unchanged. Real public tool tests are not real model/Android acceptance; not compiled for Android, PRoot/ARM not run. Changes runtimeVersion, to be re-recorded through the owner's process; pins are not changed in this package.

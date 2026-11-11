@@ -1,0 +1,9 @@
+# Workflow return text truncation contract (671)
+
+Refs W17-B, no corresponding public issue number. The real workflow tool accepts a JavaScript orchestration body and JSON meta, and returns a legal JSON value through WorkflowEngine; it isn't YAML formatting. The default maxResultChars=50000; the budget applies to the UTF-16 units of JSON.stringify(value,null,2), excluding the tool description prefix and the truncation marker.
+
+If and only if truncation is needed and the boundary splits a valid high/low surrogate pair, the kept end backs off 1 unit. The rest of the kept content follows the same JSON indentation rules as before. The omitted count must be rendered.length minus the actual kept length; the marker format is unchanged. The budget isn't changed to code points/graphemes, and the tool value, script execution permissions, run lifecycle and tool parameters are unchanged; no new dependencies.
+
+output.render after a normal foreground run completes and jobOutcomeOf for background completion share renderResult. Dynamic acceptance is limited to real foreground CLI/Agent/ToolRuntime/WorkflowEngine/PTC execution; background is source-proven only and not falsely claimed to have run. Its own scripts only return scalars/objects, with 0 subagents and no script file/network operations. The model endpoint is locally synthesized, not a real remote model. The independent live regression keeps the exact tool result string in the model request and the semantic boundary of the complete JSON value; the original probe exiting naturally with 0 is not treated as a pre-fix test passing.
+
+Deployment changes runtimeVersion. Not compiled for Android, no ARM/PRoot or real-device acceptance, and #570 is not closed. The manual probe depends on the full CLI/runtime/PTC assembly, is named *-live.mjs per ADD6, and isn't mixed into ordinary CI *.test.mjs.

@@ -1,0 +1,11 @@
+# Pre-implementation agreement: reusing metadata within a single bundle inventory
+
+Base 63e255fab5cb9d817af30b631c3643ccce8e9231, the real rc.1 pluginManager/listBundles public entry point. readBundles synchronously builds this inventory; declaredRows queries pluginPackages.metaOf by module specifier and its resolution base, obtaining multilingual display data. The same pair appears repeatedly within one listing; this item only eliminates repeated successful metadata reads.
+
+Kept: bundle order, row order, module resolution base, error shape, enable/install/permission/version judgments, existing wire fields, and the next request reading from disk. Don't cache data across requests; don't cache undefined or metadata carrying an error; don't cache source authorization, revision or whether a package exists.
+
+This synchronous collection reuses the first successful metadata object for the same pair, and the next readBundles creates a new local Map. If an external process changes locale or the manifest exactly during the synchronous collection, the original wasn't an atomic file snapshot either; this item doesn't guarantee mid-way changes are visible each time. Returned display metadata is consumed read-only as before; no new public API or configuration is added.
+
+The implementation only makes the internal declaredRows accept this run's reader; other direct calls keep their original read method; the reader still calls the real pluginPackages.metaOf. Regressions cover normal equality, small inputs, the same module with different bases being independent, a successful change being visible to the next request, failures not being cached, and original errors being kept. Numbers from the real public RPC are the main evidence of the gain; the helper microbenchmark serves only as a small-input control, and no PRoot/Android gain is claimed.
+
+The temporary wrapping of early observer methods was used only for prototype measurement; the formal implementation was separately verified with the actual runtime and the public RPC. The standalone 63e patch needs pins and runtimeVersion re-recorded through the current build process; this item doesn't record the values on the owner's behalf.

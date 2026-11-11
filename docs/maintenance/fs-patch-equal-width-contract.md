@@ -1,0 +1,11 @@
+# Local optimization for rebuilding equal-length hunks
+
+Base 63e255fab5cb9d817af30b631c3643ccce8e9231. Refs W17-B, no corresponding public issue number. Changes runtimeVersion; not compiled for Android.
+
+Only when the actual replacement.oldLength === replacement.newLines.length does it write into the owned lines array index by index. Different lengths still use the original spread, and sorting and reverse are unchanged. Matching, EOF backtracking, same-position ordering, failure returns, the trailing-blank-line retry and trailing-LF rebuilding are all unchanged; it isn't claimed that all patches are faster.
+
+All matches are completed against the original first, start is in [0,N], and the starts of the reverse-order rebuild are non-increasing. If the current length L>=s, the length after the old splice is s+m+max(L-s-k,0)>=s, so subsequent start points are still within the current array or at its end. For equal length m=k: if L>=s+k, overwriting keeps the prefix/suffix; if s<=L<s+k, contiguous writes extend it to s+k with no holes, equivalent to the old prefix+newLines+empty suffix. Zero-length equal-width does nothing, the same as the copied content. What is compared is the actual replacement after retry, not the original hunk length.
+
+lines comes from before.split or an internal new array and is not shared with the caller's hunk array; by the time of rebuilding, all matching has finished. String and hunk inputs are not modified. Legal overlap and EOF backtracking are not forbidden.
+
+This is a performance optimization, not a functional defect fix; the semantic goldens of both the original and the candidate should pass. Fixed real Context/LocalFS.patchText measurements were taken as four independent AB/BA processes, each process with 71B/1 hunk and 880003B/20 hunks, 3 warm + 5 timed each. Large-input median AB 15.736810→8.747910 ms, BA original 11.995933 / candidate 8.293520 ms; small-input AB 2.438799→2.494849 ms regressed, BA original 2.362730 / candidate 2.242179 ms. These are fixed samples from this host only and are not generalized into device/all-scale gains; all raw samples are kept and not appended repeatedly. No real model or Android/PRoot/ARM acceptance.

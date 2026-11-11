@@ -1,0 +1,11 @@
+# Subprocess complete spill write agreement (644)
+
+Base main `63e255fab5cb9d817af30b631c3643ccce8e9231` (v1.0.11), core 0.2.2-rc.1. This document is recorded before implementation: spillPath is the recovery location for the complete original output, and it can't keep claiming completeness after an ordinary file short write; the in-memory tail, raw-byte total and the original spill limit are unchanged.
+
+The real fault comes from the public LocalSubprocessRuntime.spawn: its own test process under Linux RLIMIT_FSIZE=1024 collects 8192 bytes of output from an ordinary Node, with an in-memory tail of 64 and a spill budget of 16384. The kernel's writeSync actually returned 1024 without throwing; the original implementation ignored the return value and finally returned a spillPath whose file had only 1024 bytes, while reporting total 8192. The limit applies only to that test process and its own child processes; it doesn't change the global quota or fill the disk.
+
+spillAll must completely write every prior chunk and the current chunk, or go through the existing catch to run discardSpill and onFailure once; no incomplete file may be published as spillPath, and the original in-memory tail stays readable. Complete files are still kept per the original retention contract, with no new cleanup policy.
+
+The minimal implementation replaces the two writeSync calls with Node's built-in writeFileSync(fd, Buffer). In this machine's Node 24.22.1, that function's Buffer branch explicitly calls writeSync in while(length>0) and deducts the actual written, and doesn't close by itself when isUserFd; the existing collector keeps owning the fd and closes it in discard/seal. No new general write loop/interface/dependency is needed, and the stdout processing order is unchanged.
+
+Verification must use real kernel short writes, without replacing system call results; the observer only passes through and records. It covers a single large chunk, keeping prior before overflowing, a complete spill with no error, and reuse by subsequent tasks after a failure. Only its own processes/temporary data are controlled; Android/SSH are not tested. The patch affects runtimeVersion; pins/version are recorded normally on this machine and not provided here.

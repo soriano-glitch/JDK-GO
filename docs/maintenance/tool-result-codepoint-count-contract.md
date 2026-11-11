@@ -1,0 +1,13 @@
+# Tool result code-point counting: fewer intermediate arrays
+
+Base 63e255fab5cb9d817af30b631c3643ccce8e9231, DSH 0.2.2-rc.1. Only the implementation of the public codePointLength is optimized; no functional bug is fixed and the pruning strategy is unchanged.
+
+The original implementation Array.from(text).length builds an array of every code point. The real pruneSession's pruneContent first counts the original text, then counts it again; pruneContent also has an array for keeping the head and tail, which this change leaves unchanged.
+
+The new count starts from the UTF-16 length, subtracts one for each adjacent valid high/low surrogate pair and skips the low. Ordinary BMP, ASCII, and lone high/low each count as one; combining characters and ZWJ still count as multiple code points, not changed to grapheme counts, and input isn't normalized. Equivalence reasoning: the JS string iterator consumes two UTF-16 units at once for a valid high+low and yields one code point, and yields one code point for every other unit, so the count equals the UTF-16 length minus the number of valid adjacent pairs. Skipping the low after pairing avoids double counting, and lone units still count as one. The original thresholds, head/tail, marker, rich block order, TokenMeter pricing, shadow-price events, replacement records and original logs are kept. A second prune still produces no new changes.
+
+Measure before optimizing: fixed real Session/Registry/TokenMeter/pruneSession at 1 MiB and 8 MiB, A/B and B/A. The numeric-scan prototype reduced the 8 MiB median by about 23% and 41%, with only 3 timed samples per group; the first 1 MiB pair showed almost no benefit. 64 KiB ASCII/pure emoji serve only as small controls. The earlier for-of mechanism clearly regressed; its historical data is kept. Performance numbers are not CI assertions and can't be used to infer gains under actual Agent pressure triggers, PRoot, ARM or Android.
+
+Ordinary tests use only the existing prepared prefix and Node, lazily reading DSH_TEST_PREFIX or DSH_PREFIX; the manual benchmark-live entry has no new dependencies and prints complete results and raw samples. Functionally the original should be all green, with no manufactured first red. The npm published package has no runnable full upstream tests, and the original repository has no dedicated pruner test either, so these suites aren't falsely claimed to have run.
+
+This change adds a runtime vendor patch, which affects runtimeVersion inputs; the version and pins are generated through the local existing process. This package doesn't change pins. Not compiled for Android; no actual model, full Agent trigger or device acceptance.

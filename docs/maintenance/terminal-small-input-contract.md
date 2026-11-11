@@ -1,0 +1,9 @@
+# Rejecting the whole input when characters can't fit a small legal terminal input budget (675)
+
+Base 63e255fab5cb9d817af30b631c3643ccce8e9231. The official rc.1 terminal controller allows maxInputBytes to be an integer >=1, and rejects over-limit input by the raw UTF-8 byte count of each write command. The SDK's TerminalAttachment splits by codepoint; when the budget is only 1–3 bytes, a single codepoint may not fit into any legal chunk.
+
+This change, after the writable and non-empty checks, pre-checks the whole input only for limit<4: cap 1 allows up to U+007F, cap 2 up to U+07FF, cap 3 up to U+FFFF. Dart runes' existing replacement semantics for lone UTF-16 surrogates are kept. If any rune that can't fit is found, it returns false along the existing inputFull failure/close path, without sending any prefix of this input, silently dropping characters or faking success. Existing queued/pending input is wound down per the existing close semantics, with no replay introduced.
+
+limit>=4 keeps the original chunking path, with no added whole-input pre-scan. Legal characters are still chunked on existing codepoint boundaries; non-writable, empty strings and ordinary encoded buffer/window limits keep their original behavior. The Host protocol and configuration range are unchanged, and no public API is added.
+
+The test obtains a legal budget from its own loopback HTTP terminal/environment and observes the sent frames through the public DshClient.attachTerminal and an actual WebSocket; it isn't a PTY, full official terminal Host or Android test. The later retain public stream reply serves as an ordered observation barrier on the same socket, with no sleep/private callbacks. No new dependencies, accounts or external services. SDK code isn't a runtime build input, so runtimeVersion doesn't change; not compiled for Android.

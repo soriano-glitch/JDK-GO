@@ -1,0 +1,11 @@
+# Parent path type changes for resolved file targets
+
+Refs W17-B, no corresponding public issue number. Base 63e255fab5cb9d817af30b631c3643ccce8e9231; changes runtimeVersion. Not compiled for Android; ARM, PRoot and real models were not run.
+
+The official FileSystem contract says read, list-directory and modify failures use stable FsErrors. An FsTarget comes from the public resolve; between two normal calls, one's own parent directory can be moved and an ordinary file can appear in its original location. resolveLocalTarget already has ENOTDIR→FS_NOT_FOUND, probeStats treats ENOENT/ENOTDIR as nonexistent, and listingIoError also maps to FS_NOT_FOUND; but statRegularFile only translated ENOENT.
+
+The minimal change only makes statRegularFile reuse the existing isENOTDIR, entering the same FS_NOT_FOUND branch as ENOENT. No new error code, cause policy, interface or generic catch is added; other native errors are outside this patch's scope. readText, streamText, readBytes and readByteRange all pass through this real check; a directory itself is still FS_NOT_REGULAR_FILE, and an ordinary missing file is still FS_NOT_FOUND. Cancellation, read budgets, UTF-8 decoding and write policy are unchanged.
+
+The tests use a real Context + LocalFileSystem and their own temporary directory. First resolve and read normally, rename the parent directory keeping the original file, write an ordinary file at the original parent location, then read with the same target; after restoring, read the original text back with the same target. Each of the four public entry points first keeps the actual failure, then completes the original-text and restore checks, and finally checks the typed error. There are also ENOENT and actual-directory controls for each. No private callbacks, permission operations, mock I/O, fake Agents or replacement of foreign files.
+
+This issue only proves the error classification for subsequent reads after the public FS has resolved a target. The model tool read has its own resolve/stat precondition checks, and stable errors usually reject earlier; it hasn't been proven that the tool falsely reports success, that real Agents race, or that user data is corrupted. Ordinary node:test can run with the prefix prepared by the original CI; without a prefix it lazily skips, adding no extra executable dependencies.

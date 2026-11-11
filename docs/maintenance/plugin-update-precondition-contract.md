@@ -1,0 +1,13 @@
+# 661: non-HMR updates re-verify the version basis inside the install lock
+
+Base 63e255fab5cb9d817af30b631c3643ccce8e9231, DSH 0.2.2-rc.1. This agreement precedes the implementation; no external RPC fields, configuration switches or persistent caches are added.
+
+The public updateBundle validates that the target is a newer version than the installed from, then waits for the registry check. A normal non-HMR in-place install could still use a stale from: during the wait, another public installBundle had upgraded 1 to 3, yet after the old 1→2 check returned, it silently installed 2. After another remove has succeeded, the old update also shouldn't automatically reinstall because of a stale check.
+
+This item treats a non-HMR update as an install with the precondition {name, version: from}. Inside the existing change's package.json file lock, before pnpm installs/approves build scripts/writes package files, it checks that the dependency still exists and that the real installed bundle manifest version still equals from. If not, it rejects with the existing failed/operation-error/diagnostic result, keeping the current state; no new error code, no retry, no rollback of other operations that succeeded.
+
+The expected value is passed only through installBundle's optional third internal parameter: only this module's updateBundle calls it, and the original public RPC descriptor/options and ordinary two-argument calls are unchanged. No future general-purpose wrapper is added. An ordinary explicit install can still downgrade per the existing contract; a normal 1→2 update works as usual. Changing only enabled during checking without changing the installed version should not be rejected; keeping the 660 selection is the job of its own separate patch.
+
+The check and the write are inside the same existing lock, rather than reading again before calling install and leaving an await gap in the lock. This only covers ordinary management operations that respect this lock; external processes modifying around the lock and byte differences on reinstalling the same version are outside the version precondition. HMR's remove/install/restore keep their original paths without this precondition; it can't be claimed to fix the HMR restore race.
+
+The actual counterexamples include a normal update, a newer version already installed, an uninstall already completed, and an explicit downgrade install; combined with 660's four selection controls. Real Node/Cordis/PluginManager/pnpm, its own ordinary HTTP registry and tar packages, without fake pnpm or private callbacks. Not compiled for Android; PRoot/ARM not run; this new runtime patch changes runtimeVersion, and this package doesn't record pins on the owner's behalf.

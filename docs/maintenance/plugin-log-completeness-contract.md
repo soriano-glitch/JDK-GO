@@ -1,0 +1,13 @@
+# 647 Plugin operation diagnostic log completeness contract (pre-implementation)
+
+Base 63e255fab5cb9d817af30b631c3643ccce8e9231.
+
+The official dsh-plugin-manager/lib/types/types.d.ts:129 defines PackageResult as a result carrying a retrieval path for unabridged diagnostics; output/truncated are only in-memory tail-length state maintained by the append function and can't be treated as an on-disk completeness indicator. The CLI dsh/lib/plugin-DscIHF4k.js:97 explicitly points the user to logPath on failure; the service's installBundle result also exposes packageResult.logPath (the app SDK's plugins_api.dart:344 keeps this field). Therefore losing the second half of the log while keeping a success result violates the diagnostic path contract.
+
+Two actual published entry points: index.js's PluginManager.installBundle via the internal runPnpm→runProfilePnpm; and runPluginCommand exported by the public ./operations, which the CLI calls directly, with the formal options supporting service capture. The CLI's normal execution:cli inherits stdio, so this probe is not misreported as the CLI capturing all stdout; the public operations service mode and the main service were each actually verified. The two differ in structure, so each keeps its existing convergence logic, without copying the whole implementation.
+
+Original evidence: its own Node package manager's stdout was 8192 bytes; with the subprocess at RLIMIT_FSIZE 4096, both public entry points returned package exit 0, memory/events 8192, log 4096; the 32768 negative control's log was 8192 and complete byte for byte. The main service's installBundle returned restart-required (not failed), with the formal profile fields complete; no private runPnpm or fake short writes were used. No registry/credentials/external network.
+
+Minimal fix: only the low-level log.write of pnpm.log inside each runProfilePnpm is changed to log.writeFile (covering bytes, active, diagnostic and notice), awaiting in the existing order and converging errors along the existing path; truncated is unchanged, the whole package operation isn't retried, and no caches/protocols are introduced. The other github-connection/git.log module is not included, and it can't be claimed that all other diagnostic writes are verified.
+
+FileHandle.writeFile writes the complete input or throws; failures are handled by the original collect catch→failure/abort and the existing finally that closes resources. The dependency command may already have completed file side effects; this package doesn't promise to roll back installed modules; it only prevents a silent short write from being returned as complete diagnostics. The real error category and the original public result structure are kept.

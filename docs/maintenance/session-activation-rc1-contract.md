@@ -1,0 +1,11 @@
+# Explicit session interaction activation for the reviewed rc.1
+
+Base 63e255fab5cb9d817af30b631c3643ccce8e9231. The SDK originally recognized only 0.2.2-alpha.2; after upgrading to rc.1, an explicitly allowed interaction still returned false, and cold sessions stayed without an Agent. The actual rc.1 WebHost allows an ordinary prepared observation to mount an Agent via follow with request.activate=true; a direct public request over the same SDK connection has shown agentAvailable false→true.
+
+Only the exact version 0.2.2-rc.1 is added; alpha.2 is kept, and unknown/later versions stay passive. The default preview doesn't activate and doesn't query the version; allowed, the main epoch, Mux generation, the session address kind and the re-check on leaving are all kept. Activation still uses a short auxiliary follow; the main data follow is not replaced, and the auxiliary snapshot is not forwarded. Returning true only means the Host accepted opening the stream; completion of the background Agent promotion is still signaled by Host events.
+
+An ordinary ChatScreen route that is current and resumed enters this API via ChatController.beginInteraction. The gap blocked this explicitly chosen Agent warm-up/scope initialization; the pet's current-session offer, filtered by agentAvailable, might not show because of it (a source-level consequence, not tested on a real device/UI). An ordinary prompt resolves its own Agent, so it can't be said that messages couldn't be sent. No independent product agreement permanently forbidding rc.1 was found; the original SDK note that unknown versions are passive just means the audit list wasn't updated.
+
+No RPC extension, no change to permissions, default observation or subagent policy; no UI changes. Does not change runtimeVersion. Not compiled for Android; real devices/PRoot/ARM not tested.
+
+Side-effect boundaries: promotion instantiates the Agent and emits agent/created, and restoring the inbox may flush logs; zero side effects for arbitrary plugin created listeners can't be guaranteed. The built-in inbox restore doesn't actively wake the driver, and goal creation is disarmed; with this run's own ordinary cold fixture, the actual number of model requests was 0, which is not widened into proof for restoring all persistent tasks. Closing the auxiliary follow doesn't undo an already-committed promotion.
