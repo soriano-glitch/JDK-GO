@@ -1,0 +1,49 @@
+# Publishes a GitHub Release and a GitHub Packages npm package when a v* tag is pushed
+# (or from the Actions tab: Run workflow, with the tag name).
+name: Release
+
+on:
+  push:
+    tags: ['v*']
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Tag to release (must already exist), e.g. v1.0.15
+        required: true
+
+permissions:
+  contents: write
+  packages: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      TAG: ${{ github.event.inputs.tag || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ env.TAG }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: https://npm.pkg.github.com
+          scope: '@soriano-glitch'
+      - name: Pack the plugin kit for GitHub Packages
+        working-directory: sdk/plugin-kit
+        run: |
+          npm pkg set name=@soriano-glitch/jdk-go-plugin-kit private=false \
+            version="${TAG#v}" publishConfig.registry=https://npm.pkg.github.com \
+            repository.type=git repository.url=git+https://github.com/${{ github.repository }}.git
+          npm pack
+      - name: Publish package
+        working-directory: sdk/plugin-kit
+        run: npm publish
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create the release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh release create "$TAG" sdk/plugin-kit/*.tgz \
+            --repo "$GITHUB_REPOSITORY" --title "JDK-Go ${TAG#v}" --generate-notes

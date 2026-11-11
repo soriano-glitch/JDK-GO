@@ -3,10 +3,7 @@
 </p>
 
 <p align="center">
-  <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/hero-en-dark.webp">
-    <img src="docs/assets/hero-en-light.webp" alt="JDK-Go: DeepSeek Harness, in your pocket" width="100%">
-  </picture>
+  <img src="docs/assets/hero.webp" alt="JDK-Go: DeepSeek Harness, in your pocket" width="100%">
 </p>
 
 <p align="center">
@@ -14,10 +11,8 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ccch1mneyyy/dsh-go/releases/latest"><img alt="Android 8+" src="https://img.shields.io/badge/Android-8%2B-4B67B4?style=flat-square&logo=android&logoColor=white&labelColor=2B3245"></a>
+  <a href="https://github.com/soriano-glitch/JDK-GO/releases/latest"><img alt="Android 8+" src="https://img.shields.io/badge/Android-8%2B-4B67B4?style=flat-square&logo=android&logoColor=white&labelColor=2B3245"></a>
   <a href="LICENSE"><img alt="License AGPL-3.0" src="https://img.shields.io/badge/license-AGPL--3.0-4B67B4?style=flat-square&labelColor=2B3245"></a>
-  <a href="https://forum.dshtui.com"><img alt="Forum" src="https://img.shields.io/badge/forum-forum.dshtui.com-4B67B4?style=flat-square&labelColor=2B3245"></a>
-  <a href="https://qm.qq.com/q/OEy2RqZnqY"><img alt="QQ group 1132118290" src="https://img.shields.io/badge/QQ%20group-1132118290-4B67B4?style=flat-square&logo=tencentqq&logoColor=white&labelColor=2B3245"></a>
 </p>
 
 <p align="center">
@@ -47,7 +42,7 @@
 <p align="center">Get the latest APK from GitHub Releases or the download page at go.dshtui.com. Most phones need the arm64 package.</p>
 
 <p align="center">
-  <a href="https://github.com/ccch1mneyyy/dsh-go/releases/latest"><img alt="Download from GitHub Releases" src="https://img.shields.io/badge/GitHub%20Releases-Download%20APK-4B67B4?style=for-the-badge&logo=github&logoColor=white&labelColor=2B3245"></a>&emsp;<a href="https://go.dshtui.com/download"><img alt="Download from go.dshtui.com" src="https://img.shields.io/badge/go.dshtui.com-Download%20page-4B67B4?style=for-the-badge&labelColor=2B3245"></a>
+  <a href="https://github.com/soriano-glitch/JDK-GO/releases/latest"><img alt="Download from GitHub Releases" src="https://img.shields.io/badge/GitHub%20Releases-Download%20APK-4B67B4?style=for-the-badge&logo=github&logoColor=white&labelColor=2B3245"></a>&emsp;<a href="https://go.dshtui.com/download"><img alt="Download from go.dshtui.com" src="https://img.shields.io/badge/go.dshtui.com-Download%20page-4B67B4?style=for-the-badge&labelColor=2B3245"></a>
 </p>
 
 <p align="center">
@@ -55,11 +50,11 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/ccch1mneyyy/dsh-go/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/ccch1mneyyy/dsh-go?style=flat-square&logo=github&label=Star&color=4B67B4&labelColor=2B3245"></a>
+  <a href="https://github.com/soriano-glitch/JDK-GO/stargazers"><img alt="GitHub stars" src="https://img.shields.io/github/stars/soriano-glitch/JDK-GO?style=flat-square&logo=github&label=Star&color=4B67B4&labelColor=2B3245"></a>
 </p>
 
 <p align="center">
-  <sub>New here? Start with the <a href="docs/guide/README.md">user guide</a>, and bring questions to the <a href="#community">forum and QQ group</a>.</sub><br>
+  <sub>New here? Start with the <a href="docs/guide/README.md">user guide</a>, and report problems on <a href="https://github.com/soriano-glitch/JDK-GO/issues">Issues</a>, and grab builds from <a href="https://github.com/soriano-glitch/JDK-GO/releases">Releases</a> and <a href="https://github.com/soriano-glitch/JDK-GO/packages">Packages</a>.</sub><br>
   <sub>An early test build signed with a different key can't be updated in place: uninstall it first, which clears your chats, the Linux environment and settings.</sub>
 </p>
 
@@ -186,7 +181,7 @@ Capabilities depend on the host and connection. DSHarness Remote currently accep
 
 Installation requires Android 8.0 (API 26) or later. The **arm64** package on the Releases page is for typical 64-bit Android phones; the x64 package for x86_64 devices and emulators is under “Other builds” at the end of the release notes. This repository has no 32-bit ARM build.
 
-1. Download the APK for your device architecture from [GitHub Releases](https://github.com/ccch1mneyyy/dsh-go/releases/latest) or the [download page](https://go.dshtui.com/download), and follow Android's prompt to allow that installation source.
+1. Download the APK for your device architecture from [GitHub Releases](https://github.com/soriano-glitch/JDK-GO/releases/latest) or the [download page](https://go.dshtui.com/download), and follow Android's prompt to allow that installation source.
 2. On first launch, choose an on-device runtime or a remote host.
 3. Configure a model and its credentials for the selected host, then start a conversation. Some remote providers must be configured on the host itself.
 
@@ -259,7 +254,7 @@ The following workflow targets **Linux x86_64**. The toolchain script currently 
 Start with the complete source tree and project assets. Fonts, images and other files declared in `app/pubspec.yaml` are build inputs. The following script generates the runtime bundle.
 
 ```bash
-git clone https://github.com/ccch1mneyyy/dsh-go.git
+git clone https://github.com/soriano-glitch/JDK-GO.git
 cd dsh-go
 
 bash tooling/setup-toolchain.sh
@@ -301,43 +296,22 @@ DSH_BETA_TOKEN_FILE= bash tooling/build-apk.sh --dry-run -f all
 | `sdk/plugin-kit/` | Native plugin authoring kit, used from the repository and not published to npm |
 | `examples/plugins/` | Example plugins |
 | `docs/guide/`, `docs/plugins/` | User and plugin development guides |
-| `docs/assets/` | Showcase images, pet animations and community QR codes used on this page |
+| `docs/assets/` | Showcase images and pet animations used on this page |
 | `tooling/` | Toolchain, APK build and diagnostic scripts |
 | `services/`, `site/`, `infra/` | Companion sharing service, website and deployment materials |
 
 ## Contribute
 
-Report bugs and suggest improvements in [Issues](https://github.com/ccch1mneyyy/dsh-go/issues). For code, documentation and translation changes, start with [CONTRIBUTING.en.md](CONTRIBUTING.en.md). Plugin authors can use the [plugin guides](docs/plugins/en/README.md) and [SDK](sdk/plugin-kit/README.en.md).
+Report bugs and suggest improvements in [Issues](https://github.com/soriano-glitch/JDK-GO/issues). For code, documentation and translation changes, start with [CONTRIBUTING.en.md](CONTRIBUTING.en.md). Plugin authors can use the [plugin guides](docs/plugins/en/README.md) and [SDK](sdk/plugin-kit/README.en.md).
 
 Report security issues through [SECURITY.en.md](SECURITY.en.md). Keep vulnerability details and credentials out of public issues.
-
-<a id="community"></a>
-
-## Community
-
-- **Forum**: [forum.dshtui.com](https://forum.dshtui.com)
-- **QQ group**: `1132118290` ([join](https://qm.qq.com/q/OEy2RqZnqY))
-- **WeChat group**: scan the code below; if it has expired, join the QQ group
-<!-- Telegram: link to come, add a line here -->
-
-<p align="center">
-  <a href="https://qm.qq.com/q/OEy2RqZnqY"><picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/qr-qq-en-dark.webp"><img src="docs/assets/qr-qq-en-light.webp" width="300" alt="QQ group DSH-Go!!, number 1132118290"></picture></a>&emsp;&emsp;<picture><source media="(prefers-color-scheme: dark)" srcset="docs/assets/qr-wechat-en-dark.webp"><img src="docs/assets/qr-wechat-en-light.webp" width="300" alt="WeChat group DSHGo 2群"></picture>
-</p>
-
-<p align="center">
-  <sub>QQ group <code>1132118290</code>. On a computer, <a href="https://qm.qq.com/q/OEy2RqZnqY">join with one click</a>. The WeChat code changes every week; if it has expired, join the QQ group.</sub>
-</p>
-
-## Friends' Links
-
-- **[DSH-TUI](https://dshtui.com/)**: the interactive terminal UI for DeepSeek Harness by the same author — the desktop counterpart to JDK-Go, with a pixel whale, live status and time travel ([GitHub](https://github.com/ccch1mneyyy/dsh-TUI)).
 
 ## License scope and redistribution
 
 The code is open source under [AGPL-3.0](LICENSE), and forking it to study, self-host or build on is welcome. Please respect the original author and project origin:
 
-- **Please contact the author before making modifications.** If you plan to modify this project, develop it further or publish a derivative product, please contact the original author, ccch1mneyyy, through [Issues](https://github.com/ccch1mneyyy/dsh-go/issues) or the [community](#community) in advance and describe your intended use and plans.
-- **Please credit the upstream repository and author in forks.** When publishing a modified version, please clearly credit <https://github.com/ccch1mneyyy/dsh-go> and the original author, [ccch1mneyyy](https://github.com/ccch1mneyyy), in the repository README, in-app About screen and release page. Retain copyright, license and modification notices as required by the applicable license.
+- **Please contact the author before making modifications.** If you plan to modify this project, develop it further or publish a derivative product, please contact the original author, ccch1mneyyy, through [Issues](https://github.com/soriano-glitch/JDK-GO/issues) in advance and describe your intended use and plans.
+- **Please credit the upstream repository and author in forks.** When publishing a modified version, please clearly credit <https://github.com/soriano-glitch/JDK-GO> and the original author, [ccch1mneyyy](https://github.com/ccch1mneyyy), in the repository README, in-app About screen and release page. Retain copyright, license and modification notices as required by the applicable license.
 - **No unauthorized commercial reskins.** Do not use this project's brand graphics or protected assets, including Deepy and Whale girl, in reskinned products for sale, paid distribution or other commercial products without permission. Do not violate the applicable license by removing required copyright and license notices or distributing derivative code without the required source, or impersonate the original author or an official release.
 - **The name and assets are separate.** The JDK-Go name and logo, and the Deepy and Whale girl mascots, are not covered by AGPL-3.0. Ship a modified build under your own name and assets; see [ASSETS.md](ASSETS.md).
 
