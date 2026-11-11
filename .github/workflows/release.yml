@@ -32,13 +32,20 @@ jobs:
       - name: Pack the plugin kit for GitHub Packages
         working-directory: sdk/plugin-kit
         run: |
-          npm pkg set name=@soriano-glitch/jdk-go-plugin-kit private=false             version="${TAG#v}" publishConfig.registry=https://npm.pkg.github.com             repository.type=git repository.url=git+https://github.com/${{ github.repository }}.git
+          npm pkg set name=@soriano-glitch/jdk-go-plugin-kit version="${TAG#v}" publishConfig.registry=https://npm.pkg.github.com repository.type=git repository.url=git+https://github.com/${{ github.repository }}.git
+          # `private=false` would be stored as the string "false", which npm still
+          # treats as private (EPRIVATE); the field has to go.
+          npm pkg delete private
           npm pack
       - name: Create the release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gh release create "$TAG" sdk/plugin-kit/*.tgz             --repo "$GITHUB_REPOSITORY" --title "JDK-Go ${TAG#v}" --generate-notes
+          if gh release view "$TAG" --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            gh release upload "$TAG" sdk/plugin-kit/*.tgz --clobber --repo "$GITHUB_REPOSITORY"
+          else
+            gh release create "$TAG" sdk/plugin-kit/*.tgz --repo "$GITHUB_REPOSITORY" --title "JDK-Go ${TAG#v}" --generate-notes
+          fi
       - name: Publish package
         working-directory: sdk/plugin-kit
         run: |
