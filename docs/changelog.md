@@ -2,6 +2,20 @@
 
 每个版本先中文、后英文。发版时把对应版本的正文（不含版本标题）作为 Release 正文，见 `docs/release.md`。
 
+## 1.0.17 · 2026-11-11
+
+### 中文
+
+- **全新的 JDK-Go 品牌。** 新的机器人吉祥物成为桌面图标（含夜幕、霜白、墨三个备选图标）、通知小图标和应用内标志；应用名称改为 JDK-Go，界面里的「DSH」字样统一改为「JDK」。
+- **新增菲律宾语（Tagalog）界面，并移除中文。** 全部界面文字已翻译成菲律宾语；设置里的语言选项为「跟随系统 / English / Filipino」，原先写死在代码里的中文内容（如伙伴预设、社区页）也改成了英文。
+- **网站与文档。** 新的图标和封面图；移除社区与友链板块；发布 Release 与 GitHub 包。
+
+### English
+
+- **New JDK-Go branding.** The new robot mascot is now the launcher icon (plus the night, frost and ink alternates), the notification icon and the in-app logo. The app is named JDK-Go, and "DSH" in the interface now reads "JDK".
+- **Filipino (Tagalog) added, Chinese removed.** Every interface string is translated into Filipino. The language row in Settings offers System / English / Filipino, and Chinese that was hard-coded (the Companion presets, the community page) is now English.
+- **Site and docs.** New icons and hero image; the Community and Friends' Links sections are gone; Releases and a GitHub package are published.
+
 ## 1.0.16 · 2026-11-11
 
 ### 中文

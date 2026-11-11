@@ -1,6 +1,6 @@
 # dsh-go user guide
 
-> dsh-go 1.0.16
+> dsh-go 1.0.17
 
 ## Chinese (zh/)
 
