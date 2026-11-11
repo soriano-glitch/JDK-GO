@@ -1,0 +1,8 @@
+{
+  "@@locale": "fil",
+  "phoneRuntimeUpgradeBase": "Hindi makumpirma na tugma ang bagong engine sa iyong Linux environment, kaya huminto ang update. Hindi nabura ang iyong environment at mga naka-install na tool. Gumawa ng buong backup at makipag-ugnayan sa maintainer para sa migration; huwag i-reset o i-uninstall ang app.",
+  "phoneRuntimeUpgradeManifest": "Hindi ligtas na matukoy ang runtime update manifest. Huminto ang update at pinanatili ang iyong environment. Suriin ang APK at makipag-ugnayan sa maintainer; huwag i-reset ang environment.",
+  "phoneRuntimeUpgradeInterrupted": "Hindi kumpleto ang runtime upgrade. Pinanatili ang iyong data at recovery state. Subukang i-install muli. Kung nabibigo pa rin, i-export ang diagnostics at makipag-ugnayan sa maintainer; huwag i-reset o burahin ang mga recovery directory.",
+  "phoneRuntimeUpgradeSymlink": "Pinalitan ng custom na link ang isang system path, kaya hindi ligtas na ma-update ang environment. Pinanatili ang iyong environment. I-backup ito at makipag-ugnayan sa maintainer.",
+  "phoneRuntimeUpgradeRunning": "Hindi pa nakumpirmang huminto ang engine o ang naiwang proseso. Hindi pa nagsisimula ang update. Ihinto ang lokal na engine at hintaying matapos ang paglilinis bago subukang muli; huwag i-reset ang environment."
+}

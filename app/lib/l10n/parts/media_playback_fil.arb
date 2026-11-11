@@ -1,0 +1,8 @@
+{
+  "@@locale": "fil",
+  "mediaVideoLoading": "Nilo-load ang video…",
+  "mediaVideoCannotPlay": "Hindi mapapanood ang video na ito rito. Subukang muli o buksan sa ibang app.",
+  "mediaVideoPlay": "I-play",
+  "mediaVideoPause": "I-pause",
+  "mediaVideoSaveFailed": "Hindi ma-save ang video. Subukang muli."
+}

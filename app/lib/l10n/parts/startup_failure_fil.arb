@@ -1,0 +1,7 @@
+{
+  "@@locale": "fil",
+  "phoneStartupFailureStopping": "Nabigo ang pagsisimula; humihinto",
+  "phoneStartupFailureStoppingDetail": "Nabigo ang pagsisimula; humihinto. {reason}",
+  "phoneStartupTokenTimeout": "Nag-time out ang pagsisimula: walang dumating na startup token sa loob ng 180 segundo. Tingnan ang mga log.",
+  "phoneStartupPortNotReady": "Dumating ang startup token, ngunit hindi naging handa ang port ng lokal na serbisyo. Tingnan ang mga log."
+}

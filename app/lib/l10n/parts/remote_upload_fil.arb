@@ -1,0 +1,10 @@
+{
+  "@@locale": "fil",
+  "stateWorkspaceFilesHint": "Mga file na na-upload sa kasalukuyang workspace:",
+  "stateRemoteUploadNameInvalid": "Tinanggihan ng host ang pangalan ng file. Paikliin ito o alisin ang mga espesyal na karakter at subukang muli.",
+  "stateRemoteUploadWorkspaceUnavailable": "Walang masusulatang working directory ang chat na ito",
+  "stateRemoteUploadWorkspaceChanged": "Nagbago ang working directory. Suriin ito bago mag-upload muli.",
+  "stateRemoteUploadLimit": "Tinanggihan ng host ang upload. Suriin ang laki ng file o subukang muli mamaya.",
+  "stateRemoteUploadUnsupported": "Hindi sinusuportahan ng host na ito ang pag-upload ng file. I-update ang Remote plugin nito at kumonekta muli.",
+  "stateRemoteUploadTooLarge": "Lumampas ang file sa limitasyon sa laki ng remote upload protocol"
+}

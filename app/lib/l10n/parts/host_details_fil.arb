@@ -1,0 +1,5 @@
+{
+  "@@locale": "fil",
+  "hostDetailsConnectionType": "Uri ng koneksyon",
+  "hostDetailsSshNetworkHint": "Gumagamit ng SSH tunnel. Hindi available ang pagsusuri ng LAN / P2P na ruta at pagsukat ng latency para sa koneksyong ito."
+}

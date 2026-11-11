@@ -52,7 +52,7 @@ final nativeLocaleProvider = Provider<String>((ref) {
     ref.onDispose(() => binding.removeObserver(observer));
   }
   final locale = AppLocale.resolve(chosen, binding.platformDispatcher.locales);
-  return locale.languageCode == 'en' ? 'en' : 'zh-CN';
+  return locale.languageCode == 'zh' ? 'zh-CN' : 'en';
 });
 
 class _SystemLocales with WidgetsBindingObserver {

@@ -1,0 +1,11 @@
+{
+  "@@locale": "fil",
+  "fileImageName": "larawan",
+  "fileSharedText": "Shared text.txt",
+  "fileChatFallback": "chat",
+  "fileUploadToHost": "Magpadala ng mga file sa computer",
+  "fileUploadToHostHint": "Sa workspace ng usapang ito sa computer, hindi naka-compress",
+  "fileUploadProgress": "Nagpapadala {done}/{total}: {name}",
+  "fileUploadDone": "Naipadala sa computer: {names}",
+  "fileUploadFailed": "Hindi naipadala sa computer"
+}

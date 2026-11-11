@@ -8876,6 +8876,9 @@ class L10nZh extends L10n {
   String get localeEn => 'English';
 
   @override
+  String get localeFil => 'Filipino';
+
+  @override
   String get localEnvChooseTitle => 'JDK 在哪里运行？';
 
   @override

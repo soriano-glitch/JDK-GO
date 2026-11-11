@@ -1,0 +1,9 @@
+{
+  "@@locale": "fil",
+  "phoneGateCleanupTitle": "Hindi kumpirmado ang paglilinis ng probe",
+  "phoneGateCleanupUnknown": "Naka-block ang mga bagong background resource. Subukan lang muli ang orihinal na paglilinis kung available pa ang channel nito. Hindi nito muling pinapatakbo ang probe.",
+  "phoneGateCleanupRunning": "Hinihintay ang orihinal na probe at ang paglilinis nito. Mananatiling naka-pin ang channel hanggang makumpirma ang paglilinis.",
+  "phoneGateCleanupRetry": "Subukan lang muli ang paglilinis",
+  "phoneGateCleanupDone": "Kumpirmado ang paglilinis. Piliin muli nang tahasan ang channel para magpatakbo ng bagong pagsusuri.",
+  "phoneGateRetest": "Suriin muli ang channel na ito"
+}

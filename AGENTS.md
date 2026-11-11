@@ -27,7 +27,7 @@ Choose verification by change surface, and write the commands actually executed 
 (cd packages/dsh_remote && dart pub get && dart analyze && dart test)
 (cd sdk/plugin-kit && npm install && npm test)
 node --test runtime/tests/*.test.mjs                               # Engine bridge/patch tests
-python3 app/tool/l10n_merge.py --check                             # Copy generation check
+python3 app/tool/l10n_merge.py --check --locale fil                             # Copy generation check
 python3 app/tool/guide_sync.py --check                             # User guide sync check
 tooling/build-apk.sh --build-name <x.y.z>                          # Build the APK
 ```
@@ -47,7 +47,7 @@ CI (`.github/workflows/ci.yml`) runs the general checks plus the parts touched b
 ### Source, generated output and runtime patches
 
 - Don't hand-edit generated output: `app/build/`, `.dart_tool/`, generated l10n artifacts and so on; after changing inputs, run the matching generator.
-- For UI copy, edit `app/lib/l10n/parts/*.arb`, keeping Chinese and English in sync, then run `python3 app/tool/l10n_merge.py`; don't hand-edit the generated results.
+- For UI copy, edit `app/lib/l10n/parts/*.arb`, keeping Chinese, English and Filipino (fil) in sync, then run `python3 app/tool/l10n_merge.py`; don't hand-edit the generated results.
 - For the user guide, edit `docs/guide/`, then run `python3 app/tool/guide_sync.py`.
 - Engine patches live in `runtime/patches/`: keep patch files in sync with `pins.json`, and don't hand-edit artifacts covered by a patch.
 - For the plugin teaching skill, edit `sdk/plugin-kit/skill/` or the matching SDK inputs, then run `node sdk/plugin-kit/scripts/sync-skill.mjs`.

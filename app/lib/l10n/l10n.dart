@@ -21,28 +21,46 @@ abstract final class AppLocale {
 
   /// Locales MaterialApp offers. zh_CN (not bare zh) keeps CJK glyphs
   /// Chinese on non-Chinese systems (typography.dart「汉字字形」).
-  static const supported = [zhCN, en];
+  static const fil = Locale('fil');
+
+  /// Locales MaterialApp offers: English and Filipino (Tagalog). zh_CN stays in
+  /// the list only so the test suite, which still runs in Chinese, can pin it.
+  static const supported = [en, fil, zhCN];
 
   static Locale _locale = en;
   static L10n _l10n = lookupL10n(en);
 
-  /// The locale in use (English; the app no longer offers Chinese).
+  /// The locale in use (English or Filipino; tests may pin zh_CN).
   static Locale get current => _locale;
 
-  static bool get isEnglish => _locale.languageCode == 'en';
+  /// True for every non-Chinese UI language: English and Filipino both use the
+  /// English-language data (pet names, plugin copy and so on).
+  static bool get isEnglish => _locale.languageCode != 'zh';
 
   static L10n get l10n => _l10n;
 
-  /// Switches [appL10n] to [locale] (zh_CN or en).
+  /// Switches [appL10n] to [locale] (en, fil, or zh_CN in tests).
   static void use(Locale locale) {
-    final next = locale.languageCode == 'en' ? en : zhCN;
+    final next = switch (locale.languageCode) {
+      'fil' || 'tl' => fil,
+      'zh' => zhCN,
+      _ => en,
+    };
     if (next == _locale) return;
     _locale = next;
     _l10n = lookupL10n(next);
   }
 
-  /// The app is English only: whatever the user or the system asks for.
-  static Locale resolve(Locale? chosen, List<Locale>? system) => en;
+  /// Filipino when chosen, or when the system's first matching language is
+  /// Filipino or Tagalog; English for everything else (Chinese is not offered).
+  static Locale resolve(Locale? chosen, List<Locale>? system) {
+    if (chosen != null) return chosen.languageCode == 'fil' ? fil : en;
+    for (final l in system ?? const <Locale>[]) {
+      if (l.languageCode == 'fil' || l.languageCode == 'tl') return fil;
+      if (l.languageCode == 'en') return en;
+    }
+    return en;
+  }
 }
 
 /// UI text for code without a BuildContext. Follows the app language.

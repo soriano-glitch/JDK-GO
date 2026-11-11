@@ -1,0 +1,8 @@
+{
+  "@@locale": "fil",
+  "mediaImageLoading": "Nilo-load ang larawan",
+  "mediaImageReload": "I-reload ang larawan",
+  "mediaImageReloadHint": "Binabasa muli ang file; hindi muling bubuo at walang bayad sa pagbuo",
+  "mediaVideoNoPoster": "I-tap para i-play ang video",
+  "mediaSavedFilesCount": "Nai-save ang {count} file sa gallery"
+}

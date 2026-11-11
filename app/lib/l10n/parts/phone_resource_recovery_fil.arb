@@ -1,0 +1,8 @@
+{
+  "@@locale": "fil",
+  "phoneResourceRecoveryTitle": "Kailangang i-verify ang mga background resource",
+  "phoneResourceRecoveryRunning": "Sinusuri ang orihinal na mga talaan ng resource. Maghihintay ang mga bagong gawain sa telepono hanggang matapos ito.",
+  "phoneResourceRecoveryStorage": "Hindi mabasa o ma-save ang talaan ng resource. Subukang i-save o basahin muli. Hindi inuulit ang kumpirmadong pagpapalaya, at hindi muling pinapatakbo ang mga nakaraang aksyon.",
+  "phoneResourceRecoveryPending": "Hindi pa na-verify ang mga lumang background resource. Naka-block ang mga bagong gawain sa telepono. Piliin ang orihinal na awtorisadong channel at subukang muli; kung hindi pa rin available ang verification, i-restart ang device at suriin muli. Maaaring naisagawa na ang mga nakaraang aksyon. Hindi nililinis ng pagbasa sa abiso ng pagkaantala ng gawain ang mga resource na ito.",
+  "phoneResourceRecoveryRetry": "Subukang muli ang resource verification"
+}

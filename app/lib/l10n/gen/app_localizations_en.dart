@@ -9369,6 +9369,9 @@ class L10nEn extends L10n {
   String get localeEn => 'English';
 
   @override
+  String get localeFil => 'Filipino';
+
+  @override
   String get localEnvChooseTitle => 'Where should JDK run?';
 
   @override

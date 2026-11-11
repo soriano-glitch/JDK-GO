@@ -1,0 +1,10 @@
+{
+  "@@locale": "fil",
+  "usageStatsTitle": "Magpadala ng anonymous na usage stats",
+  "usageStatsSection": "Pagandahin ang JDK-Go",
+  "usageStatsFooter": "Kinokontrol ng switch na ito ang sariling bilang ng paggamit, mga bersyon, gumawa at model ng telepono, at estadistika ng bersyon ng system ng dsh-go. Walang kasamang chat, file o account, at hindi nito kinokontrol ang estadistika ng Google ML Kit SDK.",
+  "usageNoticeBody": "Walang chat o personal na impormasyon.\nMaaaring patayin anumang oras.",
+  "usageUpgradeNotice": "Bago: anonymous na usage stats, para makatulong sa pagpapabuti ng JDK-Go.\nWalang chat o personal na impormasyon.",
+  "usageUpgradeLearn": "Alamin pa",
+  "usageUpgradeOff": "Patayin"
+}

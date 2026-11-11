@@ -1,0 +1,14 @@
+{
+  "@@locale": "fil",
+  "phoneKeepTitle": "{mode, select, shizuku{Panatilihin ang Shizuku channel} sui{Panatilihin ang Sui channel} root{Panatilihin ang root channel} adb{Panatilihin ang Direct ADB channel} other{Panatilihin ang channel na ito}}",
+  "phoneKeepRootDescription": "Pagkatapos ng pagkaputol, pag-restart ng app o reboot, kusang magtatanong muli ang JDK-Go sa iyong root manager. Ang manager pa rin ang magpapasya.",
+  "phoneKeepSharedDescription": "Pagkatapos ng pagkaputol, pag-restart ng app o reboot, muling kumokonekta ang JDK-Go gamit ang pahintulot na mayroon na ito. Hindi ito kailanman humihingi ng pahintulot.",
+  "phoneKeepAdbDescription": "Pagkatapos ng pagkaputol, pag-restart ng app o reboot, muling kumokonekta ang JDK-Go sa Wi‑Fi gamit ang umiiral na pairing. Sa pahintulot mula sa “Awtomatikong ibalik ang accessibility”, sinusubukan din nitong buksan nang isang beses ang wireless debugging.",
+  "phoneKeepRestoring": "Muling kumokonekta",
+  "phoneKeepWaiting": "Hinihintay ang channel",
+  "phoneKeepWaitingService": "Hinihintay na tumakbo ang serbisyo",
+  "phoneKeepWaitingPermission": "Hindi awtorisado. Muling kokonekta kapag ipinagkaloob mo.",
+  "phoneKeepWaitingNetwork": "Hinihintay ang Wi‑Fi",
+  "phoneKeepNotPaired": "Hindi naka-pair. I-pair muna ang wireless debugging.",
+  "phoneKeepFailed": "Hindi makakonekta muli. Susubukan ulit kapag binuksan mo ang app o nagsimula ng gawain."
+}

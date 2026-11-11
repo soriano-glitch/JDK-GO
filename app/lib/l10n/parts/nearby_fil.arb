@@ -1,0 +1,10 @@
+{
+  "@@locale": "fil",
+  "nearbyThisChat": "Ang chat na ito",
+  "nearbyPermissionTitle": "Mga pahintulot para sa chat na ito",
+  "nearbyNewChatDefault": "Mga bagong chat: {name}",
+  "nearbySetAsDefault": "Gamitin para sa mga bagong chat",
+  "nearbyManageModels": "Pamahalaan ang mga model",
+  "nearbyPermissionPill": "Mga pahintulot para sa chat na ito: {name}",
+  "nearbyChange": "Baguhin"
+}

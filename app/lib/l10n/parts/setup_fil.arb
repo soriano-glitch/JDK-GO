@@ -1,0 +1,14 @@
+{
+  "@@locale": "fil",
+  "setupAppearanceTitle": "Pumili ng hitsura",
+  "setupAppearanceMessage": "Maaari mo itong baguhin anumang oras sa Settings",
+  "setupLightMode": "Magaan na mode",
+  "setupCapsulePreparing": "Inihahanda ang runtime",
+  "setupCapsuleProgress": "Runtime {percent}%",
+  "setupCapsuleProgressSemantics": "Inihahanda ang runtime, {percent}% na ang tapos",
+  "setupCapsuleReady": "Handa na ang runtime",
+  "setupCapsuleFailed": "Nabigo ang pag-install",
+  "setupWaitingBody": "Magpapatuloy nang kusa kapag handa na",
+  "setupNotifyWhenDone": "Aabisuhan ka namin kapag tapos na",
+  "setupAwaitSignIn": "Magbubukas ang DeepSeek sign-in kapag handa na"
+}

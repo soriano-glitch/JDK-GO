@@ -1,0 +1,12 @@
+{
+  "@@locale": "fil",
+  "petActionSending": "Ipinapadala…",
+  "petActionTargetChanged": "Nagbago ang host. Buksan muli ang Quick ask; napanatili ang iyong teksto.",
+  "petActionSendFailed": "Hindi naipadala. Napanatili ang iyong teksto; subukang muli.",
+  "petActionBusy": "Abala ang chat na ito. Pumili ng Bagong chat.",
+  "petActionVoiceMissing": "I-download muna ang offline na voice model sa app.",
+  "petActionVoiceTitle": "Boses para sa Quick ask",
+  "petActionVoiceReturn": "Bumalik sa pet",
+  "petActionVoiceStop": "Tapusin ang pag-record",
+  "petActionVoiceStart": "Mag-record"
+}

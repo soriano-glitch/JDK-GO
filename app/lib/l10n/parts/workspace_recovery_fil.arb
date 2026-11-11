@@ -1,0 +1,17 @@
+{
+  "@@locale": "fil",
+  "workspaceRecoveryTitle": "Pagbawi ng workspace index",
+  "workspaceRecoveryEnable": "Gumamit ng recovery workspace index",
+  "workspaceRecoveryDisable": "Gamitin muli ang orihinal na index",
+  "workspaceRecoveryHint": "Sa telepono na ito lang: gumamit ng hiwalay na index para ma-access ang mga nababasang usapan kapag nabigo ang orihinal na workspace index.",
+  "workspaceRecoveryActive": "Napili ang hiwalay na recovery index. Pareho ang orihinal at recovery index ay pinananatili.",
+  "workspaceRecoveryWorking": "Gumagana…",
+  "workspaceRecoveryEnableBody": "Titigil ang lokal na engine, lilipat sa hiwalay na recovery index, at magsisimula muli. Hindi gagalawin ang orihinal na workspace index. Hindi buburahin ang mga file ng usapan, plugin at kredensyal.\n\nSa unang paggamit, bubuuin ang bagong index mula sa mga nababasang usapan na umiiral pa ang mga folder. Hindi awtomatikong minamana ang mga lumang pangalan ng workspace, pagkakasunod-sunod, default, archived na estado at pin. Maaaring hindi lumabas ang mga walang laman na workspace at mga usapang nawawala ang folder. Pinananatili ang orihinal na lokal na pagpapangkat at mga kagustuhan sa pin.\n\nPinananatili ang recovery index at gagamitin muli sa susunod na i-enable mo ito. Nilalampasan nito ang pagkabigo ng orihinal na index; hindi nito inaayos ang orihinal na index.",
+  "workspaceRecoveryDisableBody": "Titigil ang lokal na engine, babalik sa orihinal na workspace index, at magsisimula muli. Maaaring bumalik ang orihinal na pagkabigo.\n\nPinananatili ang parehong mga file ng usapang nalikha habang nagre-recover at ang recovery index. Hindi nagsi-sync ang membership at pagkakasunod-sunod ng workspace sa pagitan ng dalawang index. Maaaring hindi lumabas sa orihinal na index ang ilang usapang nalikha habang nagre-recover. I-enable muli ang recovery index para ipagpatuloy ang paggamit nito.",
+  "workspaceRecoveryEnableStart": "I-enable at i-restart",
+  "workspaceRecoveryDisableStart": "Gamitin ang orihinal at i-restart",
+  "workspaceRecoveryUnavailable": "Hindi sinusuportahan ng bersyong ito ang pagbawi ng workspace index. Suriin ang katayuan ng lokal na engine at i-update ang app.",
+  "workspaceRecoveryRestartIncomplete": "Nagbago ang index mode, ngunit hindi pa nakumpirmang huminto o nag-restart ang engine. Hintayin itong huminto bago ito simulan muli.",
+  "workspaceRecoverySaveFailed": "Hindi ma-save ang index mode. Walang bagong pagsisimula na hiniling. Suriin ang katayuan at mga log ng lokal na engine.",
+  "workspaceRecoveryFailed": "Hindi natapos ang operasyon. Suriin ang katayuan at mga log ng lokal na engine. Ipinapakita ng pahinang ito kung nagbago ang index mode."
+}

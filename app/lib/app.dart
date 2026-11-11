@@ -160,7 +160,7 @@ class _DshAppState extends ConsumerState<DshApp> with WidgetsBindingObserver {
         performance.reduceMotion || WidgetsBinding.instance.platformDispatcher.accessibilityFeatures.disableAnimations;
     final fluid = performance.fluidMotion && !reduced;
     FrameClock.instance.enabled = fluid;
-    _themesFor(ref.watch(accentProvider), locale.languageCode == 'en', performance.blur, reduced, fluid);
+    _themesFor(ref.watch(accentProvider), locale.languageCode != 'zh', performance.blur, reduced, fluid);
     if (!waiting && !_settled) {
       WidgetsBinding.instance.addPostFrameCallback((_) => _settled = true);
     }

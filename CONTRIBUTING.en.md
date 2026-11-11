@@ -72,8 +72,8 @@ The SDK type check requires its TypeScript development dependency. That test is 
 **Interface text:** edit the Chinese and English ARB files in `app/lib/l10n/parts/`, then generate and check:
 
 ```bash
-python3 app/tool/l10n_merge.py
-python3 app/tool/l10n_merge.py --check
+python3 app/tool/l10n_merge.py --locale fil
+python3 app/tool/l10n_merge.py --check --locale fil
 ```
 
 **User guide:** edit `docs/guide/`, then synchronize the app's bundled guide skill:

@@ -63,7 +63,7 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
       - name: Generated files are in sync
         run: |
-          python3 app/tool/l10n_merge.py --check
+          python3 app/tool/l10n_merge.py --check --locale fil
           python3 app/tool/guide_sync.py --check
           node sdk/plugin-kit/scripts/sync-skill.mjs --check
           # Not --check: this also writes site/build/share, which the share worker builds from.
@@ -150,7 +150,7 @@ jobs:
         if: matrix.shard == 0
         run: |
           flutter analyze --no-pub
-          python3 tool/l10n_merge.py
+          python3 tool/l10n_merge.py --locale fil
           git diff --exit-code -- lib/l10n
       # Split by file, not with --total-shards: that still compiles every file on every shard.
       - name: Test every third file

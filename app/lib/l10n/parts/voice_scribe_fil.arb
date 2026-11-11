@@ -1,0 +1,19 @@
+{
+  "@@locale": "fil",
+  "voiceScribeReadFailed": "Hindi mabasa ang mga setting ng boses. Subukang muli.",
+  "voiceScribeSavedReadFailed": "Na-save. I-refresh para makita ang pinakabagong mga setting.",
+  "voiceScribeSaveUnconfirmed": "Hindi makumpirma ang pag-save. I-refresh o subukang muli.",
+  "voiceScribeTitle": "Mga setting ng boses",
+  "voiceScribePolishPrompt": "Polish prompt",
+  "voiceScribeLanguage": "Wika ng pagkilala",
+  "voiceScribeRefresh": "I-refresh",
+  "voiceScribeHostChanged": "Nagbago ang koneksyon. Buksan muli para magpatuloy.",
+  "voiceScribeUnsupported": "Hindi available ang mga setting ng boses sa koneksyong ito.",
+  "voiceScribePluginDefault": "Default",
+  "voiceScribeBuiltInPrompt": "Built-in na prompt",
+  "voiceScribeProviders": "Mga serbisyo ng pagkilala",
+  "voiceScribeKeySet": "May key",
+  "voiceScribeNoKey": "Walang key",
+  "voiceScribeHotwords": "Mga hotword",
+  "voiceScribeHotwordRules": "{count, plural, =1{1 patakaran} other{{count} patakaran}}"
+}

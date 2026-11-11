@@ -1,0 +1,19 @@
+{
+  "@@locale": "fil",
+  "a11yRestoreTitle": "Awtomatikong ibalik ang accessibility",
+  "searchKwA11yRestore": "accessibility,ibalik,muling kumonekta,awtomatikong pagbawi,pahintulot,ADB,Shizuku,Sui,root,restore,reconnect",
+  "a11yRestoreNeedsGrant": "Kailangan ng awtorisasyon",
+  "a11yRestoreNotice": "Kapag naawtorisahan, muling bubuksan ang accessibility kung ito ay na-disable sa system settings. Para ihinto ang phone control, patayin ito sa JDK-Go.",
+  "a11yRestoreForceStop": "Pagkatapos ng force stop, buksan muli ang JDK-Go para maibalik ang serbisyo.",
+  "a11yRestoreGrant": "Mag-authorize at i-enable",
+  "a11yRestoreGrantShizuku": "Ipagkaloob gamit ang Shizuku",
+  "a11yRestoreGrantShizukuPermission": "I-authorize ang Shizuku, saka ipagkaloob",
+  "a11yRestoreGrantAdb": "Ipagkaloob gamit ang Direct ADB",
+  "a11yRestoreRootNote": "Ginagamit ang awtorisadong root na koneksyon para ipagkaloob lamang ang pahintulot na ito.",
+  "a11yRestoreSetup": "I-set up ang Shizuku o wireless debugging",
+  "a11yRestoreWaiting": "Payagan ang kahilingan sa Shizuku",
+  "a11yRestoreWaitingSui": "Payagan ang kahilingan sa Sui",
+  "a11yRestoreComputer": "O kumonekta sa computer at patakbuhin nang isang beses:",
+  "a11yRestoreCopy": "Kopyahin ang command",
+  "a11yRestoreCopied": "Nakopya ang command"
+}

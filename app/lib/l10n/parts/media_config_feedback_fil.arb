@@ -1,0 +1,23 @@
+{
+  "@@locale": "fil",
+  "mediaConfigKeySaved": "Na-save · hindi pa na-verify",
+  "mediaConfigKeyUnknown": "Hindi available ang katayuan",
+  "mediaConfigKeyNote": "Ang host ang nag-uulat ng presensya ng key. Hindi nagve-verify ng authentication o access sa model ang pag-save ng key.",
+  "mediaConfigConsumers": "Mga media service na gumagamit ng key na ito: {services}. Maaapektuhan silang lahat kapag binago o inalis ito; maaari rin itong gamitin ng ibang integration ng host.",
+  "mediaConfigCheck": "Suriin ang naka-save na configuration",
+  "mediaConfigCheckNote": "Lokal na snapshot lang; walang kahilingan sa provider o singil sa pagbuo. Hindi nito vine-verify ang key, koneksyon, balanse, access sa model o rehiyon. Ang host pa rin ang awtoridad sa mga tinatanggap na setting.",
+  "mediaConfigCheckReady": "Walang nakitang lokal na isyu sa configuration",
+  "mediaConfigCheckMissingKey": "Wala pang iniulat na naka-save na key ang host.",
+  "mediaConfigCheckModels": "Walang napiling model, o may mga napiling model na nawawala o iba ang protocol.",
+  "mediaConfigCheckDisabled": "Naka-off ang serbisyong ito.",
+  "mediaConfigUrlInvalid": "Maglagay ng HTTPS API root na may host, nang walang kredensyal, query, fragment o whitespace.",
+  "mediaConfigUrlEndpoint": "Mukhang request endpoint ito. Ilagay na lang ang API root; idinadagdag ng host ang request path.",
+  "mediaConfigUrlRoot": "Origin lang ang kailangan ng protocol na ito (https://host), nang walang API path.",
+  "mediaConfigUrlHint": "Ilagay ang API root, hindi ang generation endpoint. Pinananatili ng mga OpenAI-compatible na root ang kanilang prefix (halimbawa /v1).",
+  "mediaConfigPreview": "Gumawa ng preview ng request",
+  "mediaConfigPreviewNote": "Generation/create request lang; maaaring gumamit ng ibang path ang mga edit at status request. Hindi patunay ng koneksyon o pagtanggap ng host ang preview.",
+  "mediaConfigPreviewUnavailable": "Hindi available ang request path sa katalogo ng host na ito.",
+  "mediaConfigTargetTitle": "Gamitin muli ang key sa ibang target?",
+  "mediaConfigTargetBody": "Magbabago ang target mula {before} patungong {after}. Maaaring ipadala ng mga susunod na request ang tinutukoy na key sa bagong target. Magpatuloy lang kung pinagkakatiwalaan mo ito. Vine-validate pa rin ng host ang pagbabago.",
+  "mediaConfigTargetConfirm": "Pagkatiwalaan ang target at magpatuloy"
+}

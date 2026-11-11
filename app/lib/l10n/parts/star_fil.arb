@@ -1,0 +1,10 @@
+{
+  "@@locale": "fil",
+  "starPromptTitle": "{hours, plural, =0{Kalahating oras na akong nakasama mo sa JDK-Go~} =1{Isang oras na akong nakasama mo sa JDK-Go~} other{{hours} oras na akong nakasama mo sa JDK-Go~}}",
+  "starPromptBody": "Libre at open source ang JDK-Go. Kung naging mas maganda ang paggamit mo ng iyong telepono dahil dito, mangyaring bigyan ito ng Star — napakalaking bagay nito para sa munting balyenang ito!",
+  "starPromptPlea": "Pakiusap naman~ Mahalaga talaga ito!!",
+  "starPromptStar": "I-Star sa GitHub",
+  "starPromptDone": "Na-Star na",
+  "starPromptLater": "Mamaya na lang",
+  "starSettingsTitle": "I-Star ang JDK-Go sa GitHub"
+}
