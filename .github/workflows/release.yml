@@ -42,9 +42,7 @@ jobs:
       - name: Publish package
         working-directory: sdk/plugin-kit
         run: |
-          printf '@soriano-glitch:registry=https://npm.pkg.github.com
-//npm.pkg.github.com/:_authToken=%s
-' "$NODE_AUTH_TOKEN" > .npmrc
+          printf '@soriano-glitch:registry=https://npm.pkg.github.com\n//npm.pkg.github.com/:_authToken=%s\n' "$NODE_AUTH_TOKEN" > .npmrc
           npm publish --registry=https://npm.pkg.github.com
           rm -f .npmrc
         env:
