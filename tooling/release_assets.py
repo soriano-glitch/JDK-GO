@@ -19,6 +19,8 @@ and keeps those under 60 % of the new APK: in dist/, SHA256SUMS and update.json'
 
 --base-url makes update.json point at your own host (self-hosted feed); without
 it the app derives GitHub download URLs from the tag and asset names.
+DSHGO_REPO=owner/repo points update.json's `page` and --delta-from at another
+repository (a fork publishing its own releases).
 """
 
 import argparse
@@ -39,7 +41,9 @@ from build_number import MAX_VERSION_CODE, decode
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 FLAVORS = ("arm64", "x64")
 FLAVOR_ABI = {"arm64": "arm64-v8a", "x64": "x86_64"}
-REPO = "ccch1mneyyy/dsh-go"
+# Where the release lives, for update.json's `page` and --delta-from. A fork
+# publishes its own releases, so it can point this at itself with DSHGO_REPO.
+REPO = os.environ.get("DSHGO_REPO", "ccch1mneyyy/dsh-go")
 VERSION_RE = re.compile(r"^(\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?)(?:\+(\d+))?$")
 BADGING_RE = re.compile(r"^package: .*?\bversionCode='(\d*)' versionName='([^']*)'", re.MULTILINE)
 CACHE = pathlib.Path.home() / ".cache" / "dshgo-release" / "apk"
